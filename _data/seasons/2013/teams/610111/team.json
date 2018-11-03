@@ -1,0 +1,13 @@
+{
+    "name": "610111",
+    "description": "610111大三电一环绕在球队核心队长胡江南周围前进",
+    "table": {
+        "games_played": 5,
+        "wins": 2,
+        "draws": 1,
+        "loses": 2,
+        "goals_for": 5,
+        "goals_against": 5,
+        "points": 7
+    }
+}
