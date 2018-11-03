@@ -1,0 +1,13 @@
+{
+    "display_name": "611131大一机械",
+    "description": "以刘明明为核心的球队",
+    "table": {
+        "games_played": 3,
+        "wins": 2,
+        "draws": 0,
+        "loses": 1,
+        "goals_for": 5,
+        "goals_against": 5,
+        "points": 6
+    }
+}

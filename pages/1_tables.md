@@ -8,7 +8,7 @@ permalink: /tables/
 ## {{ season[0] }}
 {% endfor %}
 
-{% assign sorted = site.data.seasons["2013"].table | sort: 'points' %}
+{% assign sorted = site.data.seasons["2013"].table | sort: "points" | reverse %}
 
 | 队名 | 比赛 | 胜 | 平 | 负 | 进球 | 失球 | 净胜 | 积分 |
 |---------------|------------|
