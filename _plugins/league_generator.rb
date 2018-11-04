@@ -1,3 +1,5 @@
+require 'json'
+
 module League
 
     # class TeamPage < Jekyll::Page
@@ -37,15 +39,39 @@ module League
             
             
             # self.data = season[1]
-            puts base
-            self.read_yaml(File.join(base, '_layouts'), 'season.html')
+            # puts base
+            self.read_yaml(File.join(base, "_layouts"), "season.html")
 
             # self.data = {}
-            self.data['title'] = season[0]
-            self.data['table'] = season[1]['table']
+            self.data["title"] = season[0]
+            # self.data["table"] = season[1]["table"]
 
-            # puts self.data['table']
-            # puts dir
+            # team_array = season[1]["teams"]["table"]
+
+
+            team_array = (season[1]['teams'].to_a).map{|key, team| team}
+            # puts team_array
+            # team_array.each do |key, team|
+            #     puts "-------"
+            #     puts team['table']['points']
+            # end
+
+            # table = team_array.map {|key, team| team['table']}
+            # puts table 
+
+            sorted = (team_array.sort_by { |team| -team['table']['points'] }).map {|team| team}
+            # puts sorted
+
+            self.data['table'] = sorted
+
+            # team_array.each do |team|
+            #     puts "-------"
+            #     puts team.last['display_name']
+            # end
+
+
+            # self.data['table'] = season[1]['table']
+
         end
     end
 

@@ -27,15 +27,15 @@ layout: default
   <tbody>
     {% for team in sorted %}
     <tr>
-      <td>{{ team.name }}</td>
-      <td>{{ team.games_played }}</td>
-      <td>{{ team.wins }}</td>
-      <td>{{ team.draws }}</td>
-      <td>{{ team.loses }}</td>
-      <td>{{ team.goals_for }}</td>
-      <td>{{ team.goals_against }}</td>
-      <td>{{ team.goals_for | minus: team.goals_against }}</td>
-      <td>{{ team.points }}</td>
+      <td>{{ team.display_name }}</td>
+      <td>{{ team.table.games_played }}</td>
+      <td>{{ team.table.wins }}</td>
+      <td>{{ team.table.draws }}</td>
+      <td>{{ team.table.loses }}</td>
+      <td>{{ team.table.goals_for }}</td>
+      <td>{{ team.table.goals_against }}</td>
+      <td>{{ team.table.goals_for | minus: team.table.goals_against }}</td>
+      <td>{{ team.table.points }}</td>
     </tr>
     {% endfor %}
     
