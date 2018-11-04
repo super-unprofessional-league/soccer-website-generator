@@ -39,3 +39,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# page_gen-dirs: false
+
+# page_gen:
+#   - data: 'team'
+#     template: 'team'
+#     name: ''
+#     dir: 'team'
+
+# season_dir: 'season'
+# team_dir: 'team'

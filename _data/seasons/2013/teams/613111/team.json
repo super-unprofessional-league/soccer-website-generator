@@ -1,11 +1,14 @@
 {
+    "key": "613111",
     "display_name": "613111大三高工",
-    "description": "613111大三高工是健雄杯历史上最成功的队伍，参赛三年全部打入决赛，并在2013年夺冠",
+    "description": "健雄杯历史上最成功的队伍，参赛三次全部打入决赛，并在2013年以不败战绩夺冠",
+    "logo": "placeholder-club.jpg",
     "players": [
         {
             "name": "狄学长",
-            "img": null,
-            "position": "RM",
+            "img": "placeholder-player.jpg",
+            "number": 55,
+            "position": "Defender",
             "played": 5,
             "goals": 7
         }
