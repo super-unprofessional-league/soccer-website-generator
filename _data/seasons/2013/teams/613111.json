@@ -3,23 +3,125 @@
     "display_name": "613111大三高工",
     "description": "健雄杯历史上最成功的队伍，参赛三次全部打入决赛，并在2013年以不败战绩夺冠",
     "logo": "placeholder-club.jpg",
-    "players": [
-        {
-            "name": "狄学长",
-            "img": "placeholder-player.jpg",
-            "number": 55,
-            "position": "Defender",
-            "played": 5,
-            "goals": 7
-        }
-    ],
     "table": {
-        "games_played": 5,
-        "wins": 4,
-        "draws": 1,
+        "games_played": 6,
+        "wins": 6,
+        "draws": 0,
         "loses": 0,
-        "goals_for": 20,
+        "goals_for": 19,
         "goals_against": 1,
-        "points": 13
+        "points": 18
+    },
+    "players": {
+        "starting": [
+            {
+                "number": 1,
+                "name": "王鸣轩",
+                "img": "placeholder-player.jpg",
+                "position": "GoalKeeper",
+                "played": 6,
+                "goals": 0
+            }
+            ,{
+                "number": 14,
+                "name": "张伟铮",
+                "img": "placeholder-player.jpg",
+                "position": "Defender",
+                "played": 4,
+                "goals": 0
+            }
+            ,{
+                "number": 16,
+                "name": "熊宽晨",
+                "img": "placeholder-player.jpg",
+                "position": "Defender",
+                "played": 6,
+                "goals": 0
+            }
+            ,{
+                "number": 55,
+                "name": "狄学长",
+                "img": "placeholder-player.jpg",
+                "position": "Defender",
+                "played": 6,
+                "goals": 6
+            }
+            ,{
+                "number": 4,
+                "name": "潘登",
+                "img": "placeholder-player.jpg",
+                "position": "Midfielder",
+                "played": 6,
+                "goals": 4
+            }
+            ,{
+                "number": 9,
+                "name": "沙奔",
+                "img": "placeholder-player.jpg",
+                "position": "Midfielder",
+                "played": 6,
+                "goals": 5
+            }
+            ,{
+                "number": 10,
+                "name": "吉相冰",
+                "img": "placeholder-player.jpg",
+                "position": "Forward",
+                "played": 6,
+                "goals": 7
+            }
+            ,{
+                "number": 11,
+                "name": "陈晨",
+                "img": "placeholder-player.jpg",
+                "position": "Forward",
+                "played": 3,
+                "goals": 0
+            }
+        ],
+        "subs": [
+            {
+                "number": 31,
+                "name": "孙聪",
+                "img": "placeholder-player.jpg",
+                "position": "Midfielder",
+                "played": 1,
+                "goals": 0
+            }
+            ,{
+                "number": 5,
+                "name": "吴瀚",
+                "img": "placeholder-player.jpg",
+                "position": "Defender",
+                "played": 3,
+                "goals": 0
+            }
+            ,{
+                "number": 3,
+                "name": "朱思宇",
+                "img": "placeholder-player.jpg",
+                "position": "Defender",
+                "played": 1,
+                "goals": 0
+            }
+            ,{
+                "number": 37,
+                "name": "刘念泽",
+                "img": "placeholder-player.jpg",
+                "position": "Defender",
+                "played": 0,
+                "goals": 0
+            }
+        ]
+    },
+    "squad": {
+        "GK": 1,
+        "LCD": 16,
+        "RCD": 14,
+        "CDM": 4,
+        "RD": 55,
+        "LM": 9,
+        "LF": 10,
+        "CF": 11
     }
 }

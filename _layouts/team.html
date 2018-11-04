@@ -1,6 +1,42 @@
 ---
 layout: page
 ---
-<h1>Team page</h1>
-<div>
-</div>
+<h1>{{ page.team.display_name }}</h1>
+
+
+<table>
+<thead>
+    <tr>
+    <th>号码</th>
+    <th>姓名</th>
+    <th>位置</th>
+    <th>出场</th>
+    <th>进球</th>
+    </tr>
+</thead>
+<tbody>
+    {% for player in page.team.players.starting %}
+    <tr>
+    <td>{{ player.number }}</td>
+    <td><a href='{{player.number}}'>{{ player.name }}</a></td>
+    <td>{{ player.position }}</td>
+    <td>{{ player.played }}</td>
+    <td>{{ player.goals }}</td>
+    </tr>
+    {% endfor %}
+
+    <tr>
+        <td></td>
+    </tr>
+
+    {% for player in page.team.players.subs %}
+    <tr>
+    <td>{{ player.number }}</td>
+    <td><a href='{{player.number}}'>{{ player.name }}</a></td>
+    <td>{{ player.position }}</td>
+    <td>{{ player.played }}</td>
+    <td>{{ player.goals }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>

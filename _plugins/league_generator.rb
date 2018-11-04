@@ -2,25 +2,23 @@ require 'json'
 
 module League
 
-    # class TeamPage < Jekyll::Page
-    #     def initialize(site, base, dir, team)
-    #         @site = site
-    #         @base = base
-    #         @dir = dir
-    #         @name = 'index.html'
+    class TeamPage < Jekyll::Page
+        def initialize(site, base, dir, team)
+            @site = site
+            @base = base
+            @dir = dir
+            @name = 'index.html'
 
-    #         self.process(@name)
-    #         self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
-    #         self.data['category'] = category
-
-    #         category_title_prefix = site.config['category_title_prefix'] || 'Category: '
-    #         self.data['title'] = "#{category_title_prefix}#{category}"
-    #     end
-    # end
+            self.process(@name)
+            self.read_yaml(File.join(base, '_layouts'), 'team.html')
+            
+            self.data['team'] = team
+        end
+    end
 
     class SeasonPage < Jekyll::Page
     # class SeasonPage < Jekyll::PageWithoutAFile
-        def initialize(site, base, dir, season)
+        def initialize(site, base, dir, season, team_array)
             @site = site
             @base = base
             @dir = dir
@@ -43,34 +41,15 @@ module League
             self.read_yaml(File.join(base, "_layouts"), "season.html")
 
             # self.data = {}
-            self.data["title"] = season[0]
-            # self.data["table"] = season[1]["table"]
-
-            # team_array = season[1]["teams"]["table"]
+            self.data["title"] = season
 
 
-            team_array = (season[1]['teams'].to_a).map{|key, team| team}
-            # puts team_array
-            # team_array.each do |key, team|
-            #     puts "-------"
-            #     puts team['table']['points']
-            # end
-
-            # table = team_array.map {|key, team| team['table']}
-            # puts table 
+            # team_array = (season[1]['teams'].to_a).map{|key, team| team}
 
             sorted = (team_array.sort_by { |team| -team['table']['points'] }).map {|team| team}
             # puts sorted
 
             self.data['table'] = sorted
-
-            # team_array.each do |team|
-            #     puts "-------"
-            #     puts team.last['display_name']
-            # end
-
-
-            # self.data['table'] = season[1]['table']
 
         end
     end
@@ -81,16 +60,18 @@ module League
         def generate(site)
             # puts site.pages
             site.data['seasons'].each do |season|
-                # puts season[1]
-                site.pages << SeasonPage.new(site, site.source, File.join('seasons', season[0]), season)
-            end
+                # convert nilClass to array
+                team_array = (season[1]['teams'].to_a).map{|key, team| team}
 
-            # if site.layouts.key? 'category_index'
-            #     dir = site.config['team_dir'] || 'team'
-            #     site.categories.each_key do |category|
-            #     site.pages << TeamPage.new(site, site.source, File.join(dir, category), category)
-            #     end
-            # end
+                # site['team_pages'] = []
+                # team pages
+                team_array.each do |team|
+                    site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], team['key']), team)
+                end
+
+                # season table page
+                site.pages << SeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_array)
+            end
         end
     end
 
