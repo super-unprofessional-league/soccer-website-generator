@@ -17,7 +17,7 @@ title: Super Unprofessional League
 email: sul@sul.com
 description: >- # this means to ignore newlines until "baseurl:"
   powered by Super Unprofessional League
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/super-unprofessional-league-website" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
