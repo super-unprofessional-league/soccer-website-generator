@@ -1,0 +1,177 @@
+.row {
+    display: -ms-flex; display: -webkit-flex; display: flex;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    
+    flex: 1;
+}
+
+@media all and (max-width: 600px) {
+    .column {
+        float: none;
+        width: 100%;
+    }
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.football_field_background {
+    background-image: url("../img/field.png")
+}
+
+.football_field {
+    position: relative;
+}
+
+.player {
+    position: absolute;
+    width: 20%;
+}
+
+.player img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 2px solid #cccccc;
+    width: 50%;
+}
+
+.player p {
+    text-align: center;
+}
+
+/* GK */
+.player.GK {
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Defender */
+.player.LWB {
+    bottom: 35%;
+    left: 5%;
+}
+
+.player.LB {
+    bottom: 20%;
+    left: 8%;
+}
+
+.player.LCB {
+    bottom: 20%;
+    left: 20%;
+}
+
+.player.CB {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player.RCB {
+    bottom: 20%;
+    right: 20%;
+}
+
+.player.RB {
+    bottom: 20%;
+    right: 8%;
+}
+
+.player.RWB {
+    bottom: 35%;
+    right: 5%;
+}
+
+/* Defending Midfielder */
+
+.player.LDM {
+    bottom: 35%;
+    left: 25%;
+}
+
+.player.CDM {
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player.RDM {
+    bottom: 35%;
+    right: 25%;
+}
+
+/* Midfielder */
+
+.player.LM {
+    bottom: 50%;
+    left: 8%;
+}
+
+.player.LCM {
+    bottom: 50%;
+    left: 20%;
+}
+
+.player.CM {
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player.RCM {
+    bottom: 50%;
+    right: 20%;
+}
+
+.player.RM {
+    bottom: 50%;
+    right: 8%;
+}
+
+/* Wingers, CAM */
+
+.player.LW {
+    bottom: 65%;
+    left: 10%;
+}
+
+.player.CAM {
+    bottom: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player.RCM {
+    bottom: 65%;
+    right: 10%;
+}
+
+/* Strikers */
+
+.player.LS {
+    bottom: 75%;
+    left: 25%;
+}
+
+.player.ST {
+    bottom: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player.RS {
+    bottom: 75%;
+    right: 25%;
+}
