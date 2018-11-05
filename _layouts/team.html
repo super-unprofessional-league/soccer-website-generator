@@ -5,8 +5,13 @@ layout: page
 <!-- <link rel="stylesheet" type="text/css" href="{{"/assets/css/football-field.css" | relative_url }}">  -->
 <!-- <link rel="stylesheet" type="text/css" href="{{"/assets/css/custom-football-squad.css" | relative_url }}">  -->
 
-<h1>{{ page.team.display_name }}</h1>
+<h1>
+    <img width="20%" src='{{site.baseurl}}/assets/img/{{page.team.logo}}'/>
+    {{ page.team.display_name }}
+</h1>
 
+<p>{{ page.team.description }}</p>
+<br/>
 
 <div>
 
@@ -25,7 +30,7 @@ layout: page
     {% for player in page.team.players.starting %}
     <tr>
     <td>{{ player.number }}</td>
-    <td><a href='{{player.number}}'>{{ player.name }}</a></td>
+    <td><font color='#f55'>{{ player.name }}</font></td>
     <td>{{ player.position }}</td>
     <td>{{ player.played }}</td>
     <td>{{ player.goals }}</td>
@@ -39,7 +44,7 @@ layout: page
     {% for player in page.team.players.subs %}
     <tr>
     <td>{{ player.number }}</td>
-    <td><a href='{{player.number}}'>{{ player.name }}</a></td>
+    <td><font color='#aa1'>{{ player.name }}</font></td>
     <td>{{ player.position }}</td>
     <td>{{ player.played }}</td>
     <td>{{ player.goals }}</td>
