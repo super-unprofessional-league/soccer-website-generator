@@ -1,0 +1,18 @@
+{
+    "date": "2013/10/20/14:00",
+    "type": "semi-final",
+    "home": {
+        "key": "613111",
+        "score": 2,
+        "events": [
+            {"type": "goal", "time": 6, "player": "吉相冰"},
+            {"type": "goal", "time": 20, "player": "狄学长"}
+        ]
+    },
+    "away": {
+        "key": "610112",
+        "score": 0,
+        "events": [
+        ]
+    }
+}

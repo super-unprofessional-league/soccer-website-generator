@@ -1,12 +1,12 @@
 {
-    "date": "2013/10/17/16:00",
+    "date": "2013/11/17/14:00",
     "type": "final",
     "home": {
         "key": "613111",
         "score": 2,
         "events": [
-            {"type": "penalty", "time": 20, "player": "吉相冰"},
-            {"type": "goal", "time": 30, "player": "吉相冰"},
+            {"type": "penalty", "time": 10, "player": "吉相冰"},
+            {"type": "goal", "time": 35, "player": "吉相冰"},
             {"type": "off", "time": 40, "player": "狄学长"},
             {"type": "sub", "time": 40, "player": "吴瀚"}
         ]
@@ -15,7 +15,7 @@
         "key": "611131",
         "score": 0,
         "events": [
-            {"type": "yellow", "time": 20, "player": "placeholder"}
+            {"type": "yellow", "time": 10, "player": "somebody"}
         ]
     }
 }
