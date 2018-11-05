@@ -7,9 +7,6 @@ layout: default
 <!-- {{ page.table }} -->
 
 
-{% assign sorted = page.table | sort: "points" | reverse %}
-
-
 <table>
   <thead>
     <tr>
@@ -25,7 +22,7 @@ layout: default
     </tr>
   </thead>
   <tbody>
-    {% for team in sorted %}
+    {% for team in page.table %}
     <tr>
       <td>
         <!-- <img class='logo' src='/assets/img/{{ team.logo }}'/> -->

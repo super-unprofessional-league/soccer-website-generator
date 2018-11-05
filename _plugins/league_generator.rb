@@ -65,7 +65,7 @@ module League
 
             # team_array = (season[1]['teams'].to_a).map{|key, team| team}
 
-            sorted = (team_array.sort_by { |team| -team['table']['points'] }).map {|team| team}
+            sorted = (team_array.sort_by { |team| -team['table']['points'] })
             # puts sorted
 
             self.data['table'] = sorted
