@@ -1,0 +1,21 @@
+{
+    "date": "2012/10/19/12:30",
+    "type": "final",
+    "home": {
+        "key": "613111",
+        "score": 1,
+        "events": [
+            {"type": "goal", "time": 40, "player": "沙奔"},
+            {"type": "off", "time": 30, "player": "吉相冰"},
+            {"type": "sub", "time": 30, "player": "陈晨"}
+        ]
+    },
+    "away": {
+        "key": "611101",
+        "score": 2,
+        "events": [
+            {"type": "goal", "time": 15, "player": "周建亚"},
+            {"type": "goal", "time": 20, "player": "周建亚"}
+        ]
+    }
+}

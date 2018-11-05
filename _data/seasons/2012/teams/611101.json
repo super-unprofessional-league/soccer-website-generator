@@ -1,22 +1,22 @@
 {
-    "key": "613111",
-    "display_name": "613111大二高工",
-    "description": "健雄杯历史上最成功的队伍，参赛三次全部打入决赛，并在2013年以不败战绩夺冠",
-    "logo": "613111/logo.png",
+    "key": "611101",
+    "display_name": "611101大三机械",
+    "description": "汤红健带领的队伍",
+    "logo": "placeholder-club.jpg",
     "table": {
         "games_played": 6,
-        "wins": 4,
-        "draws": 1,
-        "loses": 1,
+        "wins": 6,
+        "draws": 0,
+        "loses": 0,
         "goals_for": 17,
         "goals_against": 3,
-        "points": 13
+        "points": 18
     },
     "players": {
         "starting": [
             {
                 "number": 1,
-                "name": "王鸣轩",
+                "name": "?",
                 "img": "placeholder-player.jpg",
                 "position": "门将",
                 "locator": "GK",
@@ -24,53 +24,53 @@
                 "goals": 0
             }
             ,{
-                "number": 37,
-                "name": "刘念泽",
+                "number": 44,
+                "name": "任晨曦",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
-                "locator": "CB",
+                "locator": "LB",
                 "played": 6,
                 "goals": 0
             }
             ,{
-                "number": 5,
-                "name": "吴瀚",
+                "number": 2,
+                "name": "邵陈希",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
-                "locator": "LB",
+                "locator": "CB",
                 "played": 3,
                 "goals": 0
             }
             ,{
-                "number": 55,
-                "name": "狄学长",
+                "number": 10,
+                "name": "董寒阳",
                 "img": "placeholder-player.jpg",
-                "position": "后卫",
-                "locator": "RB",
+                "position": "中场",
+                "locator": "LDM",
                 "played": 6,
                 "goals": 3
             }
             ,{
-                "number": 4,
-                "name": "潘登",
+                "number": 8,
+                "name": "汤红健",
                 "img": "placeholder-player.jpg",
                 "position": "中场",
-                "locator": "CM",
+                "locator": "RDM",
                 "played": 6,
                 "goals": 4
             }
             ,{
                 "number": 9,
-                "name": "沙奔",
+                "name": "章敏",
                 "img": "placeholder-player.jpg",
                 "position": "前锋",
-                "locator": "ST",
+                "locator": "RW",
                 "played": 6,
                 "goals": 2
             }
             ,{
                 "number": 31,
-                "name": "孙聪",
+                "name": "?",
                 "img": "placeholder-player.jpg",
                 "position": "中场",
                 "locator": "RM",
@@ -79,31 +79,15 @@
             }
             ,{
                 "number": 10,
-                "name": "吉相冰",
+                "name": "周建亚",
                 "img": "placeholder-player.jpg",
                 "position": "前锋",
-                "locator": "LM",
+                "locator": "ST",
                 "played": 6,
-                "goals": 10
+                "goals": 11
             }
         ],
         "subs": [
-            {
-                "number": 3,
-                "name": "朱思宇",
-                "img": "placeholder-player.jpg",
-                "position": "后卫",
-                "played": 1,
-                "goals": 0
-            }
-            ,{
-                "number": 11,
-                "name": "陈晨",
-                "img": "placeholder-player.jpg",
-                "position": "前锋",
-                "played": 1,
-                "goals": 0
-            }
         ]
     }
 }
