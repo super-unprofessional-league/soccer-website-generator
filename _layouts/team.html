@@ -2,7 +2,8 @@
 layout: page
 ---
 
-<link rel="stylesheet" type="text/css" href="{{"/assets/css/football-field.css" | relative_url }}"> 
+<!-- <link rel="stylesheet" type="text/css" href="{{"/assets/css/football-field.css" | relative_url }}">  -->
+<!-- <link rel="stylesheet" type="text/css" href="{{"/assets/css/custom-football-squad.css" | relative_url }}">  -->
 
 <h1>{{ page.team.display_name }}</h1>
 
@@ -50,9 +51,29 @@ layout: page
 </div>
 
 
-<div class="column">
-<div class="js-stage stage texture">
+<!-- <div class="column football_field_background" > -->
+<div class="column" >
+
+    <div class="football_field">
+        <img src="{{"/assets/img/field.png" | relative_url }}" />
+
+        <!-- <div class="player_icon">
+            <img width="50px" src="{{"/assets/img/placeholder-player.jpg" | relative_url }}" />
+        </div>
+
+        <div class="player_icon">
+                <img width="50px" src="{{"/assets/img/placeholder-player.jpg" | relative_url }}" />
+            </div>
+
+            <div class="player_icon">
+                    <img width="50px" src="{{"/assets/img/placeholder-player.jpg" | relative_url }}" />
+                </div> -->
+    </div>
+    
+
+<!-- <div class="js-stage stage texture">
     <div style="opacity: 1; transform: translateZ(-200px) translateY(0px);" class="js-world world">
+    <div class="js-world world">
         
         <div class="terrain js-terrain">
             <div class="field field--alt"></div>
@@ -76,9 +97,7 @@ layout: page
             <div class="field__side field__side--back"></div>
         </div>
     </div>
-
-</div>
-</div>
+</div> -->
 
 
 </div>

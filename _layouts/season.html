@@ -45,3 +45,13 @@ layout: default
     
   </tbody>
 </table>
+
+<h3>比赛</h3>
+
+{% for game in page.games_pair %}
+<a href='games/{{game[0]}}'>
+  {{ game[1].home.display_name }} {{game[1].home.score}}
+  :
+  {{ game[1].away.score }} {{game[1].away.display_name}}
+</a>
+{% endfor %}

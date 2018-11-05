@@ -1,6 +1,13 @@
+.row {
+  display: -ms-flex; display: -webkit-flex; display: flex;
+}
+
+
 .column {
   float: left;
-  width: 50%;
+  flex: 1;
+  /* width: 50%;
+  display: flex; */
 }
 
 /* Clear floats after the columns */
@@ -10,9 +17,15 @@
   clear: both;
 }
 
-* {
+
+.football_field_background {
+  background-image: url("../img/grass2.png")
+}
+
+
+/* * {
     box-sizing: border-box;
-  }
+  } */
   .test {
     overflow: hidden;
   }
@@ -20,7 +33,7 @@
     -webkit-transition: none !important;
     transition: none !important;
   }
-  .static h1 {
+  /* .static h1 {
     margin: 50px 0 15px;
     font-size: 50px;
     font-weight: 800;
@@ -35,8 +48,8 @@
     margin: 0 0 20px;
     font-size: 16px;
     color: #7f98d3;
-  }
-  .loading {
+  } */
+  /* .loading {
     position: absolute;
     top: 0;
     right: 0;
@@ -52,7 +65,7 @@
     letter-spacing: -1px;
     text-align: center;
     opacity: 0;
-  }
+  } */
   .team-list {
     position: absolute;
     left: 40px;

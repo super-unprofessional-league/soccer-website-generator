@@ -18,7 +18,7 @@
                 "number": 1,
                 "name": "王鸣轩",
                 "img": "placeholder-player.jpg",
-                "position": "GoalKeeper",
+                "position": "门将",
                 "played": 6,
                 "goals": 0
             }
@@ -26,7 +26,7 @@
                 "number": 14,
                 "name": "张伟铮",
                 "img": "placeholder-player.jpg",
-                "position": "Defender",
+                "position": "后卫",
                 "played": 4,
                 "goals": 0
             }
@@ -34,7 +34,7 @@
                 "number": 16,
                 "name": "熊宽晨",
                 "img": "placeholder-player.jpg",
-                "position": "Defender",
+                "position": "后卫",
                 "played": 6,
                 "goals": 0
             }
@@ -42,7 +42,7 @@
                 "number": 55,
                 "name": "狄学长",
                 "img": "placeholder-player.jpg",
-                "position": "Defender",
+                "position": "后卫",
                 "played": 6,
                 "goals": 6
             }
@@ -50,7 +50,7 @@
                 "number": 4,
                 "name": "潘登",
                 "img": "placeholder-player.jpg",
-                "position": "Midfielder",
+                "position": "中场",
                 "played": 6,
                 "goals": 4
             }
@@ -58,7 +58,7 @@
                 "number": 9,
                 "name": "沙奔",
                 "img": "placeholder-player.jpg",
-                "position": "Midfielder",
+                "position": "中场",
                 "played": 6,
                 "goals": 5
             }
@@ -66,7 +66,7 @@
                 "number": 10,
                 "name": "吉相冰",
                 "img": "placeholder-player.jpg",
-                "position": "Forward",
+                "position": "前锋",
                 "played": 6,
                 "goals": 7
             }
@@ -74,7 +74,7 @@
                 "number": 11,
                 "name": "陈晨",
                 "img": "placeholder-player.jpg",
-                "position": "Forward",
+                "position": "前锋",
                 "played": 3,
                 "goals": 0
             }
@@ -84,7 +84,7 @@
                 "number": 31,
                 "name": "孙聪",
                 "img": "placeholder-player.jpg",
-                "position": "Midfielder",
+                "position": "中场",
                 "played": 1,
                 "goals": 0
             }
@@ -92,7 +92,7 @@
                 "number": 5,
                 "name": "吴瀚",
                 "img": "placeholder-player.jpg",
-                "position": "Defender",
+                "position": "后卫",
                 "played": 3,
                 "goals": 0
             }
@@ -100,7 +100,7 @@
                 "number": 3,
                 "name": "朱思宇",
                 "img": "placeholder-player.jpg",
-                "position": "Defender",
+                "position": "后卫",
                 "played": 1,
                 "goals": 0
             }
@@ -108,7 +108,7 @@
                 "number": 37,
                 "name": "刘念泽",
                 "img": "placeholder-player.jpg",
-                "position": "Defender",
+                "position": "后卫",
                 "played": 0,
                 "goals": 0
             }

@@ -16,9 +16,28 @@ module League
         end
     end
 
+    class GamePage < Jekyll::Page
+        def initialize(site, base, dir, game)
+            @site = site
+            @base = base
+            @dir = dir
+            @name = 'index.html'
+
+            self.process(@name)
+            self.read_yaml(File.join(base, '_layouts'), 'game.html')
+            
+
+            self.data['game'] = game
+            # self.data['home_team'] = home_team
+            # self.data['away_team'] = away_team
+
+            
+        end
+    end
+
     class SeasonPage < Jekyll::Page
     # class SeasonPage < Jekyll::PageWithoutAFile
-        def initialize(site, base, dir, season, team_array)
+        def initialize(site, base, dir, season, team_array, games_pair)
             @site = site
             @base = base
             @dir = dir
@@ -51,6 +70,8 @@ module League
 
             self.data['table'] = sorted
 
+            self.data['games_pair'] = games_pair
+
         end
     end
 
@@ -63,14 +84,42 @@ module League
                 # convert nilClass to array
                 team_array = (season[1]['teams'].to_a).map{|key, team| team}
 
+                team_hash = Hash.new
+
                 # site['team_pages'] = []
                 # team pages
                 team_array.each do |team|
+                    team_hash[team['key']] = team
                     site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], team['key']), team)
                 end
 
+                # game pages
+                # game_hash = Hash.new{ (season[1]['games'].to_a).map{|key, game| game_hash[key] = game} }
+
+                games_pair = season[1]['games'].to_a
+
+                # games_hash = Hash.new
+                # games_pair.map{|key, game| games_hash[key] = game}
+                
+                
+                # puts game_array
+
+                games_pair.each do |key, game|
+                    # games_hash[key] = game
+
+                    home_team = team_hash[game['home']['key']]
+                    away_team = team_hash[game['away']['key']]
+
+                    game['home']['display_name'] = home_team['display_name']
+                    game['away']['display_name'] = away_team['display_name']
+                    # puts home_team
+                    site.pages << GamePage.new(site, site.source, File.join('seasons', season[0], 'games', key), game)
+                end
+
+                # puts games_hash
+                # puts games_pair
                 # season table page
-                site.pages << SeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_array)
+                site.pages << SeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_array, games_pair)
             end
         end
     end
