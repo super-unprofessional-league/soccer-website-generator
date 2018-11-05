@@ -1,0 +1,19 @@
+{
+    "date": "2013/09/08/13:00",
+    "type": "group-2",
+    "home": {
+        "key": "613111",
+        "score": 2,
+        "events": [
+            {"type": "goal", "time": 26, "player": "狄学长"},
+            {"type": "goal", "time": 34, "player": "狄学长"}
+        ]
+    },
+    "away": {
+        "key": "610121",
+        "score": 1,
+        "events": [
+            {"type": "goal", "time": 10, "player": "胡煜明"}
+        ]
+    }
+}

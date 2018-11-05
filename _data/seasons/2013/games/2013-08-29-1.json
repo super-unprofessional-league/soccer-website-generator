@@ -1,0 +1,25 @@
+{
+    "date": "2013/08/29/16:40",
+    "type": "group-1",
+    "home": {
+        "key": "613111",
+        "score": 9,
+        "events": [
+            {"type": "goal", "time": 5, "player": "狄学长"},
+            {"type": "goal", "time": 10, "player": "沙奔"},
+            {"type": "goal", "time": 15, "player": "狄学长"},
+            {"type": "goal", "time": 20, "player": "沙奔"},
+            {"type": "goal", "time": 25, "player": "沙奔"},
+            {"type": "goal", "time": 30, "player": "潘登"},
+            {"type": "goal", "time": 35, "player": "狄学长"},
+            {"type": "goal", "time": 40, "player": "潘登"},
+            {"type": "goal", "time": 45, "player": "吉相冰"}
+        ]
+    },
+    "away": {
+        "key": "610122",
+        "score": 0,
+        "events": [
+        ]
+    }
+}

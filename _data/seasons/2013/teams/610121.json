@@ -1,0 +1,15 @@
+{
+    "key": "610121",
+    "display_name": "610121大二机电",
+    "description": "胡煜明抗着前进的球队",
+    "logo": "placeholder-club.jpg",
+    "table": {
+        "games_played": 3,
+        "wins": 2,
+        "draws": 0,
+        "loses": 1,
+        "goals_for": 5,
+        "goals_against": 5,
+        "points": 6
+    }
+}

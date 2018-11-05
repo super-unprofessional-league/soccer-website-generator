@@ -1,0 +1,19 @@
+{
+    "date": "2013/10/21/14:00",
+    "type": "semi-final",
+    "home": {
+        "key": "610131",
+        "score": 0,
+        "events": [
+        ]
+    },
+    "away": {
+        "key": "610111",
+        "score": 3,
+        "events": [
+            {"type": "goal", "time": 5, "player": "胡江南"},
+            {"type": "goal", "time": 30, "player": "胡江南"},
+            {"type": "goal", "time": 40, "player": "胡江南"}
+        ]
+    }
+}
