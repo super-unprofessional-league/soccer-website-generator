@@ -5,9 +5,9 @@
         "key": "613111",
         "score": 1,
         "events": [
-            {"type": "goal", "time": 40, "player": "沙奔"},
             {"type": "off", "time": 30, "player": "吉相冰"},
-            {"type": "sub", "time": 30, "player": "陈晨"}
+            {"type": "sub", "time": 30, "player": "陈晨"},
+            {"type": "goal", "time": 40, "player": "沙奔"}
         ]
     },
     "away": {
