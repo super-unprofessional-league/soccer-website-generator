@@ -5,8 +5,10 @@
         "key": "613111",
         "score": 2,
         "events": [
-            {"type": "penalty", "time": 20, "player": "屌兵"},
-            {"type": "goal", "time": 40, "player": "屌兵"}
+            {"type": "penalty", "time": 20, "player": "吉相冰"},
+            {"type": "goal", "time": 30, "player": "吉相冰"},
+            {"type": "off", "time": 40, "player": "狄学长"},
+            {"type": "sub", "time": 40, "player": "吴瀚"}
         ]
     },
     "away": {

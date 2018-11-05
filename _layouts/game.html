@@ -4,14 +4,44 @@ layout: page
 
 <div class="row">
     <div class="column" align="right">
-        <h2>{{ page.game.home.display_name }}</h2>
+        <h2>
+            <a href='../../{{page.game.home.key}}'>
+                {{ page.game.home.display_name }}
+            </a>
+        </h2>
+        <br/>
+        <br/>
+
+        {% for event in page.game.home.events %}
+        <p>
+            <img width="30px" src="{{site.baseurl}}/assets/img/icon/{{event.type}}.png" />
+            {{event.time}}'  
+            {{event.player}}
+        </p>
+        {% endfor %}
     </div>
 
     <div class="column" align="center">
         <h2> {{ page.game.home.score }} : {{ page.game.away.score }} </h2>
+        <p>{{ page.game.type }}</p>
+        <p>{{ page.game.date }}</p>
     </div>
 
     <div class="column" align="left">
-        <h2>{{ page.game.away.display_name }}</h2>
+        <h2>
+            <a href='../../{{page.game.away.key}}'>
+                {{ page.game.away.display_name }}
+            </a>
+        </h2>
+        <br/>
+        <br/>
+
+        {% for event in page.game.away.events %}
+        <p>
+            <img width="30px" src="{{site.baseurl}}/assets/img/icon/{{event.type}}.png" />
+            {{event.time}}'  
+            {{event.player}}
+        </p>
+        {% endfor %}
     </div>
 </div>
