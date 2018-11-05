@@ -57,10 +57,18 @@ layout: page
     <div class="football_field">
         <img src="{{"/assets/img/field.svg" | relative_url }}" />
 
-        <div class="player LB">
+
+        <!-- <div class="player LB">
             <img src="{{"/assets/img/placeholder-player.jpg" | relative_url }}" />
             <p>狄学长</p>
-        </div>
+        </div> -->
+
+        {% for player in page.team.players.starting %}
+            <div class="player {{player.locator}}">
+                <img src="{{site.baseurl}}/assets/img/{{player.img}}" />
+                <p>{{player.number}} {{player.name}}</p>
+            </div>
+        {% endfor %}
 
     </div>
     
