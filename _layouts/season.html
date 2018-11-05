@@ -29,7 +29,7 @@ layout: default
     <tr>
       <td>
         <!-- <img class='logo' src='/assets/img/{{ team.logo }}'/> -->
-        <img width=30px src='{{site.baseurl}}/assets/img/{{ team.logo }}'/>
+        <img width="30px" src='{{site.baseurl}}/assets/img/{{ team.logo }}'/>
         <a href='{{team.key}}'>{{ team.display_name }}</a>
       </td>
       <td>{{ team.table.games_played }}</td>
@@ -49,9 +49,15 @@ layout: default
 <h3>比赛</h3>
 
 {% for game in page.games_pair %}
+<font color="#aaa">{{game[1].type}}</font>
 <a href='games/{{game[0]}}'>
-  {{ game[1].home.display_name }} {{game[1].home.score}}
+  {{ game[1].home.display_name }}
+  <img width="30px" src='{{site.baseurl}}/assets/img/{{ game[1].home.logo }}'/>
+  {{game[1].home.score}}
   :
-  {{ game[1].away.score }} {{game[1].away.display_name}}
+  {{ game[1].away.score }}
+  <img width="30px" src='{{site.baseurl}}/assets/img/{{ game[1].away.logo }}'/>
+  {{game[1].away.display_name}}
 </a>
+<br/>
 {% endfor %}
