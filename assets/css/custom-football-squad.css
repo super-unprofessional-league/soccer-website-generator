@@ -4,12 +4,17 @@
 
 .column {
     float: left;
-    /* width: 50%; */
+    width: 50%;
     
     flex: 1;
 }
 
-
+@media all and (max-width: 600px) {
+    .column {
+        float: none;
+        width: 100%;
+    }
+}
   
 /* Clear floats after the columns */
 .row:after {
