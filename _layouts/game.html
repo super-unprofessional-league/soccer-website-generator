@@ -4,6 +4,8 @@ layout: page
 
 <div class="row">
     <div class="column" align="right">
+
+        <img width="70%" src='{{site.baseurl}}/assets/img/{{page.game.home.logo}}'/>
         <h2>
             <a href='../../{{page.game.home.key}}'>
                 {{ page.game.home.display_name }}
@@ -22,12 +24,13 @@ layout: page
     </div>
 
     <div class="column" align="center">
-        <h2> {{ page.game.home.score }} : {{ page.game.away.score }} </h2>
         <p>{{ page.game.type }}</p>
         <p>{{ page.game.date }}</p>
+        <h2> {{ page.game.home.score }} : {{ page.game.away.score }} </h2>
     </div>
 
     <div class="column" align="left">
+        <img width="70%" src='{{site.baseurl}}/assets/img/{{page.game.away.logo}}'/>
         <h2>
             <a href='../../{{page.game.away.key}}'>
                 {{ page.game.away.display_name }}

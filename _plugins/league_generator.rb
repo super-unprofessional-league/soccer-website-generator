@@ -111,7 +111,9 @@ module League
                     away_team = team_hash[game['away']['key']]
 
                     game['home']['display_name'] = home_team['display_name']
+                    game['home']['logo'] = home_team['logo']
                     game['away']['display_name'] = away_team['display_name']
+                    game['away']['logo'] = away_team['logo']
                     # puts home_team
                     site.pages << GamePage.new(site, site.source, File.join('seasons', season[0], 'games', key), game)
                 end

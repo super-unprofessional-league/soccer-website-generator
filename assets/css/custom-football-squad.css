@@ -24,11 +24,33 @@
 }
 
 .football_field {
-    display: -ms-flex; display: -webkit-flex; display: flex;
-
-    align-items: center;
+    position: relative;
 }
 
-.player_icon {
-    flex: 1
+.player {
+    position: absolute;
+    width: 20%;
+}
+
+.player img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 2px solid #cccccc;
+    width: 50%;
+}
+
+.player p {
+    text-align: center;
+}
+
+.player.LB {
+    bottom: 20%;
+    left: 5%;
+}
+
+.player.RB {
+    bottom: 20%;
+    right: 5%;
 }
