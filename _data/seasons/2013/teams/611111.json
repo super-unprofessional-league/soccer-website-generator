@@ -1,41 +1,40 @@
 {
-    "key": "613111",
-    "display_name": "613111大三高工",
-    "description": "健雄杯历史上最成功的队伍，参赛三次全部打入决赛，并在2013年以不败战绩夺冠",
-    "logo": "613111/logo.png",
-    "image": "613111/team.jpg",
+    "key": "611111",
+    "display_name": "611111大三机械",
+    "description": "由于周林峰是体育部的吹得很凶的队伍",
+    "logo": "placeholder-club.jpg",
     "table": {
-        "games_played": 6,
-        "wins": 6,
-        "draws": 0,
-        "loses": 0,
-        "goals_for": 19,
-        "goals_against": 1,
-        "points": 18
+        "games_played": 4,
+        "wins": 0,
+        "draws": 2,
+        "loses": 1,
+        "goals_for": 1,
+        "goals_against": 2,
+        "points": 2
     },
     "players": {
         "starting": [
             {
                 "number": 1,
-                "name": "王鸣轩",
+                "name": "姜伟海",
                 "img": "placeholder-player.jpg",
                 "position": "门将",
                 "locator": "GK",
-                "played": 6,
+                "played": 3,
                 "goals": 0
             }
             ,{
-                "number": 14,
-                "name": "张伟铮",
+                "number": 4,
+                "name": "赵亮",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
-                "locator": "RCB",
-                "played": 4,
+                "locator": "CB",
+                "played": 2,
                 "goals": 0
             }
             ,{
-                "number": 16,
-                "name": "熊宽晨",
+                "number": 6,
+                "name": "黄友益",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
                 "locator": "LCB",
@@ -44,7 +43,7 @@
             }
             ,{
                 "number": 55,
-                "name": "狄学长",
+                "name": "丁奕文",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
                 "locator": "RWB",
