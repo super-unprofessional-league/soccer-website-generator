@@ -5,17 +5,20 @@
         "key": "613111",
         "score": 1,
         "events": [
+            {"type": "off", "time": 26, "player": "孙聪"},
+            {"type": "sub", "time": 26, "player": "陈晨"},
             {"type": "off", "time": 30, "player": "吉相冰"},
-            {"type": "sub", "time": 30, "player": "陈晨"},
-            {"type": "goal", "time": 40, "player": "沙奔"}
+            {"type": "sub", "time": 30, "player": "张伟铮"},
+            {"type": "yellow", "time": 42, "player": "潘登"},
+            {"type": "goal", "time": 49, "player": "沙奔"}
         ]
     },
     "away": {
         "key": "611101",
         "score": 2,
         "events": [
-            {"type": "goal", "time": 15, "player": "周建亚"},
-            {"type": "goal", "time": 20, "player": "周建亚"}
+            {"type": "goal", "time": 7, "player": "周建亚"},
+            {"type": "goal", "time": 23, "player": "周建亚"}
         ]
     }
 }
