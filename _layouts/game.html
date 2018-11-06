@@ -51,3 +51,13 @@ layout: page
         {% endfor %}
     </div>
 </div>
+
+{% if page.game.images %}
+<div class="row">
+    <div class="column" align="center">
+        {% for url in page.game.images %}
+        <img src="{{site.baseurl}}/assets/img/games/{{url}}" />
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
