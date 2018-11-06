@@ -27,6 +27,9 @@ layout: page
         <p>{{ page.game.type }}</p>
         <p>{{ page.game.date }}</p>
         <h2> {{ page.game.home.score }} : {{ page.game.away.score }} </h2>
+        {% if page.game.extra %}
+        <p>{{page.game.extra}}</p>
+        {% endif %}
     </div>
 
     <div class="column" align="left">
