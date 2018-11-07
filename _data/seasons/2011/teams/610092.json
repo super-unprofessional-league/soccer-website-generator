@@ -1,0 +1,93 @@
+{
+    "key": "610092",
+    "display_name": "610092大三电二",
+    "description": "吕力兢黄金一代",
+    "logo": "placeholder-club.jpg",
+    "table": {
+        "games_played": 6,
+        "wins": 6,
+        "draws": 0,
+        "loses": 0,
+        "goals_for": 25,
+        "goals_against": 3,
+        "points": 18
+    },
+    "players": {
+        "starting": [
+            {
+                "number": 1,
+                "name": "?",
+                "img": "placeholder-player.jpg",
+                "position": "门将",
+                "locator": "GK",
+                "played": 6,
+                "goals": 0
+            }
+            ,{
+                "number": 2,
+                "name": "刘民航",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "LCB",
+                "played": 6,
+                "goals": 1
+            }
+            ,{
+                "number": 3,
+                "name": "？",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "RCB",
+                "played": 6,
+                "goals": 0
+            }
+            ,{
+                "number": 10,
+                "name": "潘牧野",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "LDM",
+                "played": 6,
+                "goals": 4
+            }
+            ,{
+                "number": 5,
+                "name": "张泽宇",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "RDM",
+                "played": 6,
+                "goals": 5
+            }
+            ,{
+                "number": 77,
+                "name": "袁金戈",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "LW",
+                "played": 6,
+                "goals": 4
+            }
+            ,{
+                "number": 7,
+                "name": "吕力兢",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "CAM",
+                "played": 6,
+                "goals": 7
+            }
+            ,{
+                "number": 19,
+                "name": "李茂",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "ST",
+                "played": 6,
+                "goals": 9
+            }
+        ],
+        "subs": [
+        ]
+    }
+}

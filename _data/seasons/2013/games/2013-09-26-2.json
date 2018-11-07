@@ -17,8 +17,8 @@
         "score": 3,
         "events": [
             {"type": "goal", "time": 10, "player": "周健"},
-            {"type": "goal", "time": 20, "player": "?"},
-            {"type": "goal", "time": 30, "player": "?"}
+            {"type": "goal", "time": 20, "player": "陈鑫"},
+            {"type": "goal", "time": 30, "player": "都之夏"}
         ]
     }
 }

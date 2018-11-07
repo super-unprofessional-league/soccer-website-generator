@@ -58,7 +58,7 @@
                 "position": "中场",
                 "locator": "CDM",
                 "played": 6,
-                "goals": 4
+                "goals": 3
             }
             ,{
                 "number": 9,
@@ -67,7 +67,7 @@
                 "position": "中场",
                 "locator": "LCM",
                 "played": 6,
-                "goals": 5
+                "goals": 4
             }
             ,{
                 "number": 10,
@@ -76,7 +76,7 @@
                 "position": "前锋",
                 "locator": "LW",
                 "played": 6,
-                "goals": 7
+                "goals": 6
             }
             ,{
                 "number": 11,

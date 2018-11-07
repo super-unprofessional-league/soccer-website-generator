@@ -57,7 +57,7 @@
                 "position": "中场",
                 "locator": "CDM",
                 "played": 4,
-                "goals": 0
+                "goals": 1
             }
             ,{
                 "number": 13,
@@ -66,7 +66,7 @@
                 "position": "中场",
                 "locator": "CM",
                 "played": 4,
-                "goals": 2
+                "goals": 1
             }
             ,{
                 "number": 10,
@@ -84,7 +84,7 @@
                 "position": "前锋",
                 "locator": "RS",
                 "played": 4,
-                "goals": 1
+                "goals": 0
             }
         ],
         "subs": [
@@ -94,7 +94,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "前锋",
                 "played": 1,
-                "goals": 0
+                "goals": 1
             }
             ,{
                 "number": 55,
