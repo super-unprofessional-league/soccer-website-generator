@@ -1,0 +1,23 @@
+{
+    "date": "2013/09/15/09:00",
+    "type": "group-r2",
+    "images": [
+        "2013-09-15-1/1.jpg",
+        "2013-09-15-1/2.jpg"
+    ],
+    "home": {
+        "key": "613121",
+        "score": 2,
+        "events": [
+            {"type": "goal", "time": 10, "player": "薛弘毅"},
+            {"type": "penalty", "time": 20, "player": "薛弘毅"}
+        ]
+    },
+    "away": {
+        "key": "610113",
+        "score": 1,
+        "events": [
+            {"type": "goal", "time": 30, "player": "?"}
+        ]
+    }
+}

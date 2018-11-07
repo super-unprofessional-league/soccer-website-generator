@@ -6,11 +6,11 @@
     "image": "613111/team.jpg",
     "table": {
         "games_played": 6,
-        "wins": 6,
-        "draws": 0,
+        "wins": 5,
+        "draws": 1,
         "loses": 0,
         "goals_for": 19,
-        "goals_against": 1,
+        "goals_against": 2,
         "points": 18
     },
     "players": {

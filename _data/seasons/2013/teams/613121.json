@@ -1,0 +1,15 @@
+{
+    "key": "613121",
+    "display_name": "613121大二高工",
+    "description": "沈圣薛弘毅组织下的队伍",
+    "logo": "placeholder-club.jpg",
+    "table": {
+        "games_played": 3,
+        "wins": 1,
+        "draws": 1,
+        "loses": 1,
+        "goals_for": 2,
+        "goals_against": 4,
+        "points": 4
+    }
+}

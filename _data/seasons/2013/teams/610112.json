@@ -4,12 +4,114 @@
     "description": "拥有周健，刘畅等院队好手",
     "logo": "placeholder-club.jpg",
     "table": {
-        "games_played": 3,
+        "games_played": 4,
         "wins": 2,
-        "draws": 0,
+        "draws": 1,
         "loses": 1,
         "goals_for": 5,
-        "goals_against": 5,
-        "points": 6
+        "goals_against": 3,
+        "points": 7
+    },
+    "players": {
+        "starting": [
+            {
+                "number": 77,
+                "name": "刘超凡",
+                "img": "placeholder-player.jpg",
+                "position": "门将",
+                "locator": "GK",
+                "played": 4,
+                "goals": 0
+            }
+            ,{
+                "number": 2,
+                "name": "刘畅",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "RWB",
+                "played": 4,
+                "goals": 0
+            }
+            ,{
+                "number": 17,
+                "name": "李隆胜",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "LCB",
+                "played": 4,
+                "goals": 0
+            }
+            ,{
+                "number": 25,
+                "name": "孟诗哲",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "RCB",
+                "played": 4,
+                "goals": 0
+            }
+            ,{
+                "number": 3,
+                "name": "都之夏",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "CDM",
+                "played": 4,
+                "goals": 0
+            }
+            ,{
+                "number": 13,
+                "name": "周健",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "CM",
+                "played": 4,
+                "goals": 2
+            }
+            ,{
+                "number": 10,
+                "name": "陈策",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "LS",
+                "played": 4,
+                "goals": 1
+            }
+            ,{
+                "number": 7,
+                "name": "杨新逸",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "RS",
+                "played": 4,
+                "goals": 1
+            }
+        ],
+        "subs": [
+            {
+                "number": 28,
+                "name": "陈鑫",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "played": 1,
+                "goals": 0
+            }
+            ,{
+                "number": 55,
+                "name": "佘曦超",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "played": 1,
+                "goals": 0
+            }
+            ,{
+                "number": 31,
+                "name": "郑义",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "played": 1,
+                "goals": 0
+            }
+        ]
     }
 }

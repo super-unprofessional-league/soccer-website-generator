@@ -1,0 +1,18 @@
+{
+    "date": "2013/09/02/16:00",
+    "type": "group-r2",
+    "home": {
+        "key": "610111",
+        "score": 2,
+        "events": [
+            {"type": "goal", "time": 10, "player": "胡江南"},
+            {"type": "goal", "time": 20, "player": "胡江南"}
+        ]
+    },
+    "away": {
+        "key": "610122",
+        "score": 0,
+        "events": [
+        ]
+    }
+}

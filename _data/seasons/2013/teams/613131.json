@@ -1,6 +1,6 @@
 {
-    "key": "610131",
-    "display_name": "610131大一电一",
+    "key": "613131",
+    "display_name": "613131大一高工",
     "description": "?",
     "logo": "placeholder-club.jpg",
     "table": {
@@ -9,7 +9,7 @@
         "draws": 0,
         "loses": 1,
         "goals_for": 0,
-        "goals_against": 3,
+        "goals_against": 1,
         "points": 0
     }
 }

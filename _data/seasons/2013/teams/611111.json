@@ -1,16 +1,16 @@
 {
     "key": "611111",
     "display_name": "611111大三机械",
-    "description": "由于周林峰是体育部的吹得很凶的队伍",
+    "description": "由于周林峰是体育部部长所以吹得很凶的队伍",
     "logo": "placeholder-club.jpg",
     "table": {
         "games_played": 4,
-        "wins": 0,
+        "wins": 1,
         "draws": 2,
         "loses": 1,
-        "goals_for": 1,
+        "goals_for": 2,
         "goals_against": 2,
-        "points": 2
+        "points": 5
     },
     "players": {
         "starting": [
@@ -20,16 +20,16 @@
                 "img": "placeholder-player.jpg",
                 "position": "门将",
                 "locator": "GK",
-                "played": 3,
+                "played": 4,
                 "goals": 0
             }
             ,{
-                "number": 4,
+                "number": 5,
                 "name": "赵亮",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
                 "locator": "CB",
-                "played": 2,
+                "played": 3,
                 "goals": 0
             }
             ,{
@@ -38,88 +38,56 @@
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
                 "locator": "LCB",
-                "played": 6,
-                "goals": 0
+                "played": 4,
+                "goals": 1
             }
             ,{
-                "number": 55,
+                "number": 2,
                 "name": "丁奕文",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
                 "locator": "RWB",
-                "played": 6,
-                "goals": 6
+                "played": 4,
+                "goals": 0
             }
             ,{
                 "number": 4,
-                "name": "潘登",
+                "name": "徐元",
                 "img": "placeholder-player.jpg",
                 "position": "中场",
-                "locator": "CDM",
-                "played": 6,
-                "goals": 4
+                "locator": "LDM",
+                "played": 4,
+                "goals": 0
             }
             ,{
-                "number": 9,
-                "name": "沙奔",
+                "number": 8,
+                "name": "薛昊天",
                 "img": "placeholder-player.jpg",
                 "position": "中场",
-                "locator": "LCM",
-                "played": 6,
-                "goals": 5
+                "locator": "RDM",
+                "played": 3,
+                "goals": 0
             }
             ,{
-                "number": 10,
-                "name": "吉相冰",
+                "number": 7,
+                "name": "周林峰",
                 "img": "placeholder-player.jpg",
                 "position": "前锋",
                 "locator": "LW",
-                "played": 6,
-                "goals": 7
+                "played": 4,
+                "goals": 1
             }
             ,{
-                "number": 11,
-                "name": "陈晨",
+                "number": 10,
+                "name": "李昱林",
                 "img": "placeholder-player.jpg",
                 "position": "前锋",
                 "locator": "ST",
-                "played": 3,
+                "played": 4,
                 "goals": 0
             }
         ],
         "subs": [
-            {
-                "number": 31,
-                "name": "孙聪",
-                "img": "placeholder-player.jpg",
-                "position": "中场",
-                "played": 1,
-                "goals": 0
-            }
-            ,{
-                "number": 5,
-                "name": "吴瀚",
-                "img": "placeholder-player.jpg",
-                "position": "后卫",
-                "played": 3,
-                "goals": 0
-            }
-            ,{
-                "number": 3,
-                "name": "朱思宇",
-                "img": "placeholder-player.jpg",
-                "position": "后卫",
-                "played": 1,
-                "goals": 0
-            }
-            ,{
-                "number": 37,
-                "name": "刘念泽",
-                "img": "placeholder-player.jpg",
-                "position": "后卫",
-                "played": 0,
-                "goals": 0
-            }
         ]
     }
 }

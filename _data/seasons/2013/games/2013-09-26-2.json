@@ -1,0 +1,24 @@
+{
+    "date": "2013/09/26/12:15",
+    "type": "group-r3",
+    "images": [
+        "2013-09-26-2/1.jpg",
+        "2013-09-26-2/2.jpg",
+        "2013-09-26-2/3.jpg"
+    ],
+    "home": {
+        "key": "613121",
+        "score": 0,
+        "events": [
+        ]
+    },
+    "away": {
+        "key": "610112",
+        "score": 3,
+        "events": [
+            {"type": "goal", "time": 10, "player": "周健"},
+            {"type": "goal", "time": 20, "player": "?"},
+            {"type": "goal", "time": 30, "player": "?"}
+        ]
+    }
+}

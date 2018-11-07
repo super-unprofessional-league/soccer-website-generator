@@ -1,0 +1,21 @@
+{
+    "date": "2013/11/15/12:00",
+    "type": "semi-final",
+    "home": {
+        "key": "611131",
+        "score": 5,
+        "events": [
+            {"type": "goal", "time": 5, "player": "李睿"},
+            {"type": "goal", "time": 10, "player": "李睿"},
+            {"type": "goal", "time": 20, "player": "李睿"},
+            {"type": "goal", "time": 30, "player": "李睿"},
+            {"type": "goal", "time": 35, "player": "刘明明"}
+        ]
+    },
+    "away": {
+        "key": "610132",
+        "score": 0,
+        "events": [
+        ]
+    }
+}

@@ -5,11 +5,11 @@
     "logo": "placeholder-club.jpg",
     "table": {
         "games_played": 3,
-        "wins": 2,
-        "draws": 0,
-        "loses": 1,
-        "goals_for": 5,
-        "goals_against": 5,
-        "points": 6
+        "wins": 0,
+        "draws": 1,
+        "loses": 2,
+        "goals_for": 1,
+        "goals_against": 4,
+        "points": 1
     }
 }

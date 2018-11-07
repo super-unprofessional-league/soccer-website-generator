@@ -3,13 +3,92 @@
     "display_name": "611131大一机械",
     "description": "以刘明明为核心的球队",
     "logo": "placeholder-club.jpg",
+    "image": "611131/team.jpg",
     "table": {
         "games_played": 3,
         "wins": 2,
         "draws": 0,
         "loses": 1,
-        "goals_for": 5,
-        "goals_against": 5,
+        "goals_for": 6,
+        "goals_against": 2,
         "points": 6
+    },
+    "players": {
+        "starting": [
+            {
+                "number": 98,
+                "name": "杨宇宸",
+                "img": "placeholder-player.jpg",
+                "position": "门将",
+                "locator": "GK",
+                "played": 3,
+                "goals": 0
+            }
+            ,{
+                "number": 12,
+                "name": "孙一洲",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "LCB",
+                "played": 3,
+                "goals": 0
+            }
+            ,{
+                "number": 6,
+                "name": "凌晨",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "RB",
+                "played": 3,
+                "goals": 0
+            }
+            ,{
+                "number": 5,
+                "name": "宋宇遥",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "RDM",
+                "played": 3,
+                "goals": 0
+            }
+            ,{
+                "number": 18,
+                "name": "刘明明",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "CM",
+                "played": 3,
+                "goals": 2
+            }
+            ,{
+                "number": 21,
+                "name": "高峥",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "LW",
+                "played": 3,
+                "goals": 0
+            }
+            ,{
+                "number": 7,
+                "name": "李睿",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "RW",
+                "played": 3,
+                "goals": 4
+            }
+            ,{
+                "number": 8,
+                "name": "李浩",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "ST",
+                "played": 3,
+                "goals": 0
+            }
+        ],
+        "subs": [
+        ]
     }
 }

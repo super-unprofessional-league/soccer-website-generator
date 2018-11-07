@@ -1,0 +1,19 @@
+{
+    "date": "2013/10/15/15:45",
+    "type": "1/4-final",
+    "home": {
+        "key": "611111",
+        "score": 1,
+        "events": [
+            {"type": "goal", "time": 43, "player": "周林峰"}
+        ]
+    },
+    "away": {
+        "key": "610132",
+        "score": 2,
+        "events": [
+            {"type": "goal", "time": 15, "player": "颜兵健"},
+            {"type": "goal", "time": 20, "player": "王凯"}
+        ]
+    }
+}
