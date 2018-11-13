@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   东南大学吴健雄学院健雄杯足球赛，虽然是菜鸡互啄，但存放着我们美好青春的赛事
 baseurl: "/super-unprofessional-league-website" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+lang: zh
 
 # Build settings
 markdown: kramdown
