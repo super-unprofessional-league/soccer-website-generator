@@ -17,7 +17,7 @@
             {
                 "number": 1,
                 "name": "王鸣轩",
-                "img": "placeholder-player.jpg",
+                "img": "613111/wmx.jpg",
                 "position": "门将",
                 "locator": "GK",
                 "played": 6,
@@ -26,7 +26,7 @@
             ,{
                 "number": 37,
                 "name": "刘念泽",
-                "img": "placeholder-player.jpg",
+                "img": "613111/lnz.jpg",
                 "position": "后卫",
                 "locator": "CB",
                 "played": 6,
@@ -35,7 +35,7 @@
             ,{
                 "number": 5,
                 "name": "吴瀚",
-                "img": "placeholder-player.jpg",
+                "img": "613111/wh.jpg",
                 "position": "后卫",
                 "locator": "LB",
                 "played": 3,
@@ -44,7 +44,7 @@
             ,{
                 "number": 55,
                 "name": "狄学长",
-                "img": "placeholder-player.jpg",
+                "img": "613111/ss.jpg",
                 "position": "后卫",
                 "locator": "RB",
                 "played": 6,
@@ -53,7 +53,7 @@
             ,{
                 "number": 4,
                 "name": "潘登",
-                "img": "placeholder-player.jpg",
+                "img": "613111/pd.jpg",
                 "position": "中场",
                 "locator": "CM",
                 "played": 5,
@@ -62,7 +62,7 @@
             ,{
                 "number": 9,
                 "name": "沙奔",
-                "img": "placeholder-player.jpg",
+                "img": "613111/sb.jpg",
                 "position": "前锋",
                 "locator": "ST",
                 "played": 6,
@@ -71,7 +71,7 @@
             ,{
                 "number": 31,
                 "name": "孙聪",
-                "img": "placeholder-player.jpg",
+                "img": "613111/sc.jpg",
                 "position": "中场",
                 "locator": "RM",
                 "played": 6,
@@ -80,7 +80,7 @@
             ,{
                 "number": 10,
                 "name": "吉相冰",
-                "img": "placeholder-player.jpg",
+                "img": "613111/jxb.jpg",
                 "position": "前锋",
                 "locator": "LM",
                 "played": 6,
@@ -91,7 +91,7 @@
             {
                 "number": 11,
                 "name": "陈晨",
-                "img": "placeholder-player.jpg",
+                "img": "613111/cc.jpg",
                 "position": "前锋",
                 "played": 1,
                 "goals": 0
