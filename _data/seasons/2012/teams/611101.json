@@ -1,7 +1,7 @@
 {
     "key": "611101",
     "display_name": "611101大三机械",
-    "description": "汤红健带领的队伍",
+    "description": "汤红健带领的队伍；【水蛇】周建亚令613111在决赛吃尽苦头",
     "logo": "placeholder-club.jpg",
     "table": {
         "games_played": 6,
@@ -26,7 +26,7 @@
             ,{
                 "number": 29,
                 "name": "任晨曦",
-                "img": "placeholder-player.jpg",
+                "img": "611101/rcx.jpg",
                 "position": "后卫",
                 "locator": "LB",
                 "played": 6,
@@ -44,7 +44,7 @@
             ,{
                 "number": 10,
                 "name": "董寒阳",
-                "img": "placeholder-player.jpg",
+                "img": "611101/dhy.jpg",
                 "position": "中场",
                 "locator": "LDM",
                 "played": 6,
@@ -53,7 +53,7 @@
             ,{
                 "number": 12,
                 "name": "汤红健",
-                "img": "placeholder-player.jpg",
+                "img": "611101/thj.jpg",
                 "position": "中场",
                 "locator": "RDM",
                 "played": 6,
@@ -80,7 +80,7 @@
             ,{
                 "number": 25,
                 "name": "周建亚",
-                "img": "placeholder-player.jpg",
+                "img": "611101/zjy.jpg",
                 "position": "前锋",
                 "locator": "ST",
                 "played": 6,

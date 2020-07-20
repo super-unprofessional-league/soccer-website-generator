@@ -95,6 +95,14 @@
                 "position": "前锋",
                 "played": 1,
                 "goals": 0
+            },
+            {
+                "number": 16,
+                "name": "熊宽晨",
+                "img": "613111/xkc.jpg",
+                "position": "后卫",
+                "played": 2,
+                "goals": 0
             }
         ]
     }

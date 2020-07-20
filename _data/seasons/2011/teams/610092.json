@@ -3,6 +3,7 @@
     "display_name": "610092大三电二",
     "description": "吕力兢黄金一代",
     "logo": "placeholder-club.jpg",
+    "image": "610092/team.jpg",
     "table": {
         "games_played": 6,
         "wins": 6,
@@ -24,18 +25,18 @@
                 "goals": 0
             }
             ,{
-                "number": 2,
-                "name": "刘民航",
-                "img": "placeholder-player.jpg",
+                "number": 14,
+                "name": "吴宪",
+                "img": "610092/wx.jpg",
                 "position": "后卫",
                 "locator": "LCB",
                 "played": 6,
-                "goals": 1
+                "goals": 0
             }
             ,{
-                "number": 3,
-                "name": "？",
-                "img": "placeholder-player.jpg",
+                "number": 27,
+                "name": "贾国栋",
+                "img": "610092/jgd.jpg",
                 "position": "后卫",
                 "locator": "RCB",
                 "played": 6,
@@ -44,7 +45,7 @@
             ,{
                 "number": 10,
                 "name": "潘牧野",
-                "img": "placeholder-player.jpg",
+                "img": "610092/pmy.jpg",
                 "position": "中场",
                 "locator": "LDM",
                 "played": 6,
@@ -53,7 +54,7 @@
             ,{
                 "number": 5,
                 "name": "张泽宇",
-                "img": "placeholder-player.jpg",
+                "img": "610092/zzy.jpg",
                 "position": "中场",
                 "locator": "RDM",
                 "played": 6,
@@ -62,7 +63,7 @@
             ,{
                 "number": 77,
                 "name": "袁金戈",
-                "img": "placeholder-player.jpg",
+                "img": "610092/yjg.jpg",
                 "position": "前锋",
                 "locator": "LW",
                 "played": 6,
@@ -80,7 +81,7 @@
             ,{
                 "number": 19,
                 "name": "李茂",
-                "img": "placeholder-player.jpg",
+                "img": "610092/lm.jpg",
                 "position": "前锋",
                 "locator": "ST",
                 "played": 6,
@@ -88,6 +89,20 @@
             }
         ],
         "subs": [
+            {
+                "number": 2,
+                "name": "刘民航",
+                "position": "后卫",
+                "played": 1,
+                "goals": 1
+            },
+            {
+                "number": 3,
+                "name": "高金伟",
+                "position": "后卫",
+                "played": 1,
+                "goals": 0
+            }
         ]
     }
 }
