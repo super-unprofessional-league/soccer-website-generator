@@ -46,6 +46,9 @@ layout: default
 <h3>比赛</h3>
 
 {% for game in page.games_pair %}
+{% include game_lines.html game=game season_base_url="" %}
+{% endfor %}
+<!-- {% for game in page.games_pair %}
 <font color="#aaa">{{game[1].type}}</font>
 <a href='games/{{game[0]}}'>
   {{ game[1].home.display_name }}
@@ -57,4 +60,4 @@ layout: default
   {{game[1].away.display_name}}
 </a>
 <br/>
-{% endfor %}
+{% endfor %} -->

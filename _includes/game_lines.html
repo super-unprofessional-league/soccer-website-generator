@@ -1,0 +1,11 @@
+<font color="#aaa">{{include.game[1].type}}</font>
+<a href="{{include.season_base_url}}games/{{include.game[0]}} ">
+  {{ include.game[1].home.display_name }}
+  <img width="30px" src='{{site.baseurl}}/assets/img/{{ include.game[1].home.logo }}'/>
+  {{include.game[1].home.score}}
+  :
+  {{ include.game[1].away.score }}
+  <img width="30px" src='{{site.baseurl}}/assets/img/{{ include.game[1].away.logo }}'/>
+  {{include.game[1].away.display_name}}
+</a>
+<br/>
