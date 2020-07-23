@@ -3,7 +3,7 @@ require 'json'
 module League
 
     class TeamPage < Jekyll::Page
-        def initialize(site, base, dir, team)
+        def initialize(site, base, dir, team, games_pair)
             @site = site
             @base = base
             @dir = dir
@@ -13,6 +13,7 @@ module League
             self.read_yaml(File.join(base, '_layouts'), 'team.html')
             
             self.data['team'] = team
+            self.data['games_pair'] = games_pair
         end
     end
 
@@ -86,17 +87,20 @@ module League
 
                 team_hash = Hash.new
 
+                games_pair = season[1]['games'].to_a
+
                 # site['team_pages'] = []
                 # team pages
                 team_array.each do |team|
                     team_hash[team['key']] = team
-                    site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], team['key']), team)
+                    # TODO: optimize: parse games_pair once, built team2games map
+                    site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], team['key']), team, games_pair)
                 end
 
                 # game pages
                 # game_hash = Hash.new{ (season[1]['games'].to_a).map{|key, game| game_hash[key] = game} }
 
-                games_pair = season[1]['games'].to_a
+                
 
                 # games_hash = Hash.new
                 # games_pair.map{|key, game| games_hash[key] = game}

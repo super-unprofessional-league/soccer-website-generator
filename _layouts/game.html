@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<div class="row">
+<div class="row-game">
     <div class="column" align="right">
 
         <img width="70%" src='{{site.baseurl}}/assets/img/{{page.game.home.logo}}'/>
@@ -53,7 +53,7 @@ layout: page
 </div>
 
 {% if page.game.images %}
-<div class="row">
+<div class="row-game">
     <div class="column" align="center">
         {% for url in page.game.images %}
         <img src="{{site.baseurl}}/assets/img/games/{{url}}" />
