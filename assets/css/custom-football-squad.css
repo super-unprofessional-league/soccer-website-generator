@@ -1,5 +1,12 @@
-.row {
+.row-game {
     display: -ms-flex; display: -webkit-flex; display: flex;
+}
+
+.row-game:after {
+    content: "";
+    display: table;
+    clear: both;
+    float: none;
 }
 
 .column {
@@ -8,6 +15,7 @@
     
     flex: 1;
 }
+
 
 @media all and (max-width: 600px) {
     .column {
@@ -21,6 +29,14 @@
     content: "";
     display: table;
     clear: both;
+    float: none;
+}
+
+
+.block {
+    float: none;
+    width: 100%;
+    
 }
 
 
