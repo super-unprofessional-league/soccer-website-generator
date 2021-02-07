@@ -204,21 +204,26 @@ module League
 
             groups = config['group_stage']
 
-            # puts groups.count
-            group_tables = Hash.new
+            if groups != nil
 
-            groups.each do |group_key, team_keys|
-                # simple not points version first
-                team_array = team_keys.map{|key| team_hash[key]}
-                sorted = (team_array.sort_by { |team| [ -team['table']['points'], -team['table']['goals_diff'], -team['table']['goals_for'], team['table']['goals_against'], team['table']['games_played'] ] })
-                group_tables[group_key] = sorted
+                # puts groups.count
+                group_tables = Hash.new
+
+                groups.each do |group_key, team_keys|
+                    # simple not points version first
+                    team_array = team_keys.map{|key| team_hash[key]}
+                    sorted = (team_array.sort_by { |team| [ -team['table']['points'], -team['table']['goals_diff'], -team['table']['goals_for'], team['table']['goals_against'], team['table']['games_played'] ] })
+                    group_tables[group_key] = sorted
+                end
+
+                self.data['group_tables'] = group_tables
+
             end
-
-            self.data['group_tables'] = group_tables
 
 
 
             self.data['games_pair'] = games_pair
+            self.data['rules'] = config['rules']
 
         end
     end

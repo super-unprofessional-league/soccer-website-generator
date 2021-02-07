@@ -64,8 +64,6 @@ layout: default
 </ul>
 </div>
 
-<p style="font-size:12px;">*大一球队直接进入淘汰赛</p>
-
 <h3>小组赛阶段</h3>
 
 {% for group in page.group_tables %}
@@ -106,10 +104,15 @@ layout: default
 </table>
 {% endfor %}
 
+{% if page.group_tables != nil %}
 {% for game in page.games_pair %}
 {% if game[1].type contains "group" %}
 {% include game_lines.html game=game season_base_url="" %}
 {% endif %}
 {% endfor %}
+{% endif %}
 
-<p style="font-size:12px;">*各小组前两名出线</p>
+{% if page.rules != nil %}
+&nbsp;
+<p style="font-size:12px;">{{page.rules | newline_to_br}}</p>
+{% endif %}
