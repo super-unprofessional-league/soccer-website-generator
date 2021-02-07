@@ -64,6 +64,7 @@
 
 .player p {
     text-align: center;
+    font-size: 14px;
 }
 
 /* GK */
@@ -86,7 +87,7 @@
 
 .player.LCB {
     bottom: 20%;
-    left: 20%;
+    left: 30%;
 }
 
 .player.CB {
@@ -97,7 +98,7 @@
 
 .player.RCB {
     bottom: 20%;
-    right: 20%;
+    right: 30%;
 }
 
 .player.RB {
@@ -114,7 +115,7 @@
 
 .player.LDM {
     bottom: 35%;
-    left: 25%;
+    left: 30%;
 }
 
 .player.CDM {
@@ -125,7 +126,7 @@
 
 .player.RDM {
     bottom: 35%;
-    right: 25%;
+    right: 30%;
 }
 
 /* Midfielder */
@@ -137,7 +138,7 @@
 
 .player.LCM {
     bottom: 50%;
-    left: 20%;
+    left: 30%;
 }
 
 .player.CM {
@@ -148,7 +149,7 @@
 
 .player.RCM {
     bottom: 50%;
-    right: 20%;
+    right: 30%;
 }
 
 .player.RM {
@@ -190,4 +191,19 @@
 .player.RS {
     bottom: 79%;
     right: 25%;
+}
+
+
+/* player list table */
+table {
+    text-align: center;
+}
+table.playerlist img {
+    width: 40px;
+}
+table.playerlist th {
+    padding: 0.3em;
+}
+table.playerlist td {
+    padding: 0.3em;
 }

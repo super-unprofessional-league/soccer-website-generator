@@ -17,68 +17,38 @@ layout: page
 
 
     <div class="column">
-<table>
-<thead>
-    <tr>
-    <th>号码</th>
-    <th>姓名</th>
-    <th>位置</th>
-    <th>出场</th>
-    <th>进球</th>
-    </tr>
-</thead>
-<tbody>
-    {% for player in page.team.players.starting %}
-    <tr>
-    <td>{{ player.number }}</td>
-    <td><font color='#f55'>{{ player.name }}</font></td>
-    <td>{{ player.position }}</td>
-    <td>{{ player.played }}</td>
-    <td>{{ player.goals }}</td>
-    </tr>
-    {% endfor %}
+        <table class="playerlist">
+        <thead>
+            <tr>
+            <th>号码</th>
+            <th>头像</th>
+            <th>姓名</th>
+            <th>位置</th>
+            <th>出场</th>
+            <th>进球</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in page.team.players.starting %}
+            {% include player_table_line.html player=player %}
+            {% endfor %}
 
-    <tr>
-        <td></td>
-    </tr>
+            <!-- <tr>
+                <td></td>
+            </tr> -->
 
-    {% for player in page.team.players.subs %}
-    <tr>
-    <td>{{ player.number }}</td>
-    <td><font color='#aa1'>{{ player.name }}</font></td>
-    <td>{{ player.position }}</td>
-    <td>{{ player.played }}</td>
-    <td>{{ player.goals }}</td>
-    </tr>
-    {% endfor %}
-</tbody>
-</table>
-
-</div>
-
-
-<!-- <div class="column football_field_background" > -->
-<div class="column" >
-
-    <div class="football_field">
-        <img src="{{"/assets/img/field.svg" | relative_url }}" />
-
-
-        <!-- <div class="player LB">
-            <img src="{{"/assets/img/placeholder-player.jpg" | relative_url }}" />
-            <p>狄学长</p>
-        </div> -->
-
-        {% for player in page.team.players.starting %}
-            <div class="player {{player.locator}}">
-                <img src="{{site.baseurl}}/assets/img/{{player.img}}" />
-                <p>{{player.number}} {{player.name}}</p>
-            </div>
-        {% endfor %}
+            {% for player in page.team.players.subs %}
+            {% include player_table_line.html player=player %}
+            {% endfor %}
+        </tbody>
+        </table>
 
     </div>
 
 
+<!-- Starting squad -->
+<div class="column" >
+    {% include squad.html squad=page.team.players.starting %}
 </div>
 
 </div>
