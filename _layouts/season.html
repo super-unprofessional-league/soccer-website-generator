@@ -35,7 +35,7 @@ layout: default
       <td>{{ team.table.loses }}</td>
       <td>{{ team.table.goals_for }}</td>
       <td>{{ team.table.goals_against }}</td>
-      <td>{{ team.table.goals_for | minus: team.table.goals_against }}</td>
+      <td>{{ team.table.goals_diff }}</td>
       <td>{{ team.table.points }}</td>
     </tr>
     {% endfor %}

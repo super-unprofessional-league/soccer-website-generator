@@ -36,6 +36,9 @@ layout: default
 			<div>
 			{% if game_pair[1] != nil %}
 			{% include knockout_game_link.html game=game_pair %}
+      {% if game_pair[1]['extra'] != nil %}
+      &nbsp; {{game_pair[1]['extra']}}
+      {% endif %}
 			{% else %}
 			?
 			{% endif %}
@@ -70,6 +73,14 @@ layout: default
   <thead>
     <tr>
       <th>{{group[0]}}</th>
+      <th>比赛</th>
+      <th>胜</th>
+      <th>平</th>
+      <th>负</th>
+      <th>进球</th>
+      <th>失球</th>
+      <th>净胜</th>
+      <th>积分</th>
     </tr>
   </thead>
   <tbody>
@@ -80,6 +91,14 @@ layout: default
         <img width="30px" src='{{site.baseurl}}/assets/img/{{ team.logo }}'/>
         <a href='{{team.key}}'>{{ team.display_name }}</a>
       </td>
+      <td>{{ team.table.games_played }}</td>
+      <td>{{ team.table.wins }}</td>
+      <td>{{ team.table.draws }}</td>
+      <td>{{ team.table.loses }}</td>
+      <td>{{ team.table.goals_for }}</td>
+      <td>{{ team.table.goals_against }}</td>
+      <td>{{ team.table.goals_diff }}</td>
+      <td>{{ team.table.points }}</td>
     </tr>
     {% endfor %}
     
