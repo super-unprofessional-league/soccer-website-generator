@@ -1,0 +1,93 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{"/assets/css/knockout-bracket.css" | relative_url }}">
+
+<h2>{{ page.display_name }}</h2>
+
+<!-- {{page.team_hash}} -->
+
+{% if page.winner != nil and page.winner != "" %}
+<h3>冠军</h3>
+{% include team_link.html team=page.winner %}
+{% endif %}
+
+<div class="row">&nbsp;</div>
+
+<h3>淘汰赛阶段</h3>
+
+
+<div class="tournament">
+{% for round in page.knockout_array  %}
+  <ul class="round">
+    <li class="spacer">&nbsp;</li>
+		
+    {% for game_array in round %}
+		{% assign game_pair = game_array[2] %}
+    {% assign team0 = game_array[0] %}
+    {% assign team1 = game_array[1] %}
+    
+
+		
+    
+    <li class="game game-top">{% include team_link.html team=team0 %}</li>
+		<li class="game game-spacer"></li>
+		<li class="game game-spacer-text">
+			<div>
+			{% if game_pair[1] != nil %}
+			{% include knockout_game_link.html game=game_pair %}
+			{% else %}
+			?
+			{% endif %}
+			</div>
+		</li>
+		<li class="game game-spacer"></li>
+    <li class="game game-bottom ">{% include team_link.html team=team1 %}</li>
+
+
+
+    <li class="spacer">&nbsp;</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+
+
+<ul class="round" style="width: 50px">
+{% if page.winner != nil and page.winner != "" %}
+{% include team_link.html team=page.winner %}
+{% else %}
+&nbsp;
+{% endif %}
+</ul>
+</div>
+
+
+<h3>小组赛阶段</h3>
+
+{% for group in page.group_tables %}
+<table class="block">
+  <thead>
+    <tr>
+      <th>{{group[0]}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for team in group[1] %}
+    <tr>
+      <td>
+        <!-- <img class='logo' src='/assets/img/{{ team.logo }}'/> -->
+        <img width="30px" src='{{site.baseurl}}/assets/img/{{ team.logo }}'/>
+        <a href='{{team.key}}'>{{ team.display_name }}</a>
+      </td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+{% endfor %}
+
+{% for game in page.games_pair %}
+{% if game[1].type contains "group" %}
+{% include game_lines.html game=game season_base_url="" %}
+{% endif %}
+{% endfor %}
