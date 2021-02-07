@@ -4,15 +4,6 @@
     "description": "以刘明明为核心的球队",
     "logo": "placeholder-club.jpg",
     "image": "611131/team.jpg",
-    "table": {
-        "games_played": 3,
-        "wins": 2,
-        "draws": 0,
-        "loses": 1,
-        "goals_for": 6,
-        "goals_against": 2,
-        "points": 6
-    },
     "players": {
         "starting": [
             {

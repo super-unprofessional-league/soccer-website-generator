@@ -4,15 +4,6 @@
     "description": "健雄杯历史上最成功的队伍，参赛三次全部打入决赛，并在2013年以不败战绩夺冠",
     "logo": "613111/logo.png",
     "image": "613111/team.jpg",
-    "table": {
-        "games_played": 6,
-        "wins": 5,
-        "draws": 1,
-        "loses": 0,
-        "goals_for": 19,
-        "goals_against": 2,
-        "points": 18
-    },
     "players": {
         "starting": [
             {
@@ -100,7 +91,7 @@
             ,{
                 "number": 5,
                 "name": "吴瀚",
-                "img": "613111/wmx.jpg",
+                "img": "613111/wh.jpg",
                 "position": "后卫",
                 "played": 3,
                 "goals": 0

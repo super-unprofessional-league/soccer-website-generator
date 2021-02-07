@@ -3,15 +3,6 @@
     "display_name": "611111大三机械",
     "description": "由于周林峰是体育部部长所以吹得很凶的队伍",
     "logo": "placeholder-club.jpg",
-    "table": {
-        "games_played": 4,
-        "wins": 1,
-        "draws": 2,
-        "loses": 1,
-        "goals_for": 2,
-        "goals_against": 2,
-        "points": 5
-    },
     "players": {
         "starting": [
             {

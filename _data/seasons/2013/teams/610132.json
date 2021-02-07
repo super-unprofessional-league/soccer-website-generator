@@ -2,14 +2,5 @@
     "key": "610132",
     "display_name": "610132大一电二",
     "description": "施祎辰带领的球队",
-    "logo": "placeholder-club.jpg",
-    "table": {
-        "games_played": 2,
-        "wins": 1,
-        "draws": 0,
-        "loses": 1,
-        "goals_for": 2,
-        "goals_against": 6,
-        "points": 3
-    }
+    "logo": "placeholder-club.jpg"
 }

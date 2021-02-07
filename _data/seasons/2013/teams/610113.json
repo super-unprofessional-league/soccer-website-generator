@@ -2,14 +2,5 @@
     "key": "610113",
     "display_name": "610113大三电三",
     "description": "帮张硕撑腰的球队",
-    "logo": "placeholder-club.jpg",
-    "table": {
-        "games_played": 3,
-        "wins": 0,
-        "draws": 1,
-        "loses": 2,
-        "goals_for": 1,
-        "goals_against": 4,
-        "points": 1
-    }
+    "logo": "placeholder-club.jpg"
 }

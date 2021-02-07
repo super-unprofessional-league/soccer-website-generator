@@ -2,14 +2,5 @@
     "key": "613131",
     "display_name": "613131大一高工",
     "description": "?",
-    "logo": "placeholder-club.jpg",
-    "table": {
-        "games_played": 1,
-        "wins": 0,
-        "draws": 0,
-        "loses": 1,
-        "goals_for": 0,
-        "goals_against": 1,
-        "points": 0
-    }
+    "logo": "placeholder-club.jpg"
 }

@@ -3,15 +3,6 @@
     "display_name": "610112大三电二",
     "description": "拥有周健，刘畅等院队好手",
     "logo": "placeholder-club.jpg",
-    "table": {
-        "games_played": 4,
-        "wins": 2,
-        "draws": 1,
-        "loses": 1,
-        "goals_for": 5,
-        "goals_against": 3,
-        "points": 7
-    },
     "players": {
         "starting": [
             {
