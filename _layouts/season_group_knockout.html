@@ -64,13 +64,16 @@ layout: default
 </ul>
 </div>
 
+{% if page.group_tables != nil %}
+
 <h3>小组赛阶段</h3>
 
 {% for group in page.group_tables %}
+{% assign group_key = group[0] %}
 <table class="block">
   <thead>
     <tr>
-      <th>{{group[0]}}</th>
+      <th>{{group_key}}</th>
       <th>比赛</th>
       <th>胜</th>
       <th>平</th>
@@ -99,17 +102,24 @@ layout: default
       <td>{{ team.table.points }}</td>
     </tr>
     {% endfor %}
-    
   </tbody>
 </table>
+
+{% for game in page.group_games[group_key] %}
+{% include game_lines.html game=game season_base_url="" %}
+{% endfor %}
+<br/>
+<br/>
 {% endfor %}
 
-{% if page.group_tables != nil %}
+{% comment %}
 {% for game in page.games_pair %}
 {% if game[1].type contains "group" %}
 {% include game_lines.html game=game season_base_url="" %}
 {% endif %}
 {% endfor %}
+{% endcomment %}
+
 {% endif %}
 
 {% if page.rules != nil %}

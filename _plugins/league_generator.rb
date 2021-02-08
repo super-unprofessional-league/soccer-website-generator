@@ -192,37 +192,46 @@ module League
             self.data['winner'] = config['winner'] ? team_hash[config['winner']] : nil
 
 
-            ##############################################
-
-            # Iterate games to calculate data
-            group_games_pair = games_pair.select{|key, game| game['type'].include? 'group'}
-            League.calculate_table(team_hash, group_games_pair)
-
-            ##############################################
-
             # group stage
 
             groups = config['group_stage']
 
             if groups != nil
 
+                ##############################################
+
+                # Iterate games to calculate data
+                group_games_pair = games_pair.select{|key, game| game['type'].include? 'group'}
+                League.calculate_table(team_hash, group_games_pair)
+
+                ##############################################
+
+
                 # puts groups.count
                 group_tables = Hash.new
+                group_games = Hash.new
 
                 groups.each do |group_key, team_keys|
                     # simple not points version first
                     team_array = team_keys.map{|key| team_hash[key]}
+                    team_keys_set = team_keys.to_set
                     sorted = (team_array.sort_by { |team| [ -team['table']['points'], -team['table']['goals_diff'], -team['table']['goals_for'], team['table']['goals_against'], team['table']['games_played'] ] })
                     group_tables[group_key] = sorted
+
+                    # puts team_keys_set
+                    cur_group_games_pair = group_games_pair.select{|key, game| team_keys_set.include?(game['home']['key'])}
+
+                    group_games[group_key] = cur_group_games_pair
                 end
 
                 self.data['group_tables'] = group_tables
+                self.data['group_games'] = group_games
 
             end
 
 
 
-            self.data['games_pair'] = games_pair
+            # self.data['games_pair'] = games_pair
             self.data['rules'] = config['rules']
 
         end
