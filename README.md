@@ -11,6 +11,10 @@ By shrekshao狄学长
 
 ![](docs/tournament-page.png)
 
+![](docs/team-page.png)
+
+![](docs/game-page.png)
+
 已支持以下功能：
 * 多个赛季
     - 联赛（传统积分榜，积分等数据根据比赛信息自动计算）
