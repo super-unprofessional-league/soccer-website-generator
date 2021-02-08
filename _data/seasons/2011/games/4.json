@@ -1,0 +1,23 @@
+{
+    "date": "2011/09/25/12:00",
+    "type": "1/4",
+    "images": [
+    ],
+    "home": {
+        "key": "613111",
+        "score": 5,
+        "events": [
+            {"type": "goal", "time": 10, "player": "潘登"},
+            {"type": "goal", "time": 20, "player": "沙奔"},
+            {"type": "goal", "time": 25, "player": "潘登"},
+            {"type": "goal", "time": 30, "player": "沙奔"},
+            {"type": "goal", "time": 45, "player": "吉相冰"}
+        ]
+    },
+    "away": {
+        "key": "610111",
+        "score": 0,
+        "events": [
+        ]
+    }
+}

@@ -10,14 +10,14 @@
         "key": "610112",
         "score": 2,
         "events": [
-            {"type": "goal", "time": 10, "player": "陈策"}
+            {"type": "goal", "time": 10, "player": "陈策"},
+            {"type": "owngoal", "time": 30, "player": "（乌龙）"}
         ]
     },
     "away": {
         "key": "610113",
         "score": 0,
         "events": [
-            {"type": "goal", "time": 30, "player": "（乌龙）"}
         ]
     }
 }

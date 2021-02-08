@@ -1,0 +1,84 @@
+{
+    "key": "610111",
+    "display_name": "610111大一电一",
+    "description": "610111大一电一环绕在球队核心队长胡江南周围前进",
+    "logo": "placeholder-club.jpg",
+    "players": {
+        "starting": [
+            {
+                "number": 1,
+                "name": "翟邦朝",
+                "img": "placeholder-player.jpg",
+                "position": "门将",
+                "locator": "GK",
+                "played": 5,
+                "goals": 0
+            }
+            ,{
+                "number": 7,
+                "name": "谭思远",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "RCB",
+                "played": 5,
+                "goals": 0
+            }
+            ,{
+                "number": 6,
+                "name": "？",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "LCB",
+                "played": 5,
+                "goals": 0
+            }
+            ,{
+                "number": 5,
+                "name": "张建飞",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "CDM",
+                "played": 5,
+                "goals": 0
+            }
+            ,{
+                "number": 8,
+                "name": "汪中柱",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "RCM",
+                "played": 5,
+                "goals": 0
+            }
+            ,{
+                "number": 9,
+                "name": "丁一帆",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "LCM",
+                "played": 5,
+                "goals": 1
+            }
+            ,{
+                "number": 10,
+                "name": "李臻",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "ST",
+                "played": 5,
+                "goals": 2
+            }
+            ,{
+                "number": 4,
+                "name": "胡江南",
+                "img": "610111/hjn.jpg",
+                "position": "前锋",
+                "locator": "CAM",
+                "played": 5,
+                "goals": 7
+            }
+        ],
+        "subs": [
+        ]
+    }
+}

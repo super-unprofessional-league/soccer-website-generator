@@ -13,6 +13,7 @@
         "key": "610121",
         "score": 2,
         "events": [
+            {"type": "owngoal", "time": 30, "player": "（乌龙）"},
             {"type": "goal", "time": 35, "player": "文轶"}
         ]
     },
@@ -23,7 +24,6 @@
             {"type": "goal", "time": 5, "player": "丁一帆"},
             {"type": "goal", "time": 10, "player": "李臻"},
             {"type": "goal", "time": 15, "player": "李臻"},
-            {"type": "goal", "time": 30, "player": "（乌龙）"},
             {"type": "goal", "time": 40, "player": "胡江南"}
         ]
     }
