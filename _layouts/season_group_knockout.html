@@ -27,18 +27,12 @@ layout: default
     {% assign team0 = game_array[0] %}
     {% assign team1 = game_array[1] %}
     
-
-		
-    
     <li class="game game-top">{% include team_link.html team=team0 %}</li>
 		<li class="game game-spacer"></li>
 		<li class="game game-spacer-text">
 			<div>
 			{% if game_pair[1] != nil %}
 			{% include knockout_game_link.html game=game_pair %}
-      {% if game_pair[1]['extra'] != nil %}
-      &nbsp; {{game_pair[1]['extra']}}
-      {% endif %}
 			{% else %}
 			?
 			{% endif %}

@@ -52,6 +52,14 @@ layout: page
     </div>
 </div>
 
+{% if page.game.video %}
+<div class="row-game">
+    <div class="column" align="center">
+        {{page.game.video}}
+    </div>
+</div>
+{% endif %}
+
 {% if page.game.images %}
 <div class="row-game">
     <div class="column" align="center">

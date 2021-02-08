@@ -2,4 +2,7 @@
   {{include.game[1].home.score}}
   :
   {{ include.game[1].away.score }}
+  {% if include.game[1].extra != nil %}
+  &nbsp; {{include.game[1].extra}}
+  {% endif %}
 </a>
