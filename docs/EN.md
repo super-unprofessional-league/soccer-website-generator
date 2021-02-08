@@ -42,6 +42,7 @@ It is suitable for college and community league since it can be hosted free on a
 ## Getting Started (TODO: Refine)
 
 * install [Jekyll](https://jekyllrb.com/docs/) (More basic tutorials follow Jekyll)
+* `bundle install`
 * generate the site by running `bundle exec jekyll serve` during development.
 * build the site by running `bundle exec jekyll build` before publish.
 * init git in `_site` folder, push to the `gh_page` branch on github to host
