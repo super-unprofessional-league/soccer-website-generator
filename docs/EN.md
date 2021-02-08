@@ -6,7 +6,11 @@ By shrekshao狄学长
 
 [Demo](https://super-unprofessional-league.github.io/super-unprofessional-league-website/) (in Chinese)
 
-A Jekyll based static site generator for website of a unprofessional league. Features include: 
+A Jekyll based static site generator for website of a unprofessional league.
+
+![](docs/tournament-page.png)
+
+Features include: 
 * Multiple seasons
     - League (traditional table, with data auto calculated from game data)
     - Tournament (group stage table + knockout stage bracket)
