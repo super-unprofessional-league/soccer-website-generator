@@ -14,7 +14,7 @@
             {"type": "penalty", "time": 10, "player": "吉相冰"},
             {"type": "goal", "time": 35, "player": "吉相冰"},
             {"type": "off", "time": 40, "player": "狄学长"},
-            {"type": "sub", "time": 40, "player": "张伟铮"}
+            {"type": "sub", "time": 40, "player": "孙聪"}
         ]
     },
     "away": {

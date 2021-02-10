@@ -248,6 +248,28 @@ module League
                 team_hash.each do |key, team|
                     team['games'] = Array.new
                     team['key'] = key
+
+                    team['player_hash'] = Hash.new
+                    if team['players'] != nil
+                        
+                        starting = team['players']['starting']
+                        if starting != nil
+                            starting.each do |p|
+                                p['goals'] = 0
+                                team['player_hash'][p['name']] = p
+                            end
+                        end
+
+                        subs = team['players']['subs']
+                        if subs != nil
+                            subs.each do |p|
+                                p['goals'] = 0
+                                team['player_hash'][p['name']] = p
+                            end
+                        end
+                    end
+
+                    # team['players']['starting'].each{|p| puts p}
                 end
                 # team_array = (team_hash.to_a).map{|key, team| team}
 
@@ -256,12 +278,6 @@ module League
                 games_pair = season[1]['games'].to_a
 
                 # puts games_pair
-
-                
-                # team_array.each do |team|
-                #     # TODO: optimize??: parse games_pair once, built team2games map (more mem)
-                #     site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], team['key']), team, games_pair)
-                # end
 
                 games_hash = Hash.new
 
@@ -284,7 +300,25 @@ module League
                     game['home']['logo'] = home_team['logo']
                     game['away']['display_name'] = away_team['display_name']
                     game['away']['logo'] = away_team['logo']
-                    # puts home_team
+
+                    game['home']['events'].each do |e|
+                        if e['type'] == 'goal' or e['type'] == 'penalty'
+                            player = home_team['player_hash'][e['player']]
+                            if player != nil
+                                player['goals'] += 1
+                            end
+                        end
+                    end
+
+                    game['away']['events'].each do |e|
+                        if e['type'] == 'goal' or e['type'] == 'penalty'
+                            player = away_team['player_hash'][e['player']]
+                            if player != nil
+                                player['goals'] += 1
+                            end
+                        end
+                    end
+
                     site.pages << GamePage.new(site, site.source, File.join('seasons', season[0], 'games', key), game)
                 end
 

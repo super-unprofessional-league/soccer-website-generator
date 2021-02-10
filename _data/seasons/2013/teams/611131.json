@@ -11,8 +11,7 @@
                 "img": "611131/yyc.jpg",
                 "position": "门将",
                 "locator": "GK",
-                "played": 3,
-                "goals": 0
+                "played": 3
             }
             ,{
                 "number": 12,
@@ -20,8 +19,7 @@
                 "img": "611131/syz.jpg",
                 "position": "后卫",
                 "locator": "LCB",
-                "played": 3,
-                "goals": 0
+                "played": 3
             }
             ,{
                 "number": 6,
@@ -29,17 +27,14 @@
                 "img": "611131/lc.jpg",
                 "position": "后卫",
                 "locator": "RB",
-                "played": 3,
-                "goals": 0
+                "played": 3
             }
             ,{
                 "number": 21,
                 "name": "宋雨遥",
                 "img": "611131/syy.jpg",
                 "position": "后卫",
-                "locator": "RDM",
-                "played": 3,
-                "goals": 0
+                "locator": "RDM"
             }
             ,{
                 "number": 18,
@@ -47,8 +42,7 @@
                 "img": "611131/lmm.jpg",
                 "position": "中场",
                 "locator": "CM",
-                "played": 3,
-                "goals": 2
+                "played": 3
             }
             ,{
                 "number": 8,
@@ -56,8 +50,7 @@
                 "img": "611131/gz.jpg",
                 "position": "前锋",
                 "locator": "LW",
-                "played": 3,
-                "goals": 0
+                "played": 3
             }
             ,{
                 "number": 7,
@@ -65,8 +58,7 @@
                 "img": "611131/lr.jpg",
                 "position": "前锋",
                 "locator": "RW",
-                "played": 3,
-                "goals": 4
+                "played": 3
             }
             ,{
                 "number": 9,
@@ -74,8 +66,7 @@
                 "img": "611131/lh.jpg",
                 "position": "前锋",
                 "locator": "ST",
-                "played": 3,
-                "goals": 0
+                "played": 3
             }
         ],
         "subs": [

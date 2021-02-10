@@ -10,8 +10,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "门将",
                 "locator": "GK",
-                "played": 5,
-                "goals": 0
+                "played": 5
             }
             ,{
                 "number": 7,
@@ -19,8 +18,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
                 "locator": "RCB",
-                "played": 5,
-                "goals": 0
+                "played": 5
             }
             ,{
                 "number": 6,
@@ -28,8 +26,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
                 "locator": "LCB",
-                "played": 5,
-                "goals": 0
+                "played": 5
             }
             ,{
                 "number": 5,
@@ -37,8 +34,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "中场",
                 "locator": "CDM",
-                "played": 5,
-                "goals": 0
+                "played": 5
             }
             ,{
                 "number": 8,
@@ -46,8 +42,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "中场",
                 "locator": "RCM",
-                "played": 5,
-                "goals": 0
+                "played": 5
             }
             ,{
                 "number": 9,
@@ -55,8 +50,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "中场",
                 "locator": "LCM",
-                "played": 5,
-                "goals": 1
+                "played": 5
             }
             ,{
                 "number": 10,
@@ -64,8 +58,7 @@
                 "img": "placeholder-player.jpg",
                 "position": "前锋",
                 "locator": "ST",
-                "played": 5,
-                "goals": 2
+                "played": 5
             }
             ,{
                 "number": 4,
@@ -73,8 +66,7 @@
                 "img": "610111/hjn.jpg",
                 "position": "前锋",
                 "locator": "CAM",
-                "played": 5,
-                "goals": 7
+                "played": 5
             }
         ],
         "subs": [

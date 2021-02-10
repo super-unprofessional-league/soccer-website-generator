@@ -24,7 +24,7 @@ layout: page
             <th>头像</th>
             <th>姓名</th>
             <th>位置</th>
-            <th>出场</th>
+            <!-- <th>出场</th> -->
             <th>进球</th>
             </tr>
         </thead>
@@ -32,10 +32,6 @@ layout: page
             {% for player in page.team.players.starting %}
             {% include player_table_line.html player=player %}
             {% endfor %}
-
-            <!-- <tr>
-                <td></td>
-            </tr> -->
 
             {% for player in page.team.players.subs %}
             {% include player_table_line.html player=player %}
