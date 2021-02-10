@@ -3,9 +3,8 @@ layout: default
 ---
 <link rel="stylesheet" href="{{"/assets/css/knockout-bracket.css" | relative_url }}">
 
-<h2>{{ page.display_name }}</h2>
-
-<!-- {{page.team_hash}} -->
+{% include season_tabs.html name=page.display_name %}
+<div class="row">&nbsp;</div>
 
 {% if page.winner != nil and page.winner != "" %}
 <h3>冠军</h3>

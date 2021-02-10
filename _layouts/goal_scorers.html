@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+{% include season_tabs.html name=page.display_name %}
+<div class="row">&nbsp;</div>
+
+<h3>射手榜</h3>
+
+<table class="playerlist">
+  <thead>
+    <tr>
+      <th>头像</th>
+      <th>姓名</th>
+      <th>队伍</th>
+      <th>进球数 (点球)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in page.rank_table %}
+    <tr>
+      <td>
+        {% if player.img != nil %}
+        <img src="{{site.baseurl}}/assets/img/{{player.img}}"/>
+        {% else %}
+        <img src="{{site.baseurl}}/assets/img/placeholder-player.jpg"/>
+        {% endif %}
+      </td>
+      <td><font color='#f55'>{{ player.name }}</font></td>
+      <td>
+        {% assign team = page.team_hash[player.teamkey] %}
+        {% include team_link.html team=team %}
+      </td>
+      <td>
+        {{ player.goals }}
+        {% if player.penalty > 0 %}
+        ( {{ player.penalty }} )
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+

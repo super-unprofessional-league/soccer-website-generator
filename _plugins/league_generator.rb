@@ -2,6 +2,22 @@ require 'json'
 
 module League
 
+    class GoalScorerPage < Jekyll::Page
+        def initialize(site, base, dir, season_name, rank_table, team_hash)
+            @site = site
+            @base = base
+            @dir = dir
+            @name = 'goal_scorers.html'
+
+            self.process(@name)
+            self.read_yaml(File.join(base, '_layouts'), 'goal_scorers.html')
+
+            self.data['rank_table'] = rank_table
+            self.data['team_hash'] = team_hash
+            self.data['display_name'] = season_name
+        end
+    end
+
     class TeamPage < Jekyll::Page
         def initialize(site, base, dir, team)
             @site = site
@@ -92,7 +108,7 @@ module League
     # default SeasonPage (League table)
     class SeasonPage < Jekyll::Page
     # class SeasonPage < Jekyll::PageWithoutAFile
-        def initialize(site, base, dir, season, team_hash, games_pair)
+        def initialize(site, base, dir, season, team_hash, games_pair, config, season_name)
             @site = site
             @base = base
             @dir = dir
@@ -115,7 +131,18 @@ module League
             self.read_yaml(File.join(base, "_layouts"), "season.html")
 
             # self.data = {}
-            self.data["title"] = season
+            
+            # if config != nil and config['display_name'] != nil
+            #     self.data['display_name'] = config['display_name']
+            # else
+            #     self.data['display_name'] = season
+            # end
+            # self.data["title"] = self.data['display_name']
+
+            self.data['display_name'] = season_name
+            self.data["title"] = season_name
+            self.data['winner'] = config['winner'] ? team_hash[config['winner']] : nil
+            
 
             League.calculate_table(team_hash, games_pair)
             # Object.send(:calculate_table, team_hash, games_pair)
@@ -136,21 +163,28 @@ module League
 
     # group + knockout for jxcup
     class GroupAndKnockOutSeasonPage < Jekyll::Page
-        def initialize(site, base, dir, season, team_hash, games_hash, games_pair, config)
+        def initialize(site, base, dir, season, team_hash, games_hash, games_pair, config, season_name)
             @site = site
             @base = base
             @dir = dir
             @name = "index.html"
             self.process(@name)
             self.read_yaml(File.join(base, "_layouts"), "season_group_knockout.html")
-            self.data["title"] = season
-            # self.data["title"] = config['display_name']
+            # if self.data['display_name'] != nil
+            #     self.data['display_name'] = config['display_name']
+            # else
+            #     self.data['display_name'] = season
+            # end
+            # self.data["title"] = self.data['display_name']
+            self.data['display_name'] = season_name
+            self.data["title"] = season_name
 
             knockout_stage = config['knockout_stage']
             # puts knockout_stage
             
-            self.data['display_name'] = config['display_name']
-
+            if config['display_name'] != nil
+                self.data['display_name'] = config['display_name']
+            end
 
             # knock out stage
 
@@ -256,6 +290,7 @@ module League
                         if starting != nil
                             starting.each do |p|
                                 p['goals'] = 0
+                                p['penalty'] = 0
                                 team['player_hash'][p['name']] = p
                             end
                         end
@@ -264,6 +299,7 @@ module League
                         if subs != nil
                             subs.each do |p|
                                 p['goals'] = 0
+                                p['penalty'] = 0
                                 team['player_hash'][p['name']] = p
                             end
                         end
@@ -306,6 +342,9 @@ module League
                             player = home_team['player_hash'][e['player']]
                             if player != nil
                                 player['goals'] += 1
+                                if e['type'] == 'penalty'
+                                    player['penalty'] += 1
+                                end
                             end
                         end
                     end
@@ -315,6 +354,9 @@ module League
                             player = away_team['player_hash'][e['player']]
                             if player != nil
                                 player['goals'] += 1
+                                if e['type'] == 'penalty'
+                                    player['penalty'] += 1
+                                end
                             end
                         end
                     end
@@ -323,19 +365,55 @@ module League
                 end
 
 
+                goal_scorers = Array.new
+
                 team_hash.each do |key, team|
                     site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], key), team)
+
+                    if team['players'] != nil
+                        starting = team['players']['starting']
+                        if starting != nil
+                            starting.each do |p|
+                                if p['goals'] > 0
+                                    p['teamkey'] = key
+                                    goal_scorers << p
+                                end
+                            end
+                        end
+
+                        subs = team['players']['subs']
+                        if subs != nil
+                            subs.each do |p|
+                                if p['goals'] > 0
+                                    p['teamkey'] = key
+                                    goal_scorers << p
+                                end
+                            end
+                        end
+                    end
                 end
+
+                sorted_goal_scorers = (goal_scorers.sort_by { |p| [ -p['goals'], p['penalty'] ] })
+                
 
                 # puts games_hash
 
                 config = season[1]['config']
+                season_name = season[0]
+                if config != nil and config['display_name'] != nil
+                    season_name = config['display_name']
+                end
+
+
                 # puts config
                 if config == nil or config['type'] == 'league'
-                    site.pages << SeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_hash, games_pair)
+                    site.pages << SeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_hash, games_pair, config, season_name)
                 elsif config['type'] == 'group + knockout'
-                    site.pages << GroupAndKnockOutSeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_hash, games_hash, games_pair, config)
+                    site.pages << GroupAndKnockOutSeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_hash, games_hash, games_pair, config, season_name)
                 end
+
+                
+                site.pages << GoalScorerPage.new(site, site.source, File.join('seasons', season[0]), season_name, sorted_goal_scorers, team_hash)
 
 
                 # puts games_hash
