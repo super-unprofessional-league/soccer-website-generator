@@ -29,17 +29,14 @@ Features include:
         - sub
         - pictures
         - video embed code
+* Player stats table
+    - goal scorer (goals auto calculated from game data)
 * Team page
     - Starting and sub player list
     - Formation of starting squad
     - Pictures
 * News post
 
-
-Features want (not yet added)
-* Player data auto calculation from game data (it's hardcoded now)
-* Player stats table
-    - goal scorer
 
 It is suitable for college and community league since it can be hosted free on a number of place.
 
