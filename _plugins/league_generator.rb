@@ -340,11 +340,15 @@ module League
                     game['home']['events'].each do |e|
                         if e['type'] == 'goal' or e['type'] == 'penalty'
                             player = home_team['player_hash'][e['player']]
-                            if player != nil
-                                player['goals'] += 1
-                                if e['type'] == 'penalty'
-                                    player['penalty'] += 1
-                                end
+                            if player == nil
+                                # puts e['player']
+                                home_team['player_hash'][e['player']] = {'name' => e['player'], 'goals' => 0, 'penalty' => 0}
+                                player = home_team['player_hash'][e['player']]
+                            end
+                            
+                            player['goals'] += 1
+                            if e['type'] == 'penalty'
+                                player['penalty'] += 1
                             end
                         end
                     end
@@ -352,11 +356,15 @@ module League
                     game['away']['events'].each do |e|
                         if e['type'] == 'goal' or e['type'] == 'penalty'
                             player = away_team['player_hash'][e['player']]
-                            if player != nil
-                                player['goals'] += 1
-                                if e['type'] == 'penalty'
-                                    player['penalty'] += 1
-                                end
+                            if player == nil
+                                # puts e['player']
+                                away_team['player_hash'][e['player']] = {'name' => e['player'], 'goals' => 0, 'penalty' => 0}
+                                player = away_team['player_hash'][e['player']]
+                            end
+
+                            player['goals'] += 1
+                            if e['type'] == 'penalty'
+                                player['penalty'] += 1
                             end
                         end
                     end
@@ -370,27 +378,34 @@ module League
                 team_hash.each do |key, team|
                     site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], key), team)
 
-                    if team['players'] != nil
-                        starting = team['players']['starting']
-                        if starting != nil
-                            starting.each do |p|
-                                if p['goals'] > 0
-                                    p['teamkey'] = key
-                                    goal_scorers << p
-                                end
-                            end
-                        end
-
-                        subs = team['players']['subs']
-                        if subs != nil
-                            subs.each do |p|
-                                if p['goals'] > 0
-                                    p['teamkey'] = key
-                                    goal_scorers << p
-                                end
-                            end
+                    team['player_hash'].each do |pk, p|
+                        if p['goals'] > 0
+                            p['teamkey'] = key
+                            goal_scorers << p
                         end
                     end
+
+                    # if team['players'] != nil
+                        # starting = team['players']['starting']
+                        # if starting != nil
+                        #     starting.each do |p|
+                        #         if p['goals'] > 0
+                        #             p['teamkey'] = key
+                        #             goal_scorers << p
+                        #         end
+                        #     end
+                        # end
+
+                        # subs = team['players']['subs']
+                        # if subs != nil
+                        #     subs.each do |p|
+                        #         if p['goals'] > 0
+                        #             p['teamkey'] = key
+                        #             goal_scorers << p
+                        #         end
+                        #     end
+                        # end
+                    # end
                 end
 
                 sorted_goal_scorers = (goal_scorers.sort_by { |p| [ -p['goals'], p['penalty'] ] })
