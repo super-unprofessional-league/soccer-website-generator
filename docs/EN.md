@@ -8,11 +8,11 @@ By shrekshao狄学长
 
 A Jekyll based static site generator for website of a unprofessional league.
 
-![](docs/tournament-page.png)
+![](tournament-page.png)
 
-![](docs/team-page.png)
+![](team-page.png)
 
-![](docs/game-page.png)
+![](game-page.png)
 
 Features include: 
 * Multiple seasons

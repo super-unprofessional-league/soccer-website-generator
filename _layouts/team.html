@@ -54,10 +54,8 @@ layout: page
 </div>
 
 <div>
-{% for game in page.games_pair %}
-{% if page.team.key == game[1].home.key or page.team.key == game[1].away.key %}
+{% for game in page.team.games %}
 {% include game_lines.html game=game season_base_url="../" %}
-{% endif %}
 {% endfor %}
 </div>
 

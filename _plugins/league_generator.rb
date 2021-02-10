@@ -3,7 +3,7 @@ require 'json'
 module League
 
     class TeamPage < Jekyll::Page
-        def initialize(site, base, dir, team, games_pair)
+        def initialize(site, base, dir, team)
             @site = site
             @base = base
             @dir = dir
@@ -13,7 +13,6 @@ module League
             self.read_yaml(File.join(base, '_layouts'), 'team.html')
             
             self.data['team'] = team
-            self.data['games_pair'] = games_pair
         end
     end
 
@@ -246,6 +245,10 @@ module League
                 # convert nilClass to array
 
                 team_hash = season[1]['teams']
+                team_hash.each do |key, team|
+                    team['games'] = Array.new
+                    team['key'] = key
+                end
                 # team_array = (team_hash.to_a).map{|key, team| team}
 
                 
@@ -254,9 +257,7 @@ module League
 
                 # puts games_pair
 
-                team_hash.each do |key, team|
-                    site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], key), team, games_pair)
-                end
+                
                 # team_array.each do |team|
                 #     # TODO: optimize??: parse games_pair once, built team2games map (more mem)
                 #     site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], team['key']), team, games_pair)
@@ -266,12 +267,18 @@ module League
 
                 
                 # generate each game page
-                games_pair.each do |key, game|
+                games_pair.each do |p|
+                    key = p[0]
+                    game = p[1]
                     games_hash[key] = game
                     # puts key
+                    # puts game
 
                     home_team = team_hash[game['home']['key']]
                     away_team = team_hash[game['away']['key']]
+
+                    home_team['games'] << p
+                    away_team['games'] << p
 
                     game['home']['display_name'] = home_team['display_name']
                     game['home']['logo'] = home_team['logo']
@@ -279,6 +286,11 @@ module League
                     game['away']['logo'] = away_team['logo']
                     # puts home_team
                     site.pages << GamePage.new(site, site.source, File.join('seasons', season[0], 'games', key), game)
+                end
+
+
+                team_hash.each do |key, team|
+                    site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], key), team)
                 end
 
                 # puts games_hash

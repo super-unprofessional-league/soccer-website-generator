@@ -25,9 +25,7 @@ layout: default
     {% for team in page.table %}
     <tr>
       <td>
-        <!-- <img class='logo' src='/assets/img/{{ team.logo }}'/> -->
-        <img width="30px" src='{{site.baseurl}}/assets/img/{{ team.logo }}'/>
-        <a href='{{team.key}}'>{{ team.display_name }}</a>
+        {% include team_link.html team=team %}
       </td>
       <td>{{ team.table.games_played }}</td>
       <td>{{ team.table.wins }}</td>
