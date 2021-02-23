@@ -82,25 +82,19 @@ By shrekshao狄学长
                 "number": 1,
                 "name": "布尔基",
                 "img": "placeholder-player.jpg",
-                "position": "门将",
-                "played": 25,
-                "goals": 0
+                "position": "门将"
             }
             ,{
                 "number": 28,
                 "name": "维特塞尔",
                 "img": "placeholder-player.jpg",
-                "position": "中场",
-                "played": 28,
-                "goals": 5
+                "position": "中场"
             }
             ,{
                 "number": 11,
                 "name": "罗伊斯",
                 "img": "placeholder-player.jpg",
-                "position": "中场",
-                "played": 27,
-                "goals": 13
+                "position": "中场"
             }
         ],
         "subs": [
@@ -108,9 +102,7 @@ By shrekshao狄学长
                 "number": 9,
                 "name": "哈兰德",
                 "img": "placeholder-player.jpg",
-                "position": "前锋",
-                "played": 23,
-                "goals": 22
+                "position": "前锋"
             }
             
         ]
