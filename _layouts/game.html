@@ -24,7 +24,7 @@ layout: page
     </div>
 
     <div class="column" align="center">
-        <p>{{ page.game.type }}</p>
+        <p>{% translate {{ page.game.type | prepend: "games."}} %}</p>
         <p>{{ page.game.date }}</p>
         <h2> {{ page.game.home.score }} : {{ page.game.away.score }} </h2>
         {% if page.game.extra %}

@@ -7,13 +7,13 @@ layout: default
 <div class="row">&nbsp;</div>
 
 {% if page.winner != nil and page.winner != "" %}
-<h3>冠军</h3>
+<h3>{% translate champion %}</h3>
 {% include team_link.html team=page.winner %}
 {% endif %}
 
 <div class="row">&nbsp;</div>
 
-<h3>淘汰赛阶段</h3>
+<h3>{% translate knockout_stage %}</h3>
 
 
 <div class="tournament">
@@ -59,7 +59,7 @@ layout: default
 
 {% if page.group_tables != nil %}
 
-<h3>小组赛阶段</h3>
+<h3>{% translate group_stage %}</h3>
 
 {% for group in page.group_tables %}
 {% assign group_key = group[0] %}
@@ -67,14 +67,14 @@ layout: default
   <thead>
     <tr>
       <th>{{group_key}}</th>
-      <th>场次</th>
-      <th>胜</th>
-      <th>平</th>
-      <th>负</th>
-      <th>进球</th>
-      <th>失球</th>
-      <th>净胜</th>
-      <th>积分</th>
+      <th>{% translate table.played %}</th>
+      <th>{% translate table.win %}</th>
+      <th>{% translate table.tie %}</th>
+      <th>{% translate table.lose %}</th>
+      <th>{% translate table.goals_for %}</th>
+      <th>{% translate table.goals_against %}</th>
+      <th>{% translate table.goals_diff %}</th>
+      <th>{% translate table.points %}</th>
     </tr>
   </thead>
   <tbody>

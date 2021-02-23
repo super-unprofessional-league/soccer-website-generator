@@ -1,0 +1,41 @@
+schedule: Schedule
+goal_scorers: Goal Scorers
+player:
+  photo: Pic
+  name: Name
+  team: Team
+  goals_penalty: Goals(Penalty)
+  number: No.
+  position: Position
+  goals: Goals
+champion: Champion
+knockout_stage: Knockout Stage
+group_stage: Group Stage
+games_list: Games
+table:
+  team_name: Team
+  played: Played
+  win: Wins
+  tie: Draws
+  lose: Loses
+  goals_for: GF
+  goals_against: GA
+  goals_diff: GD
+  points: P
+games:
+  final: Final
+  1/2: 1/2 final
+  1/2-final: 1/2 final
+  semi-final: 1/2 final
+  1/4: 1/4 Final
+  1/4-final: 1/4 Final
+  1/8: 1/8 Final
+  1/8-final: 1/8 Final
+  1/16: 1/16 Final
+  1/16-final: 1/16 Final
+  group: Group
+  group-r1: Group Round 1
+  group-r2: Group Round 2
+  group-r3: Group Round 3
+  group-r4: Group Round 4
+  group-r5: Group Round 5

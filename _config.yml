@@ -21,6 +21,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/super-unprofessional-league-website" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: zh
+languages: ["zh"]
+exclude_from_localizations: ["javascript", "images", "css"]
 
 # Build settings
 markdown: kramdown

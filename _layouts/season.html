@@ -6,22 +6,22 @@ layout: default
 <div class="row">&nbsp;</div>
 
 {% if page.winner != nil and page.winner != "" %}
-<h3>冠军</h3>
+<h3>{% translate champion %}</h3>
 {% include team_link.html team=page.winner %}
 {% endif %}
 
 <table>
   <thead>
     <tr>
-      <th>队名</th>
-      <th>场次</th>
-      <th>胜</th>
-      <th>平</th>
-      <th>负</th>
-      <th>进球</th>
-      <th>失球</th>
-      <th>净胜</th>
-      <th>积分</th>
+      <th>{% translate table.team_name %}</th>
+      <th>{% translate table.played %}</th>
+      <th>{% translate table.win %}</th>
+      <th>{% translate table.tie %}</th>
+      <th>{% translate table.lose %}</th>
+      <th>{% translate table.goals_for %}</th>
+      <th>{% translate table.goals_against %}</th>
+      <th>{% translate table.goals_diff %}</th>
+      <th>{% translate table.points %}</th>
     </tr>
   </thead>
   <tbody>
@@ -44,7 +44,7 @@ layout: default
   </tbody>
 </table>
 
-<h3>比赛</h3>
+<h3>{% translate games_list %}</h3>
 
 {% for game in page.games_pair %}
 {% include game_lines.html game=game season_base_url="" %}

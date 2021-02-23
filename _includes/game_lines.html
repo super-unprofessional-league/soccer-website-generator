@@ -1,7 +1,7 @@
 <a href="{{include.season_base_url}}games/{{include.game[0]}} ">
 <font color="#aaa">{{include.game[1].date}}</font>
 
-<font color="#aaa">{{include.game[1].type}}</font>
+<font color="#aaa">{% translate {{include.game[1].type | prepend: "games."}} %}</font>
 
   {{ include.game[1].home.display_name }}
   <img width="30px" src='{{site.baseurl}}/assets/img/{{ include.game[1].home.logo }}'/>
