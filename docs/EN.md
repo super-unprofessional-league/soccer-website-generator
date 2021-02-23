@@ -35,6 +35,7 @@ Features include:
     - Starting and sub player list
     - Formation of starting squad
     - Pictures
+* Language translation support
 * News post
 
 
