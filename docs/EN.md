@@ -90,25 +90,20 @@ All league data (matches, squad, etc.) goes under `_data` folder. All static ass
                 "number": 1,
                 "name": "Roman Burki",
                 "img": "placeholder-player.jpg",
-                "position": "GoalKeeper",
-                "played": 25,
+                "position": "GoalKeeper"
                 "goals": 0
             }
             ,{
                 "number": 28,
                 "name": "Axel Witsel",
                 "img": "placeholder-player.jpg",
-                "position": "Midfielder",
-                "played": 28,
-                "goals": 5
+                "position": "Midfielder"
             }
             ,{
                 "number": 11,
                 "name": "Marco Reus",
                 "img": "placeholder-player.jpg",
-                "position": "Forward",
-                "played": 27,
-                "goals": 13
+                "position": "Forward"
             }
         ],
         "subs": [
@@ -116,9 +111,7 @@ All league data (matches, squad, etc.) goes under `_data` folder. All static ass
                 "number": 22,
                 "name": "Christian Pulisic",
                 "img": "placeholder-player.jpg",
-                "position": "Midfielder",
-                "played": 21,
-                "goals": 3
+                "position": "Midfielder"
             }
             
         ]
