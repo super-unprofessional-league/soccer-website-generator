@@ -26,7 +26,18 @@ layout: default
         <img src="{{site.baseurl}}/assets/img/placeholder-player.jpg"/>
         {% endif %}
       </td>
-      <td><font color='#f55'>{{ player.name }}</font></td>
+      <td>
+        {% case forloop.index %}
+        {% when 1 %}
+        🥇
+        {% when 2 %}
+        🥈
+        {% when 3 %}
+        🥉
+        {% else %}
+        {% endcase %}
+        <font color='#f55'>{{ player.name }}</font>
+      </td>
       <td>
         {% assign team = page.team_hash[player.teamkey] %}
         {% include team_link.html team=team %}
