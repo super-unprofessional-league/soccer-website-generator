@@ -22,6 +22,7 @@ table:
   goals_for: GF
   goals_against: GA
   goals_diff: GD
+  avg: Avg
   points: P
 games:
   final: Final

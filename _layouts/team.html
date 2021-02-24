@@ -14,6 +14,33 @@ layout: page
 <br/>
 
 <div class="row">
+    <table class="playerlist">
+    <thead>
+        <tr>
+            <th></th>
+            <th>{% t table.played %}</th>
+            <th>{% t table.win %}</th>
+            <th>{% t table.tie %}</th>
+            <th>{% t table.lose %}</th>
+            <th>{% t table.goals_for %}</th>
+            <th>{% t table.goals_against %}</th>
+            <th>{% t table.avg %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td>{%if page.team_key == page.season.config.winner %}🏆{%endif%} <a href="../">{{ page.season.config.display_name }}</a></td>
+        <td>{{ page.team.stats.games_played }}</td>
+        <td>{{ page.team.stats.wins }}</td>
+        <td>{{ page.team.stats.draws }}</td>
+        <td>{{ page.team.stats.loses }}</td>
+        <td>{{ page.team.stats.goals_for }}</td>
+        <td>{{ page.team.stats.goals_against }}</td>
+        <td>+{{ page.team.stats.avg_gf }} / -{{ page.team.stats.avg_ga }}</td>
+    </tbody>
+    </table>
+</div>
+
+<div class="row">
 
 
     <div class="column">

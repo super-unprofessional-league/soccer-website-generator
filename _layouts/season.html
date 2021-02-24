@@ -6,9 +6,11 @@ layout: default
 <div class="row">&nbsp;</div>
 
 {% if page.winner != nil and page.winner != "" %}
-<h3>{% translate champion %}</h3>
+<h3>🏆 {% translate champion %}</h3>
 {% include team_link.html team=page.winner %}
 {% endif %}
+
+<div class="row">&nbsp;</div>
 
 <table>
   <thead>

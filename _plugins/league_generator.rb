@@ -19,7 +19,7 @@ module League
     end
 
     class TeamPage < Jekyll::Page
-        def initialize(site, base, dir, team)
+        def initialize(site, base, dir, team_key, team, season_key, season)
             @site = site
             @base = base
             @dir = dir
@@ -28,7 +28,11 @@ module League
             self.process(@name)
             self.read_yaml(File.join(base, '_layouts'), 'team.html')
             
+
+            self.data['team_key'] = team_key
             self.data['team'] = team
+            self.data['season_key'] = season_key
+            self.data['season'] = season
         end
     end
 
@@ -51,15 +55,12 @@ module League
         end
     end
 
-    def self.calculate_table (team_hash, games_pair)
+    def self.calculate_table (team_hash, games_pair, entry)
         # Iterate games to calculate data
 
         # clear data 
         for team in team_hash
-            # if team['table'] == nil
-            #     team['table'] = Hash.new
-            # end
-            team[1]['table'] = {
+            team[1][entry] = {
                 'games_played' => 0,
                 'wins' => 0,
                 'draws' => 0,
@@ -75,12 +76,12 @@ module League
             key = p[0]
             game = p[1]
 
-            t0 = team_hash[game['home']['key']]['table']
+            t0 = team_hash[game['home']['key']][entry]
             t0['games_played'] += 1;
             t0['goals_for'] += game['home']['score'];
             t0['goals_against'] += game['away']['score'];
 
-            t1 = team_hash[game['away']['key']]['table']
+            t1 = team_hash[game['away']['key']][entry]
             t1['games_played'] += 1;
             t1['goals_for'] += game['away']['score'];
             t1['goals_against'] += game['home']['score'];
@@ -99,15 +100,21 @@ module League
 
         # post process
         for team in team_hash
-            t = team[1]['table']
+            t = team[1][entry]
             t['goals_diff'] = t['goals_for'] - t['goals_against']
             t['points'] = t['wins'] * 3 + t['draws']
+
+            t['avg_gf'] = t['games_played'] == 0 ? 0.0 : t['goals_for'].fdiv(t['games_played'])
+            t['avg_ga'] = t['games_played'] == 0 ? 0.0 : t['goals_against'].fdiv(t['games_played'])
+
+            t['avg_gf'] = sprintf("%0.1f", t['avg_gf'])
+            t['avg_ga'] = sprintf("%0.1f", t['avg_ga'])
         end
     end
 
     # default SeasonPage (League table)
-    class SeasonPage < Jekyll::Page
-    # class SeasonPage < Jekyll::PageWithoutAFile
+    class LeagueSeasonPage < Jekyll::Page
+    # class LeagueSeasonPage < Jekyll::PageWithoutAFile
         def initialize(site, base, dir, season, team_hash, games_pair, config, season_name)
             @site = site
             @base = base
@@ -144,8 +151,7 @@ module League
             self.data['winner'] = config['winner'] ? team_hash[config['winner']] : nil
             
 
-            League.calculate_table(team_hash, games_pair)
-            # Object.send(:calculate_table, team_hash, games_pair)
+            # League.calculate_table(team_hash, games_pair, 'table')
             team_tables = team_hash.map{ |key, value| value }
 
             # team_array = (season[1]['teams'].to_a).map{|key, team| team}
@@ -235,7 +241,7 @@ module League
 
                 # Iterate games to calculate data
                 group_games_pair = games_pair.select{|key, game| game['type'].include? 'group'}
-                League.calculate_table(team_hash, group_games_pair)
+                League.calculate_table(team_hash, group_games_pair,'table')
 
                 ##############################################
 
@@ -375,8 +381,22 @@ module League
 
                 goal_scorers = Array.new
 
+                # include all games (groups and knockout for tournament)
+                League.calculate_table(team_hash, games_pair, 'stats')
+
+                config = season[1]['config']
+                season_name = season[0]
+                if config != nil and config['display_name'] != nil
+                    season_name = config['display_name']
+                end
+
+                stats_is_table = false
+                if config == nil or config['type'] == 'league'
+                    stats_is_table = true
+                end
+
+
                 team_hash.each do |key, team|
-                    site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], key), team)
 
                     team['player_hash'].each do |pk, p|
                         if p['goals'] > 0
@@ -385,27 +405,11 @@ module League
                         end
                     end
 
-                    # if team['players'] != nil
-                        # starting = team['players']['starting']
-                        # if starting != nil
-                        #     starting.each do |p|
-                        #         if p['goals'] > 0
-                        #             p['teamkey'] = key
-                        #             goal_scorers << p
-                        #         end
-                        #     end
-                        # end
+                    if stats_is_table
+                        team['table'] = team['stats']
+                    end
 
-                        # subs = team['players']['subs']
-                        # if subs != nil
-                        #     subs.each do |p|
-                        #         if p['goals'] > 0
-                        #             p['teamkey'] = key
-                        #             goal_scorers << p
-                        #         end
-                        #     end
-                        # end
-                    # end
+                    site.pages << TeamPage.new(site, site.source, File.join('seasons', season[0], key), key, team, season[0], season[1])
                 end
 
                 sorted_goal_scorers = (goal_scorers.sort_by { |p| [ -p['goals'], p['penalty'] ] })
@@ -413,16 +417,12 @@ module League
 
                 # puts games_hash
 
-                config = season[1]['config']
-                season_name = season[0]
-                if config != nil and config['display_name'] != nil
-                    season_name = config['display_name']
-                end
+                
 
 
                 # puts config
                 if config == nil or config['type'] == 'league'
-                    site.pages << SeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_hash, games_pair, config, season_name)
+                    site.pages << LeagueSeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_hash, games_pair, config, season_name)
                 elsif config['type'] == 'group + knockout'
                     site.pages << GroupAndKnockOutSeasonPage.new(site, site.source, File.join('seasons', season[0]), season[0], team_hash, games_hash, games_pair, config, season_name)
                 end

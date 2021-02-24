@@ -23,6 +23,7 @@ table:
   goals_against: 失球
   goals_diff: 净胜
   points: 积分
+  avg: 场均
 games:
   final: 决赛
   1/2: 半决赛
