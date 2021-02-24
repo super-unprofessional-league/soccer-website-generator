@@ -1,18 +1,16 @@
-<a href="{{include.season_base_url}}games/{{include.game[0]}} ">
-<font color="#aaa">{{include.game[1].date}}</font>
-
-<font color="#aaa">{% translate {{include.game[1].type | prepend: "games."}} %}</font>
-
-  {{ include.game[1].home.display_name }}
-  <img width="30px" src='{{site.baseurl}}/assets/img/{{ include.game[1].home.logo }}'/>
-  {% if include.game[1].schedule %}
+<a href="{{include.season_base_url}}games/{{include.game_key}}">
+<font color="#aaa">{{include.game.date}}</font>
+<font color="#aaa">{% translate {{include.game.type | prepend: "games."}} %}</font>
+  {{ include.game.home.display_name }}
+  <img class="team-logo" src='{{site.baseurl}}/assets/img/{{ include.game.home.logo }}'/>
+  {% if include.game.schedule %}
   &nbsp;VS&nbsp;
   {% else %}
-  {{include.game[1].home.score}}
+  {{include.game.home.score}}
   :
-  {{ include.game[1].away.score }}
+  {{ include.game.away.score }}
   {% endif %}
-  <img width="30px" src='{{site.baseurl}}/assets/img/{{ include.game[1].away.logo }}'/>
-  {{include.game[1].away.display_name}}
+  <img class="team-logo" src='{{site.baseurl}}/assets/img/{{ include.game.away.logo }}'/>
+  {{include.game.away.display_name}}
 </a>
 <br/>

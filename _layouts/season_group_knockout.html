@@ -97,7 +97,9 @@ layout: default
 </table>
 
 {% for game in page.group_games[group_key] %}
-{% include game_lines.html game=game season_base_url="" %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
 {% endfor %}
 <br/>
 <br/>
@@ -106,7 +108,9 @@ layout: default
 {% comment %}
 {% for game in page.games_pair %}
 {% if game[1].type contains "group" %}
-{% include game_lines.html game=game season_base_url="" %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
 {% endif %}
 {% endfor %}
 {% endcomment %}

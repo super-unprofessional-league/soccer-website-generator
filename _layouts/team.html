@@ -50,7 +50,9 @@ layout: page
 
 <div>
 {% for game in page.team.games %}
-{% include game_lines.html game=game season_base_url="../" %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="../" %}
 {% endfor %}
 </div>
 
