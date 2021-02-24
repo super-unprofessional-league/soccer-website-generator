@@ -207,3 +207,7 @@ table.playerlist th {
 table.playerlist td {
     padding: 0.3em;
 }
+
+.team-logo {
+    width: 30px !important;
+}
