@@ -5,7 +5,9 @@ player:
   photo: Pic
   name: Name
   team: Team
-  goals_penalty: Goals(Penalty)
+  goals_penalty: |
+    Goals
+    (Penalty)
   number: No.
   position: Position
   goals: Goals
@@ -24,6 +26,7 @@ table:
   goals_diff: GD
   avg: Avg
   points: P
+  stats: Stats
 games:
   final: Final
   1/2: 1/2 final

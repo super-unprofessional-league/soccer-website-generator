@@ -5,15 +5,18 @@ layout: default
 {% include season_tabs.html name=page.display_name %}
 <div class="row">&nbsp;</div>
 
-<h3>{% translate goal_scorers %}</h3>
+<h3>{% t goal_scorers %}</h3>
 
 <table class="playerlist">
   <thead>
     <tr>
-      <th>{% translate player.photo %}</th>
-      <th>{% translate player.name %}</th>
-      <th>{% translate player.team %}</th>
-      <th>{% translate player.goals_penalty %}</th>
+      <th>{% t player.photo %}</th>
+      <th>{% t player.name %}</th>
+      <th>{% t player.team %}</th>
+      {% capture gp %}
+      {% t player.goals_penalty %}
+      {% endcapture %}
+      <th>{{ gp | newline_to_br }}</th>
     </tr>
   </thead>
   <tbody>

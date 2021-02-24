@@ -5,7 +5,9 @@ player:
   photo: 头像
   name: 姓名
   team: 队伍
-  goals_penalty: 进球数(点球)
+  goals_penalty: |
+    进球数
+    (点球)
   number: 号码
   position: 位置
   goals: 进球
@@ -24,6 +26,7 @@ table:
   goals_diff: 净胜
   points: 积分
   avg: 场均
+  stats: 统计
 games:
   final: 决赛
   1/2: 半决赛
