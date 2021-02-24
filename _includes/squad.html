@@ -4,7 +4,7 @@
   {% for player in include.squad %}
     {% if player.locator != nil %}
       <div class="player {{player.locator}}">
-          <img src="{{site.baseurl}}/assets/img/{{player.img}}" />
+          <img src="{{site.baseurl}}/assets/img/{{player.img | default: 'placeholder-player.jpg'}}" />
           <p>{{player.number}} {{player.name}}</p>
       </div>
     {% endif %}
