@@ -14,10 +14,10 @@ layout: page
 <br/>
 
 <div class="row">
-    <table class="playerlist">
+    <table>
     <thead>
         <tr>
-            <th>{% t table.stats %}</th>
+            <th>{% t season %}</th>
             <th>{% t table.played %}</th>
             <th>{% t table.win %}</th>
             <th>{% t table.tie %}</th>
@@ -27,16 +27,23 @@ layout: page
             <th>{% t table.avg %}</th>
         </tr>
     </thead>
+    {% for pair in page.history_stats %}
+    {% assign stats=pair[1] %}
+    {% if pair[0] == page.season_key %}
+    <tbody class="cur-season-line">
+    {% else %}
     <tbody>
-        <td>{%if page.team_key == page.season.config.winner %}🏆{%endif%} <a href="../">{{ page.season.config.display_name }}</a></td>
-        <td>{{ page.team.stats.games_played }}</td>
-        <td>{{ page.team.stats.wins }}</td>
-        <td>{{ page.team.stats.draws }}</td>
-        <td>{{ page.team.stats.loses }}</td>
-        <td>{{ page.team.stats.goals_for }}</td>
-        <td>{{ page.team.stats.goals_against }}</td>
-        <td>+{{ page.team.stats.avg_gf }} / -{{ page.team.stats.avg_ga }}</td>
+    {% endif %}
+        <td>{%if stats.is_winner == true %}🏆{%endif%} <a href="../../{{ stats.season_key }}/{{page.team_key}}">{{ stats.season_name }}</a></td>
+        <td>{{ stats.games_played }}</td>
+        <td>{{ stats.wins }}</td>
+        <td>{{ stats.draws }}</td>
+        <td>{{ stats.loses }}</td>
+        <td>{{ stats.goals_for }}</td>
+        <td>{{ stats.goals_against }}</td>
+        <td>+{{ stats.avg_gf }} / -{{ stats.avg_ga }}</td>
     </tbody>
+    {% endfor %}
     </table>
 </div>
 

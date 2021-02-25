@@ -1,6 +1,7 @@
 posts_title: 战报
 schedule: 赛程
 goal_scorers: 射手榜
+season: 赛季
 player:
   photo: 头像
   name: 姓名
@@ -38,6 +39,7 @@ games:
   1/8-final: 1/8决赛
   1/16: 1/16决赛
   1/16-final: 1/16决赛
+  third-place-playoff: 三四名决赛
   group: 小组赛
   group-r1: 小组赛第1轮
   group-r2: 小组赛第2轮

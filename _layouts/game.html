@@ -55,7 +55,7 @@ layout: page
 {% if page.game.video %}
 <div class="row-game">
     <div class="column" align="center">
-        {{page.game.video}}
+        {{page.game.video | url_decode}}
     </div>
 </div>
 {% endif %}

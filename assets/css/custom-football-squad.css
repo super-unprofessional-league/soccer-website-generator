@@ -211,3 +211,16 @@ table.playerlist td {
 .team-logo {
     width: 30px !important;
 }
+
+/* team history stats table */
+.cur-season-line {
+    font-weight: bold;
+}
+
+/* hack for embed video*/
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 400px;
+}

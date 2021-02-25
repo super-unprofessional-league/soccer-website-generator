@@ -1,6 +1,7 @@
 posts_title: Posts
 schedule: Schedule
 goal_scorers: Goal Scorers
+season: Season
 player:
   photo: Pic
   name: Name
@@ -29,15 +30,16 @@ table:
   stats: Stats
 games:
   final: Final
-  1/2: 1/2 final
-  1/2-final: 1/2 final
-  semi-final: 1/2 final
+  1/2: 1/2 Final
+  1/2-final: 1/2 Final
+  semi-final: 1/2 Final
   1/4: 1/4 Final
   1/4-final: 1/4 Final
   1/8: 1/8 Final
   1/8-final: 1/8 Final
   1/16: 1/16 Final
   1/16-final: 1/16 Final
+  third-place-playoff: Third Place Playoff
   group: Group
   group-r1: Group Round 1
   group-r2: Group Round 2
