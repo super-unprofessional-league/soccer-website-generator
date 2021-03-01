@@ -40,9 +40,12 @@ games:
   1/16: 1/16 Final
   1/16-final: 1/16 Final
   third-place-playoff: Third Place Playoff
+  rank-playoff: Ranking Playoff
   group: Group
   group-r1: Group Round 1
   group-r2: Group Round 2
   group-r3: Group Round 3
   group-r4: Group Round 4
   group-r5: Group Round 5
+  group-r6: Group Round 6
+  league: League
