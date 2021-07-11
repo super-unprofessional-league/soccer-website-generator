@@ -1,5 +1,7 @@
 {
   "display_name": "12赛季",
+  "description": "联赛赛季示例",
   "type": "league",
-  "winner": "611101"
+  "winner": "611101",
+  "rules": "这里可以写一些赛事分组，晋级等的规则"
 }

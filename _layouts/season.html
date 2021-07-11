@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include season_tabs.html name=page.display_name %}
+{% include season_tabs.html name=page.display_name description=page.description %}
 <div class="row">&nbsp;</div>
 
 {% if page.winner != nil and page.winner != "" %}
@@ -53,3 +53,8 @@ layout: default
 {% assign g = game[1] %}
 {% include game_lines.html game_key=gk game=g season_base_url="" %}
 {% endfor %}
+
+{% if page.rules != nil %}
+&nbsp;
+<p style="font-size:12px;">{{page.rules | newline_to_br}}</p>
+{% endif %}

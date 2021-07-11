@@ -1,5 +1,6 @@
 {
   "display_name": "13赛季",
+  "description": "健雄杯2013赛季。吴院班级大三之后将打散进入各专业，所以对11级来说这是他们的最后一届健雄杯。\n小组赛+淘汰赛示例",
   "type": "group + knockout",
   "group_stage": {
     "A": [

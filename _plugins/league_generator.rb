@@ -79,6 +79,10 @@ module League
             key = p[0]
             game = p[1]
 
+            if game['schedule']
+                next
+            end
+
             t0 = team_hash[game['home']['key']][entry]
             t0['games_played'] += 1;
             t0['goals_for'] += game['home']['score'];
@@ -167,6 +171,8 @@ module League
 
             self.data['games_pair'] = games_pair
 
+            self.data['description'] = config['description']
+            self.data['rules'] = config['rules']
         end
     end
 
@@ -274,6 +280,7 @@ module League
 
 
             # self.data['games_pair'] = games_pair
+            self.data['description'] = config['description']
             self.data['rules'] = config['rules']
 
         end

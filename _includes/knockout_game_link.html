@@ -1,7 +1,11 @@
 <a href="{{include.season_base_url}}games/{{include.game[0]}} ">
+  {% if include.game[1].schedule %}
+  &nbsp;VS&nbsp;
+  {% else %}
   {{include.game[1].home.score}}
   :
   {{ include.game[1].away.score }}
+  {% endif %}
   {% if include.game[1].extra != nil %}
   &nbsp; {{include.game[1].extra}}
   {% endif %}

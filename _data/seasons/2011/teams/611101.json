@@ -1,0 +1,92 @@
+{
+    "display_name": "611101大二机械",
+    "description": "",
+    "logo": "placeholder-club.jpg",
+    "table": {
+        "games_played": 6,
+        "wins": 6,
+        "draws": 0,
+        "loses": 0,
+        "goals_for": 17,
+        "goals_against": 3,
+        "points": 18
+    },
+    "players": {
+        "starting": [
+            {
+                "number": 1,
+                "name": "?",
+                "img": "placeholder-player.jpg",
+                "position": "门将",
+                "locator": "GK",
+                "played": 6,
+                "goals": 0
+            }
+            ,{
+                "number": 29,
+                "name": "任晨曦",
+                "img": "611101/rcx.jpg",
+                "position": "后卫",
+                "locator": "LB",
+                "played": 6,
+                "goals": 0
+            }
+            ,{
+                "number": 15,
+                "name": "邵陈希",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "CB",
+                "played": 3,
+                "goals": 0
+            }
+            ,{
+                "number": 10,
+                "name": "董寒阳",
+                "img": "611101/dhy.jpg",
+                "position": "中场",
+                "locator": "LDM",
+                "played": 6,
+                "goals": 3
+            }
+            ,{
+                "number": 12,
+                "name": "汤红健",
+                "img": "611101/thj.jpg",
+                "position": "中场",
+                "locator": "RDM",
+                "played": 6,
+                "goals": 4
+            }
+            ,{
+                "number": 7,
+                "name": "章敏",
+                "img": "placeholder-player.jpg",
+                "position": "前锋",
+                "locator": "RW",
+                "played": 6,
+                "goals": 2
+            }
+            ,{
+                "number": 31,
+                "name": "?",
+                "img": "placeholder-player.jpg",
+                "position": "中场",
+                "locator": "RM",
+                "played": 6,
+                "goals": 0
+            }
+            ,{
+                "number": 25,
+                "name": "周建亚",
+                "img": "611101/zjy.jpg",
+                "position": "前锋",
+                "locator": "ST",
+                "played": 6,
+                "goals": 11
+            }
+        ],
+        "subs": [
+        ]
+    }
+}

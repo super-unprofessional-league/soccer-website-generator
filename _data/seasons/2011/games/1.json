@@ -1,0 +1,19 @@
+{
+    "date": "2011/10/12/14:00",
+    "type": "1/2",
+    "schedule": true,
+    "images": [
+    ],
+    "home": {
+        "key": "610092",
+        "score": 0,
+        "events": [
+        ]
+    },
+    "away": {
+        "key": "611101",
+        "score": 0,
+        "events": [
+        ]
+    }
+}

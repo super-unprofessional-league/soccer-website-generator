@@ -3,7 +3,7 @@ layout: default
 ---
 <link rel="stylesheet" href="{{"/assets/css/knockout-bracket.css" | relative_url }}">
 
-{% include season_tabs.html name=page.display_name %}
+{% include season_tabs.html name=page.display_name description=page.description %}
 <div class="row">&nbsp;</div>
 
 {% if page.winner != nil and page.winner != "" %}

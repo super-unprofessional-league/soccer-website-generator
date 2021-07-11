@@ -26,7 +26,11 @@ layout: page
     <div class="column" align="center">
         <p>{% translate {{ page.game.type | prepend: "games."}} %}</p>
         <p>{{ page.game.date }}</p>
+        {% if page.game.schedule %}
+        <h2>&nbsp;VS&nbsp;</h2>
+        {% else %}
         <h2> {{ page.game.home.score }} : {{ page.game.away.score }} </h2>
+        {% endif %}
         {% if page.game.extra %}
         <p>{{page.game.extra}}</p>
         {% endif %}

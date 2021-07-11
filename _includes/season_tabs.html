@@ -1,5 +1,9 @@
 <h2>{{ include.name }}</h2>
 
+{% if include.description != nil %}
+<p>{{include.description | newline_to_br}}</p>
+{% endif %}
+
 <div class="row">
   <a href=".">{% translate schedule %}</a>
   &nbsp;
