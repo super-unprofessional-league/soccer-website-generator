@@ -90,19 +90,21 @@ All league data (matches, squad, etc.) goes under `_data` folder. All static ass
                 "number": 1,
                 "name": "Roman Burki",
                 "img": "placeholder-player.jpg",
+                "locator": "GK",
                 "position": "GoalKeeper"
-                "goals": 0
             }
             ,{
                 "number": 28,
                 "name": "Axel Witsel",
                 "img": "placeholder-player.jpg",
+                "locator": "CDM",
                 "position": "Midfielder"
             }
             ,{
                 "number": 11,
                 "name": "Marco Reus",
                 "img": "placeholder-player.jpg",
+                "locator": "CAM",
                 "position": "Forward"
             }
         ],
@@ -115,11 +117,6 @@ All league data (matches, squad, etc.) goes under `_data` folder. All static ass
             }
             
         ]
-    },
-    "squad": {
-        "GK": 1,
-        "CDM": 28,
-        "CF": 11
     }
 }
 ```

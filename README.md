@@ -82,18 +82,21 @@ By shrekshao狄学长
                 "number": 1,
                 "name": "布尔基",
                 "img": "placeholder-player.jpg",
+                "locator": "GK",
                 "position": "门将"
             }
             ,{
                 "number": 28,
                 "name": "维特塞尔",
                 "img": "placeholder-player.jpg",
+                "locator": "CDM",
                 "position": "中场"
             }
             ,{
                 "number": 11,
                 "name": "罗伊斯",
                 "img": "placeholder-player.jpg",
+                "locator": "CAM",
                 "position": "中场"
             }
         ],
@@ -106,11 +109,6 @@ By shrekshao狄学长
             }
             
         ]
-    },
-    "squad": {
-        "GK": 1,
-        "CDM": 28,
-        "CF": 11
     }
 }
 ```
@@ -124,6 +122,7 @@ By shrekshao狄学长
 {
     "date": "2018/11/10/9:30",
     "type": "group-r1",
+    "schedule": false,
     "home": {
         "key": "dortmund",
         "score": 3,
