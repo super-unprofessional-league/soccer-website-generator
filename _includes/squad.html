@@ -1,6 +1,7 @@
 <div class="football_field">
   <img src="{{"/assets/img/field.svg" | relative_url }}" />
 
+  {% if include.squad != nil %}
   {% for player in include.squad %}
     {% if player.locator != nil %}
       <div class="player {{player.locator}}">
@@ -9,5 +10,6 @@
       </div>
     {% endif %}
   {% endfor %}
+  {% endif %}
 
 </div>

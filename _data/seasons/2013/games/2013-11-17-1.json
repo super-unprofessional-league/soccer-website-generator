@@ -14,7 +14,43 @@
             {"type": "penalty", "time": 10, "player": "吉相冰"},
             {"type": "goal", "time": 35, "player": "吉相冰"},
             {"type": "off", "time": 40, "player": "狄学长"},
-            {"type": "sub", "time": 40, "player": "孙聪"}
+            {"type": "sub", "time": 40, "player": "孙聪"},
+            {"type": "off", "time": 40, "player": "吴瀚"},
+            {"type": "sub", "time": 40, "player": "张伟铮"}
+        ],
+        "squad": [
+            {
+                "name": "王鸣轩",
+                "locator": "GK"
+            }
+            ,{
+                "name": "吴瀚",
+                "locator": "RCB"
+            }
+            ,{
+                "name": "熊宽晨",
+                "locator": "LB"
+            }
+            ,{
+                "name": "狄学长",
+                "locator": "RWB"
+            }
+            ,{
+                "name": "潘登",
+                "locator": "CDM"
+            }
+            ,{
+                "name": "沙奔",
+                "locator": "LCM"
+            }
+            ,{
+                "name": "吉相冰",
+                "locator": "LW"
+            }
+            ,{
+                "name": "陈晨",
+                "locator": "ST"
+            }
         ]
     },
     "away": {
@@ -22,6 +58,7 @@
         "score": 0,
         "events": [
             {"type": "yellow", "time": 10, "player": "宋雨遥"}
-        ]
+        ],
+        "squad": "default"
     }
 }

@@ -39,7 +39,17 @@ module League
     end
 
     class GamePage < Jekyll::Page
-        def initialize(site, base, dir, key, game)
+        def buildStartingSquad(squad, team_player_hash)
+            for i in 0..(squad.length-1)
+                s = squad[i]
+                squad[i] = team_player_hash[s['name']]
+                if s['locator'] != nil
+                    squad[i]['locator'] = s['locator']
+                end
+            end
+        end
+
+        def initialize(site, base, dir, key, game, home_team, away_team)
             @site = site
             @base = base
             @dir = dir
@@ -51,6 +61,22 @@ module League
 
             self.data['key'] = key
             self.data['game'] = game
+
+            # build squad
+            if game['home']['squad'] != nil
+                if game['home']['squad'] == 'default'
+                    game['home']['squad'] = home_team['players']['starting']
+                else
+                    self.buildStartingSquad(game['home']['squad'], home_team['player_hash'])
+                end
+            end
+            if game['away']['squad'] != nil
+                if game['away']['squad'] == 'default'
+                    game['away']['squad'] = away_team['players']['starting']
+                else
+                    self.buildStartingSquad(game['away']['squad'], away_team['player_hash'])
+                end
+            end
             # self.data['home_team'] = home_team
             # self.data['away_team'] = away_team
 
@@ -352,6 +378,19 @@ module League
                     home_team = team_hash[game['home']['key']]
                     away_team = team_hash[game['away']['key']]
 
+                    if home_team['players'] == nil
+                        home_team['players'] = {
+                            "starting" => [],
+                            "subs" => []
+                        }
+                    end
+                    if away_team['players'] == nil
+                        away_team['players'] = {
+                            "starting" => [],
+                            "subs" => []
+                        }
+                    end
+
                     home_team['games'] << p
                     away_team['games'] << p
 
@@ -392,7 +431,7 @@ module League
                         end
                     end
 
-                    site.pages << GamePage.new(site, site.source, File.join('seasons', season[0], 'games', key), key, game)
+                    site.pages << GamePage.new(site, site.source, File.join('seasons', season[0], 'games', key), key, game, home_team, away_team)
                 end
 
 

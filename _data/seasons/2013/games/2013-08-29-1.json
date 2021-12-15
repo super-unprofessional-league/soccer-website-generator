@@ -20,12 +20,14 @@
             {"type": "goal", "time": 35, "player": "吉相冰"},
             {"type": "goal", "time": 40, "player": "潘登"},
             {"type": "goal", "time": 45, "player": "吉相冰"}
-        ]
+        ],
+        "squad": "default"
     },
     "away": {
         "key": "610122",
         "score": 0,
         "events": [
-        ]
+        ],
+        "squad": "default"
     }
 }

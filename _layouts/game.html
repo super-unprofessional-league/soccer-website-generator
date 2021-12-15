@@ -56,6 +56,24 @@ layout: page
     </div>
 </div>
 
+<div class="row-game">
+    <div class="column" align="right">
+        {% if page.game.home.squad != nil %}
+        {% include squad.html squad=page.game.home.squad %}
+        {% endif %}
+    </div>
+
+    <div class="column" align="center">
+
+    </div>
+
+    <div class="column" align="left">
+        {% if page.game.away.squad != nil %}
+        {% include squad.html squad=page.game.away.squad %}
+        {% endif %}
+    </div>
+</div>
+
 {% if page.game.video %}
 <div class="row-game">
     <div class="column" align="center">
