@@ -77,6 +77,15 @@ layout: page
     </div>
 </div>
 {% endif %}
+{% if page.game.videos %}
+{% for v in page.game.videos %}
+<div class="row-game">
+    <div class="column" align="center">
+        {{v | url_decode}}
+    </div>
+</div>
+{% endfor %}
+{% endif %}
 
 {% if page.game.images %}
 <div class="row-game">
