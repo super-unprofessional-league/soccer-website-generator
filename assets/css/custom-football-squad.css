@@ -64,13 +64,13 @@
 
 .team-page-squad .player p {
     text-align: center;
-    font-size: clamp(8px, 4vw, 12px);
+    font-size: 12px;
     white-space: nowrap;
 }
 
 .game-page-squad .player p {
     text-align: center;
-    font-size: clamp(5px, 1.5vw, 8px);
+    font-size: clamp(8px, 0.8vw, 12px);
     white-space: nowrap;
 }
 
