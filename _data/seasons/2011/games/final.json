@@ -21,12 +21,14 @@
         "score": 1,
         "events": [
             {"type": "goal", "time": 36, "player": "李茂"}
-        ]
+        ],
+        "squad": "default"
     },
     "away": {
         "key": "613111",
         "score": 0,
         "events": [
-        ]
+        ],
+        "squad": "default"
     }
 }

@@ -57,7 +57,7 @@ layout: page
 </div>
 
 <div class="row-game">
-    <div class="column" align="right">
+    <div class="column game-page-squad" align="right">
         {% if page.game.home.squad != nil %}
         {% include squad.html squad=page.game.home.squad %}
         {% endif %}
@@ -67,7 +67,7 @@ layout: page
 
     </div>
 
-    <div class="column" align="left">
+    <div class="column game-page-squad" align="left">
         {% if page.game.away.squad != nil %}
         {% include squad.html squad=page.game.away.squad %}
         {% endif %}

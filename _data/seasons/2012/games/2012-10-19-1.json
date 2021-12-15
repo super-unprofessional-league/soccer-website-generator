@@ -11,7 +11,8 @@
             {"type": "sub", "time": 30, "player": "张伟铮"},
             {"type": "yellow", "time": 42, "player": "潘登"},
             {"type": "goal", "time": 49, "player": "沙奔"}
-        ]
+        ],
+        "squad": "default"
     },
     "away": {
         "key": "611101",
@@ -19,6 +20,7 @@
         "events": [
             {"type": "goal", "time": 7, "player": "周建亚"},
             {"type": "goal", "time": 23, "player": "周建亚"}
-        ]
+        ],
+        "squad": "default"
     }
 }
