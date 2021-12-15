@@ -1,0 +1,75 @@
+{
+    "display_name": "611111大二机械",
+    "description": "周林峰还不是体育部长",
+    "logo": "placeholder-club.jpg",
+    "players": {
+        "starting": [
+            {
+                "number": 1,
+                "name": "姜伟海",
+                "img": "611111/jwh.jpg",
+                "position": "门将",
+                "locator": "GK",
+                "played": 4
+            }
+            ,{
+                "number": 3,
+                "name": "赵亮",
+                "img": "611111/zl.jpg",
+                "position": "后卫",
+                "locator": "RCB",
+                "played": 3
+            }
+            ,{
+                "number": 6,
+                "name": "黄友益",
+                "img": "611111/hyy.jpg",
+                "position": "后卫",
+                "locator": "LCB",
+                "played": 4
+            }
+            ,{
+                "number": 2,
+                "name": "丁奕文",
+                "img": "placeholder-player.jpg",
+                "position": "后卫",
+                "locator": "RWB",
+                "played": 4
+            }
+            ,{
+                "number": 4,
+                "name": "徐元",
+                "img": "611111/xy.jpg",
+                "position": "中场",
+                "locator": "LDM",
+                "played": 4
+            }
+            ,{
+                "number": 8,
+                "name": "薛昊天",
+                "img": "611111/xht.jpg",
+                "position": "中场",
+                "locator": "RDM",
+                "played": 3
+            }
+            ,{
+                "number": 5,
+                "name": "周林峰",
+                "img": "611111/zlf.jpg",
+                "position": "前锋",
+                "locator": "LW",
+                "played": 4
+            }
+            ,{
+                "number": 10,
+                "name": "李昱林",
+                "img": "611111/lyl.jpg",
+                "position": "前锋",
+                "locator": "ST",
+                "played": 4
+            }
+        ],
+        "subs": [
+        ]
+    }
+}
