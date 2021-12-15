@@ -76,28 +76,27 @@
                 "name": "孙聪",
                 "img": "613111/sc.jpg",
                 "position": "中场",
-                "played": 1
+                "locator": "RM"
             }
             ,{
                 "number": 5,
                 "name": "吴瀚",
                 "img": "613111/wh.jpg",
                 "position": "后卫",
-                "played": 3
+                "locator": "RCB"
             }
             ,{
                 "number": 3,
                 "name": "朱思宇",
                 "img": "placeholder-player.jpg",
                 "position": "后卫",
-                "played": 2
+                "locator": "RCB"
             }
             ,{
                 "number": 37,
                 "name": "刘念泽",
                 "img": "613111/lnz.jpg",
-                "position": "后卫",
-                "played": 0
+                "position": "后卫"
             }
         ]
     }

@@ -42,9 +42,17 @@ module League
         def buildStartingSquad(squad, team_player_hash)
             for i in 0..(squad.length-1)
                 s = squad[i]
-                squad[i] = team_player_hash[s['name']]
-                if s['locator'] != nil
-                    squad[i]['locator'] = s['locator']
+                l = s['locator']
+                p = team_player_hash[s['name']]
+                if l != nil
+                    squad[i] = {
+                        'name' => p['name'],
+                        'number' => p['number'],
+                        'img' => p['img'],
+                        'locator' => l
+                    }
+                else
+                    squad[i] = team_player_hash[s['name']]
                 end
             end
         end
