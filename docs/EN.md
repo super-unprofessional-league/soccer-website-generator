@@ -123,6 +123,8 @@ All league data (matches, squad, etc.) goes under `_data` folder. All static ass
 
 * squad position (`GK`, `CM`, etc) abbreviations are correspond to predefined positions in css (take a look to see the full list [here](https://github.com/super-unprofessional-league/super-unprofessional-league-website/blob/master/assets/css/custom-football-squad.css#L70))
 
+![](field-locator.png)
+
 ### Game json file example
 
 ```json
