@@ -7,6 +7,35 @@
         "events": [
             {"type": "goal", "time": 26, "player": "狄学长"},
             {"type": "goal", "time": 34, "player": "狄学长"}
+        ],
+        "squad": [
+            {
+                "name": "王鸣轩"
+            }
+            ,{
+                "name": "吴瀚"
+            }
+            ,{
+                "name": "朱思宇"
+            }
+            ,{
+                "name": "狄学长"
+                ,"locator": "RM"
+            }
+            ,{
+                "name": "潘登"
+                ,"locator": "CM"
+            }
+            ,{
+                "name": "沙奔"
+                ,"locator": "LDM"
+            }
+            ,{
+                "name": "吉相冰"
+            }
+            ,{
+                "name": "陈晨"
+            }
         ]
     },
     "away": {
@@ -14,6 +43,7 @@
         "score": 1,
         "events": [
             {"type": "goal", "time": 10, "player": "胡煜明"}
-        ]
+        ],
+        "squad": "default"
     }
 }

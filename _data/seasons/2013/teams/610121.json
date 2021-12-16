@@ -1,5 +1,39 @@
 {
     "display_name": "610121大二机电",
     "description": "胡煜明抗着前进的球队",
-    "logo": "placeholder-club.jpg"
+    "logo": "placeholder-club.jpg",
+    "players": {
+        "starting": [
+            {
+                "number": 9,
+                "name": "胡煜明",
+                "img": "611121/hym.jpg",
+                "position": "中场",
+                "locator": "CM"
+            }
+            ,{
+                "number": 17,
+                "name": "文轶",
+                "img": "611121/wy.jpg",
+                "position": "后卫",
+                "locator": "RB"
+            }
+            ,{
+                "number": 8,
+                "name": "张凌翔",
+                "img": "611121/zlx.jpg",
+                "position": "中场",
+                "locator": "LWB"
+            }
+            ,{
+                "number": 6,
+                "name": "牛畅",
+                "img": "610121/nc.jpg",
+                "position": "后卫",
+                "locator": "LCB"
+            }
+        ],
+        "subs": [
+        ]
+    }
 }

@@ -7,13 +7,43 @@
         "events": [
             {"type": "goal", "time": 15, "player": "颜兵健"},
             {"type": "goal", "time": 20, "player": "王凯"}
-        ]
+        ],
+        "squad": "default"
     },
     "away": {
         "key": "611111",
         "score": 1,
         "events": [
             {"type": "goal", "time": 43, "player": "周林峰"}
+        ],
+        "squad": [
+            {
+                "name": "姜伟海"
+            }
+            ,{
+                "name": "徐元"
+            }
+            ,{
+                "name": "黄友益"
+                ,"locator": "LB"
+            }
+            ,{
+                "name": "丁奕文"
+                ,"locator": "RB"
+            }
+            ,{
+                "name": "薛昊天"
+                ,"locator": "CM"
+            }
+            ,{
+                "name": "周林峰"
+            }
+            ,{
+                "name": "吴傲"
+            }
+            ,{
+                "name": "李昱林"
+            }
         ]
     }
 }

@@ -1,5 +1,29 @@
 {
     "display_name": "610132大一电二",
     "description": "施祎辰带领的球队",
-    "logo": "placeholder-club.jpg"
+    "logo": "placeholder-club.jpg",
+    "players": {
+        "starting": [
+            {
+                "number": 9,
+                "name": "施祎辰",
+                "position": "前锋",
+                "locator": "ST"
+            }
+            ,{
+                "number": 3,
+                "name": "颜兵健",
+                "position": "后卫",
+                "locator": "RM"
+            }
+            ,{
+                "number": 2,
+                "name": "王凯",
+                "position": "中场",
+                "locator": "LM"
+            }
+        ],
+        "subs": [
+        ]
+    }
 }
