@@ -116,6 +116,8 @@ By shrekshao狄学长
 * 队伍文件名似乎暂时只支持ascii英文字符
 * 阵容位置缩写 (`GK`, `CM`, etc) 对应到css里预设的位置 ([在这里看全部可用位置缩写](https://github.com/super-unprofessional-league/super-unprofessional-league-website/blob/master/assets/css/custom-football-squad.css#L70))
 
+![](docs/field-locator.png)
+
 ### games 比赛数据结构
 
 ```json

@@ -1,6 +1,9 @@
 {
     "date": "2012/10/19/12:30",
     "type": "final",
+    "videos": [
+        "<iframe src='https://player.youku.com/embed/XNDY4MTY2MTIw' frameborder=0 'allowfullscreen'></iframe>"
+    ],
     "home": {
         "key": "613111",
         "score": 1,
@@ -11,7 +14,8 @@
             {"type": "sub", "time": 30, "player": "张伟铮"},
             {"type": "yellow", "time": 42, "player": "潘登"},
             {"type": "goal", "time": 49, "player": "沙奔"}
-        ]
+        ],
+        "squad": "default"
     },
     "away": {
         "key": "611101",
@@ -19,6 +23,7 @@
         "events": [
             {"type": "goal", "time": 7, "player": "周建亚"},
             {"type": "goal", "time": 23, "player": "周建亚"}
-        ]
+        ],
+        "squad": "default"
     }
 }

@@ -21,7 +21,33 @@
             {"type": "goal", "time": 40, "player": "潘登"},
             {"type": "goal", "time": 45, "player": "吉相冰"}
         ],
-        "squad": "default"
+        "squad": [
+            {
+                "name": "王鸣轩"
+            }
+            ,{
+                "name": "张伟铮"
+            }
+            ,{
+                "name": "熊宽晨"
+            }
+            ,{
+                "name": "狄学长"
+                ,"locator": "RM"
+            }
+            ,{
+                "name": "潘登"
+            }
+            ,{
+                "name": "沙奔"
+            }
+            ,{
+                "name": "吉相冰"
+            }
+            ,{
+                "name": "陈晨"
+            }
+        ]
     },
     "away": {
         "key": "610122",
