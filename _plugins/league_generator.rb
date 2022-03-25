@@ -56,6 +56,12 @@ module League
                 end
             end
         end
+        def buildBench(bench, team_player_hash)
+            for i in 0..(bench.length-1)
+                s = bench[i]
+                bench[i] = team_player_hash[s['name']]
+            end
+        end
 
         def initialize(site, base, dir, key, game, home_team, away_team)
             @site = site
@@ -78,12 +84,19 @@ module League
                     self.buildStartingSquad(game['home']['squad'], home_team['player_hash'])
                 end
             end
+            if game['home']['bench'] != nil
+                self.buildBench(game['home']['bench'], home_team['player_hash'])
+            end
+
             if game['away']['squad'] != nil
                 if game['away']['squad'] == 'default'
                     game['away']['squad'] = away_team['players']['starting']
                 else
                     self.buildStartingSquad(game['away']['squad'], away_team['player_hash'])
                 end
+            end
+            if game['away']['bench'] != nil
+                self.buildBench(game['away']['bench'], away_team['player_hash'])
             end
             # self.data['home_team'] = home_team
             # self.data['away_team'] = away_team
@@ -408,6 +421,7 @@ module League
                     game['away']['logo'] = away_team['logo']
 
                     game['home']['events'].each do |e|
+                        next if e['player'] == '??'
                         if e['type'] == 'goal' or e['type'] == 'penalty'
                             player = home_team['player_hash'][e['player']]
                             if player == nil
@@ -424,6 +438,7 @@ module League
                     end
 
                     game['away']['events'].each do |e|
+                        next if e['player'] == '??'
                         if e['type'] == 'goal' or e['type'] == 'penalty'
                             player = away_team['player_hash'][e['player']]
                             if player == nil

@@ -19,6 +19,13 @@ layout: page
             <img width="30px" src="{{site.baseurl}}/assets/img/icon/{{event.type}}.png" />
             {{event.time}}'  
             {{event.player}}
+            {% if event.assist %}
+                <img width="30px" src="{{site.baseurl}}/assets/img/icon/assist.png" />
+                {{event.assist}}
+                {% elsif event.sub %}
+                <img width="30px" src="{{site.baseurl}}/assets/img/icon/sub.png" />
+                {{event.sub}}
+            {% endif %}
         </p>
         {% endfor %}
     </div>
@@ -57,19 +64,33 @@ layout: page
 </div>
 
 <div class="row-game">
-    <div class="column" align="right">
+    <div class="column game-page-squad" align="right">
         {% if page.game.home.squad != nil %}
         {% include squad.html squad=page.game.home.squad %}
         {% endif %}
+
+        {% if page.game.home.bench != nil %}
+        {% for player in page.game.home.bench %}
+        <div class="player sub">
+            <img src="{{site.baseurl}}/assets/img/{{player.img | default: 'placeholder-player.jpg'}}" />
+            <p>{{player.number}} {{player.name}}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
     </div>
 
-    <div class="column" align="center">
-
-    </div>
-
-    <div class="column" align="left">
+    <div class="column game-page-squad" align="left">
         {% if page.game.away.squad != nil %}
         {% include squad.html squad=page.game.away.squad %}
+        {% endif %}
+
+        {% if page.game.away.bench != nil %}
+        {% for player in page.game.away.bench %}
+        <div class="player sub">
+            <img src="{{site.baseurl}}/assets/img/{{player.img | default: 'placeholder-player.jpg'}}" />
+            <p>{{player.number}} {{player.name}}</p>
+        </div>
+        {% endfor %}
         {% endif %}
     </div>
 </div>
@@ -80,6 +101,15 @@ layout: page
         {{page.game.video | url_decode}}
     </div>
 </div>
+{% endif %}
+{% if page.game.videos %}
+{% for v in page.game.videos %}
+<div class="row-game">
+    <div class="column" align="center">
+        {{v | url_decode}}
+    </div>
+</div>
+{% endfor %}
 {% endif %}
 
 {% if page.game.images %}

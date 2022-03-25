@@ -12,11 +12,9 @@
         "score": 2,
         "events": [
             {"type": "penalty", "time": 10, "player": "吉相冰"},
-            {"type": "goal", "time": 35, "player": "吉相冰"},
-            {"type": "off", "time": 40, "player": "狄学长"},
-            {"type": "sub", "time": 40, "player": "孙聪"},
-            {"type": "off", "time": 40, "player": "吴瀚"},
-            {"type": "sub", "time": 40, "player": "张伟铮"}
+            {"type": "goal", "time": 35, "player": "吉相冰", "assist": "陈晨"},
+            {"type": "off", "time": 40, "player": "狄学长", "sub": "孙聪"},
+            {"type": "off", "time": 40, "player": "吴瀚", "sub": "张伟铮"}
         ],
         "squad": [
             {
@@ -30,6 +28,7 @@
             }
             ,{
                 "name": "狄学长"
+                ,"locator": "RM"
             }
             ,{
                 "name": "潘登"
@@ -44,6 +43,7 @@
                 "name": "陈晨"
             }
         ]
+        ,"bench": [{"name": "张伟铮"}, {"name": "孙聪"}]
     },
     "away": {
         "key": "611131",

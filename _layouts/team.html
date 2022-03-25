@@ -2,9 +2,6 @@
 layout: page
 ---
 
-<!-- <link rel="stylesheet" type="text/css" href="{{"/assets/css/football-field.css" | relative_url }}">  -->
-<!-- <link rel="stylesheet" type="text/css" href="{{"/assets/css/custom-football-squad.css" | relative_url }}">  -->
-
 <h1>
     <img width="20%" src='{{site.baseurl}}/assets/img/{{page.team.logo}}'/>
     {{ page.team.display_name }}
@@ -76,7 +73,7 @@ layout: page
 
 
 <!-- Starting squad -->
-<div class="column" >
+<div class="column team-page-squad" >
     {% include squad.html squad=page.team.players.starting %}
 </div>
 

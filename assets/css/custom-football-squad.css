@@ -62,9 +62,21 @@
     width: 50%;
 }
 
-.player p {
+.player.sub {
+    position:static !important;
+    float: left;
+}
+
+.team-page-squad .player p {
     text-align: center;
-    font-size: clamp(5px, 60%, 12px);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.game-page-squad .player p {
+    text-align: center;
+    font-size: clamp(8px, 0.8vw, 12px);
+    white-space: nowrap;
 }
 
 /* GK */

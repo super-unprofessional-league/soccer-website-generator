@@ -129,11 +129,24 @@ By shrekshao狄学长
         "events": [
             {"type": "yellow", "time": 29, "player": "Weigl"},
             {"type": "yellow", "time": 36, "player": "Akanji"},
-            {"type": "off", "time": 46, "player": "Weigl"},
-            {"type": "sub", "time": 46, "player": "Dahoud"},
+            {"type": "off", "time": 46, "player": "Weigl", "sub": "Dahoud"},
             {"type": "penalty", "time": 49, "player": "Reus"},
             {"type": "goal", "time": 67, "player": "Reus"},
-            {"type": "goal", "time": 73, "player": "Paco Alcacer"}
+            {"type": "goal", "time": 73, "player": "Paco Alcacer", "assist": "Reus"}
+        ],
+        "squad": [
+            {
+                "name": "Weigl"
+            },
+            {
+                "name": "Reus",
+                "locator": "CAM"
+            }
+        ],
+        "bench": [
+            {
+                "name": "Gotze"
+            }
         ]
     },
     "away": {
@@ -143,7 +156,8 @@ By shrekshao狄学长
             {"type": "goal", "time": 26, "player": "Lewandowski"},
             {"type": "goal", "time": 52, "player": "Lewandowski"},
             {"type": "yellow", "time": 55, "player": "Ribery"}
-        ]
+        ],
+        "squad": "default"
     }
 }
 ```
