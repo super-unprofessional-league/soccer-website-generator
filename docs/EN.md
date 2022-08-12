@@ -4,7 +4,7 @@ By shrekshao狄学长
 
 [EN](#) | [简体中文](../README.md)
 
-[Demo](https://super-unprofessional-league.github.io/super-unprofessional-league-website/) (in Chinese)
+[Demo](https://super-unprofessional-league.github.io/soccer-website-generator/) (in Chinese)
 
 A Jekyll based static site generator for website of a unprofessional league.
 

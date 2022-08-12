@@ -5,7 +5,7 @@ By shrekshao狄学长
 
 [EN](docs/EN.md) | [简体中文](#)
 
-[示例](https://super-unprofessional-league.github.io/super-unprofessional-league-website/)
+[示例](https://super-unprofessional-league.github.io/soccer-website-generator/)
 
 一个基于Jekyll的静态网站生成器，转为建造超业余足球联赛网站定制，适用于校园内赛事，社区联赛等。 
 
