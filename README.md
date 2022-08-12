@@ -5,7 +5,7 @@ By shrekshao狄学长
 
 [EN](docs/EN.md) | [简体中文](#)
 
-[示例](https://super-unprofessional-league.github.io/super-unprofessional-league-website/)
+[示例](https://super-unprofessional-league.github.io/soccer-website-generator/)
 
 一个基于Jekyll的静态网站生成器，转为建造超业余足球联赛网站定制，适用于校园内赛事，社区联赛等。 
 
@@ -115,6 +115,8 @@ By shrekshao狄学长
 
 * 队伍文件名似乎暂时只支持ascii英文字符
 * 阵容位置缩写 (`GK`, `CM`, etc) 对应到css里预设的位置 ([在这里看全部可用位置缩写](https://github.com/super-unprofessional-league/super-unprofessional-league-website/blob/master/assets/css/custom-football-squad.css#L70))
+
+![](docs/field-locator.png)
 
 ### games 比赛数据结构
 
