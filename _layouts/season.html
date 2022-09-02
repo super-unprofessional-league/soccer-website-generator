@@ -15,6 +15,7 @@ layout: default
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>{% translate table.team_name %}</th>
       <th>{% translate table.played %}</th>
       <th>{% translate table.win %}</th>
@@ -29,6 +30,7 @@ layout: default
   <tbody>
     {% for team in page.table %}
     <tr>
+      <td>{{ forloop.index }}</td>
       <td>
         {% include team_link.html team=team %}
       </td>

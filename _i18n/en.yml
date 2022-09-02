@@ -2,6 +2,7 @@ posts_title: Posts
 schedule: Schedule
 goal_scorers: Goal Scorers
 season: Season
+season_list: All Seasons
 player:
   photo: Pic
   name: Name
@@ -15,6 +16,7 @@ player:
 champion: Champion
 knockout_stage: Knockout Stage
 group_stage: Group Stage
+rank_stage: Ranking Stage
 games_list: Games
 table:
   team_name: Team
@@ -40,7 +42,9 @@ games:
   1/16: 1/16 Final
   1/16-final: 1/16 Final
   third-place-playoff: Third Place Playoff
-  rank-playoff: Ranking Playoff
+  rank-r1: Ranking Round 1
+  rank-r2: Ranking Round 2
+  rank-r3: Ranking Round 3
   group: Group
   group-r1: Group Round 1
   group-r2: Group Round 2
@@ -49,3 +53,23 @@ games:
   group-r5: Group Round 5
   group-r6: Group Round 6
   league: League
+  '#1': Round 1
+  '#2': Round 2
+  '#3': Round 3
+  '#4': Round 4
+  '#5': Round 5
+  '#6': Round 6
+  '#7': Round 7
+  '#8': Round 8
+  '#9': Round 9
+  '#10': Round 10
+  '#11': Round 11
+  '#12': Round 12
+  '#13': Round 13
+  '#14': Round 14
+  '#15': Round 15
+  '#16': Round 16
+  '#17': Round 17
+  '#18': Round 18
+  '#19': Round 19
+  '#20': Round 20

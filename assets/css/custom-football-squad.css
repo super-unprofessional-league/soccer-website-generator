@@ -1,3 +1,13 @@
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
 .row-game {
     display: -ms-flex; display: -webkit-flex; display: flex;
 }
@@ -221,7 +231,21 @@ table.playerlist td {
 }
 
 .team-logo {
-    width: 30px !important;
+    height: 30px !important;
+    padding: 0.1em;
+    object-fit: contain;
+}
+
+.row-game .column .team-logo-large {
+    width: 70%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.team-page-logo {
+    width: 20%;
+    max-height: 150px;
+    object-fit: contain;
 }
 
 /* team history stats table */

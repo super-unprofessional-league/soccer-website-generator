@@ -12,12 +12,14 @@ layout: default
 <div class="row">&nbsp;</div>
 {% endif %}
 
-{% if page.knockout_array != nil %}
+{% if page.knockouts != nil %}
 <div class="row">&nbsp;</div>
-<h3>{% translate knockout_stage %}</h3>
 
+{% for k in page.knockouts  %}
+{% assign knockout_key = k[0] %}
+<h3>{{ knockout_key }}</h3>
 <div class="tournament">
-{% for round in page.knockout_array  %}
+  {% for round in k[1].knockout_array  %}
   <ul class="round">
     <li class="spacer">&nbsp;</li>
 		
@@ -48,19 +50,30 @@ layout: default
   {% endfor %}
 
 
+
 <ul class="round" style="width: 50px">
-{% if page.winner != nil and page.winner != "" %}
-{% include team_link.html team=page.winner %}
+{% if k[1].winner != nil and k[1].winner != "" %}
+{% assign w = k[1].winner %}
+{% include team_link.html team=w %}
 {% else %}
 &nbsp;
 {% endif %}
 </ul>
 </div>
+
+{% for game in k[1].other_games %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
+{% endfor %}
+<br/>
+
+{% endfor %}
 {% endif %}
 
 {% if page.group_tables != nil %}
 
-<h3>{% translate group_stage %}</h3>
+<h3>{% translate rank_stage %}</h3>
 
 {% for group in page.group_tables %}
 {% assign group_key = group[0] %}
@@ -108,15 +121,6 @@ layout: default
 <br/>
 {% endfor %}
 
-{% comment %}
-{% for game in page.games_pair %}
-{% if game[1].type contains "group" %}
-{% assign gk = game[0] %}
-{% assign g = game[1] %}
-{% include game_lines.html game_key=gk game=g season_base_url="" %}
-{% endif %}
-{% endfor %}
-{% endcomment %}
 
 {% endif %}
 

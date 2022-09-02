@@ -30,6 +30,10 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll/tagging
+
+minima:
+  date_format: " %Y-%m-%d"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -44,5 +48,6 @@ exclude:
   - vendor/ruby/
   - docs/
 
-# exclude:
-  
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty

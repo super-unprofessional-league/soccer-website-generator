@@ -5,7 +5,7 @@ layout: page
 <div class="row-game">
     <div class="column" align="right">
 
-        <img width="70%" src='{{site.baseurl}}/assets/img/{{page.game.home.logo}}'/>
+        <img class="team-logo-large" src='{{site.baseurl}}/assets/img/{{page.game.home.logo}}'/>
         <h2>
             <a href='../../{{page.game.home.key}}'>
                 {{ page.game.home.display_name }}
@@ -22,7 +22,7 @@ layout: page
             {% if event.assist %}
                 <img width="30px" src="{{site.baseurl}}/assets/img/icon/assist.png" />
                 {{event.assist}}
-                {% elsif event.sub %}
+            {% elsif event.sub %}
                 <img width="30px" src="{{site.baseurl}}/assets/img/icon/sub.png" />
                 {{event.sub}}
             {% endif %}
@@ -44,7 +44,7 @@ layout: page
     </div>
 
     <div class="column" align="left">
-        <img width="70%" src='{{site.baseurl}}/assets/img/{{page.game.away.logo}}'/>
+        <img class="team-logo-large" src='{{site.baseurl}}/assets/img/{{page.game.away.logo}}'/>
         <h2>
             <a href='../../{{page.game.away.key}}'>
                 {{ page.game.away.display_name }}
@@ -58,6 +58,13 @@ layout: page
             <img width="30px" src="{{site.baseurl}}/assets/img/icon/{{event.type}}.png" />
             {{event.time}}'  
             {{event.player}}
+            {% if event.assist %}
+                <img width="30px" src="{{site.baseurl}}/assets/img/icon/assist.png" />
+                {{event.assist}}
+            {% elsif event.sub %}
+                <img width="30px" src="{{site.baseurl}}/assets/img/icon/sub.png" />
+                {{event.sub}}
+            {% endif %}
         </p>
         {% endfor %}
     </div>

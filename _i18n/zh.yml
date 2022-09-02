@@ -2,6 +2,7 @@ posts_title: 战报
 schedule: 赛程
 goal_scorers: 射手榜
 season: 赛季
+season_list: 全部赛季
 player:
   photo: 头像
   name: 姓名
@@ -15,6 +16,7 @@ player:
 champion: 冠军
 knockout_stage: 淘汰赛阶段
 group_stage: 小组赛阶段
+rank_stage: 排位赛阶段
 games_list: 比赛
 table:
   team_name: 队名
@@ -40,7 +42,9 @@ games:
   1/16: 1/16决赛
   1/16-final: 1/16决赛
   third-place-playoff: 三四名决赛
-  rank-playoff: 排位赛
+  rank-r1: 排位赛第1轮
+  rank-r2: 排位赛第2轮
+  rank-r3: 排位赛第3轮
   group: 小组赛
   group-r1: 小组赛第1轮
   group-r2: 小组赛第2轮
@@ -49,3 +53,23 @@ games:
   group-r5: 小组赛第5轮
   group-r6: 小组赛第6轮
   league: 联赛
+  '#1': 第1轮
+  '#2': 第2轮
+  '#3': 第3轮
+  '#4': 第4轮
+  '#5': 第5轮
+  '#6': 第6轮
+  '#7': 第7轮
+  '#8': 第8轮
+  '#9': 第9轮
+  '#10': 第10轮
+  '#11': 第11轮
+  '#12': 第12轮
+  '#13': 第13轮
+  '#14': 第14轮
+  '#15': 第15轮
+  '#16': 第16轮
+  '#17': 第17轮
+  '#18': 第18轮
+  '#19': 第19轮
+  '#20': 第20轮
