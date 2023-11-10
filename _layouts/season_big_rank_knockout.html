@@ -1,0 +1,78 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{"/assets/css/knockout-bracket.css" | relative_url }}">
+<style>
+.big-rank tr:nth-child(-n+4) td:first-child, .tier1 {
+  background-color: #d4af37 !important;
+}
+.big-rank tr:nth-child(n+5):nth-child(-n+8) td:first-child, .tier2 {
+  background-color:#e9cc6e !important;
+}
+.big-rank tr:nth-child(n+9):nth-child(-n+12) td:first-child, .tier3 {
+  background-color: #ece1ba !important;
+}
+.big-rank tr:nth-child(n+13):nth-child(-n+16) td:first-child, .tier4 {
+  background-color: #ececec !important;
+}
+</style>
+
+{% include season_tabs.html name=page.display_name description=page.description link=page.link %}
+<div class="row">&nbsp;</div>
+
+{% include champion.html winner=page.winner %}
+
+<!-- 总冠军杯 knockout bracket -->
+{% include knockout_brackets.html knockouts=page.knockouts %}
+
+<!-- 大 ranking table -->
+<h3>{% t open_group %}</h3>
+{% assign id = 0 %}
+
+{% for bb in page.rank_tables %}
+{% assign rr = bb %}
+{% break %}
+{% endfor %}
+
+{% assign rank_key = rr[0] %}
+{% assign big_rank_table = rr[1] %}
+
+{% include team_table.html table=big_rank_table table_class="big-rank" %}
+
+<p>
+* <span class="tier1">冠军杯</span>
+<span class="tier2">优胜杯</span>
+<span class="tier3">湾区杯</span>
+<span class="tier4">硅谷杯</span>
+
+</p>
+
+{% for game in page.rank_games[rank_key] %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
+{% endfor %}
+<br/>
+<br/>
+
+{% assign len = big_rank_table | size %}
+{% assign id = id | plus: len %}
+
+<!-- 17名以后 -->
+{% capture sn2 %}
+{% t yzb_group %}
+{% endcapture %}
+
+{% include group_tables.html group_tables=page.group_tables group_games=page.group_games stage_name=sn2 index_offset=id table_field='group_table'%}
+
+<h3>{% t qualify_stage %}</h3>
+{% for game in page.game_list %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
+{% endfor %}
+
+{% if page.rules != nil %}
+&nbsp;
+<p style="font-size:12px;">{{page.rules | newline_to_br}}</p>
+{% endif %}

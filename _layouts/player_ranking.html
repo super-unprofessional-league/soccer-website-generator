@@ -2,10 +2,10 @@
 layout: default
 ---
 
-{% include season_tabs.html name=page.display_name %}
+{% include season_tabs.html name=page.display_name description=page.description link=page.link %}
 <div class="row">&nbsp;</div>
 
-<h3>{% t goal_scorers %}</h3>
+<h3>{% t {{page.rank_title}} %}</h3>
 
 <table class="playerlist">
   <thead>
@@ -14,7 +14,7 @@ layout: default
       <th>{% t player.name %}</th>
       <th>{% t player.team %}</th>
       {% capture gp %}
-      {% t player.goals_penalty %}
+      {% t {{page.scoring_name}} %}
       {% endcapture %}
       <th>{{ gp | newline_to_br }}</th>
     </tr>
@@ -23,11 +23,9 @@ layout: default
     {% for player in page.rank_table %}
     <tr>
       <td>
-        {% if player.img != nil %}
-        <img src="{{site.baseurl}}/assets/img/{{player.img}}"/>
-        {% else %}
-        <img src="{{site.baseurl}}/assets/img/placeholder-player.jpg"/>
-        {% endif %}
+        <div class="player static">
+          <img src="{{site.baseurl_root}}/assets/img/{{player.img | default: 'placeholder-player.jpg'}}" />
+        </div>
       </td>
       <td>
         {% case forloop.index %}
@@ -39,16 +37,16 @@ layout: default
         🥉
         {% else %}
         {% endcase %}
-        <font color='#f55'>{{ player.name }}</font>
+        {{ player.name }}
       </td>
       <td>
         {% assign team = page.team_hash[player.teamkey] %}
         {% include team_link.html team=team %}
       </td>
       <td>
-        {{ player.goals }}
-        {% if player.penalty > 0 %}
-        ({{ player.penalty }})
+        {{ player[page.field1] }}
+        {% if player[page.field2] > 0 %}
+        ({{ player[page.field2] }})
         {% endif %}
       </td>
     </tr>

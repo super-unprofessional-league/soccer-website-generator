@@ -1,15 +1,12 @@
 <tr>
   <td>{{ include.player.number }}</td>
   <td>
-      {% if include.player.img != nil %}
-      <img src="{{site.baseurl}}/assets/img/{{include.player.img}}"/>
-      {% else %}
-      <img src="{{site.baseurl}}/assets/img/placeholder-player.jpg"/>
-      {% endif %}
-      </img>
+    <div class="player static">
+      <img src="{{site.baseurl_root}}/assets/img/{{include.player.img | default: 'placeholder-player.jpg'}}" />
+    </div>
   </td>
-  <td><font color='#f55'>{{ include.player.name }}</font></td>
-  <td>{{ include.player.position }}</td>
-  <!-- <td>{{ include.player.played }}</td> -->
+  <td>{{ include.player.name }}</td>
+  <td>{% t include.player.position %}</td>
   <td>{{ include.player.goals }}</td>
+  <td>{{ include.player.assists }}</td>
 </tr>

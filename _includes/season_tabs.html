@@ -1,13 +1,26 @@
-<h2>{{ include.name }}</h2>
+<h2>
+  {% include i18n_display_name.html entity=page %}
+  {% if include.link != nil %}
+  &nbsp;[
+  <a href="{{include.link}}">{% t league_website %}</a>
+  ]
+  {% endif %}
+</h2>
 
 {% if include.description != nil %}
 <p>{{include.description | newline_to_br}}</p>
 {% endif %}
 
+{% if include.disable_tabs == nil %}
 <div class="row">
   <a href=".">{% translate schedule %}</a>
   &nbsp;
   |
   &nbsp;
   <a href="goal_scorers">{% translate goal_scorers %}</a>
+  &nbsp;
+  |
+  &nbsp;
+  <a href="assists_list">{% translate assist_list %}</a>
 </div>
+{% endif %}

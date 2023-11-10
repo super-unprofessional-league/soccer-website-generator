@@ -3,8 +3,6 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
@@ -26,8 +24,8 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-        <p>powered by<br/>  <a href="https://github.com/super-unprofessional-league/super-unprofessional-league-website">Super Unprofessional League Website Generator</a></p>
+        <p>{% include i18n_field.html entity=site field="description" %}</p>
+        <p>powered by<br/>  <a href="https://github.com/super-unprofessional-league/soccer-website-generator">Super Unprofessional League Website Generator</a></p>
       </div>
 
     </div>

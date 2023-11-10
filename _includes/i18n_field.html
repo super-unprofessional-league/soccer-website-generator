@@ -1,0 +1,7 @@
+{% assign entry = include.field | append: "_" | append: site.lang %}
+{% assign text = include.entity[{{entry}}] %}
+{% if text != nil %}
+{{ text }}
+{% else %}
+{{ include.entity[include.field] }}
+{% endif %}

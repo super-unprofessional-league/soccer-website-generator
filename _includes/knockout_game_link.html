@@ -6,6 +6,9 @@
   :
   {{ include.game[1].away.score }}
   {% endif %}
+  {% if include.game[1].penalty != nil %}
+  &nbsp;（{%t penalty %} {{include.game[1].penalty[0]}}:{{include.game[1].penalty[1]}}）
+  {% endif %}
   {% if include.game[1].extra != nil %}
   &nbsp; {{include.game[1].extra}}
   {% endif %}

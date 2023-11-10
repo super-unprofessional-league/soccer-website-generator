@@ -3,122 +3,17 @@ layout: default
 ---
 <link rel="stylesheet" href="{{"/assets/css/knockout-bracket.css" | relative_url }}">
 
-{% include season_tabs.html name=page.display_name description=page.description %}
+{% include season_tabs.html name=page.display_name description=page.description link=page.link %}
 <div class="row">&nbsp;</div>
 
-{% if page.winner != nil and page.winner != "" %}
-<h3>🏆 {% translate champion %}</h3>
-{% include team_link.html team=page.winner %}
-<div class="row">&nbsp;</div>
-{% endif %}
+{% include champion.html winner=page.winner %}
 
-{% if page.knockout_array != nil %}
-<div class="row">&nbsp;</div>
-<h3>{% translate knockout_stage %}</h3>
+{% include knockout_brackets.html knockouts=page.knockouts %}
 
-<div class="tournament">
-{% for round in page.knockout_array  %}
-  <ul class="round">
-    <li class="spacer">&nbsp;</li>
-		
-    {% for game_array in round %}
-		{% assign game_pair = game_array[2] %}
-    {% assign team0 = game_array[0] %}
-    {% assign team1 = game_array[1] %}
-    
-    <li class="game game-top">{% include team_link.html team=team0 %}</li>
-		<li class="game game-spacer"></li>
-		<li class="game game-spacer-text">
-			<div>
-			{% if game_pair[1] != nil %}
-			{% include knockout_game_link.html game=game_pair %}
-			{% else %}
-			?
-			{% endif %}
-			</div>
-		</li>
-		<li class="game game-spacer"></li>
-    <li class="game game-bottom ">{% include team_link.html team=team1 %}</li>
-
-
-
-    <li class="spacer">&nbsp;</li>
-    {% endfor %}
-  </ul>
-  {% endfor %}
-
-
-<ul class="round" style="width: 50px">
-{% if page.winner != nil and page.winner != "" %}
-{% include team_link.html team=page.winner %}
-{% else %}
-&nbsp;
-{% endif %}
-</ul>
-</div>
-{% endif %}
-
-{% if page.group_tables != nil %}
-
-<h3>{% translate group_stage %}</h3>
-
-{% for group in page.group_tables %}
-{% assign group_key = group[0] %}
-<table class="block">
-  <thead>
-    <tr>
-      <th></th>
-      <th>{{group_key}}</th>
-      <th>{% translate table.played %}</th>
-      <th>{% translate table.win %}</th>
-      <th>{% translate table.tie %}</th>
-      <th>{% translate table.lose %}</th>
-      <th>{% translate table.goals_for %}</th>
-      <th>{% translate table.goals_against %}</th>
-      <th>{% translate table.goals_diff %}</th>
-      <th>{% translate table.points %}</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for team in group[1] %}
-    <tr>
-      <td>{{ forloop.index }}</td>
-      <td>
-        {% include team_link.html team=team %}
-      </td>
-      <td>{{ team.table.games_played }}</td>
-      <td>{{ team.table.wins }}</td>
-      <td>{{ team.table.draws }}</td>
-      <td>{{ team.table.loses }}</td>
-      <td>{{ team.table.goals_for }}</td>
-      <td>{{ team.table.goals_against }}</td>
-      <td>{{ team.table.goals_diff }}</td>
-      <td>{{ team.table.points }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-{% for game in page.group_games[group_key] %}
-{% assign gk = game[0] %}
-{% assign g = game[1] %}
-{% include game_lines.html game_key=gk game=g season_base_url="" %}
-{% endfor %}
-<br/>
-<br/>
-{% endfor %}
-
-{% comment %}
-{% for game in page.games_pair %}
-{% if game[1].type contains "group" %}
-{% assign gk = game[0] %}
-{% assign g = game[1] %}
-{% include game_lines.html game_key=gk game=g season_base_url="" %}
-{% endif %}
-{% endfor %}
-{% endcomment %}
-
-{% endif %}
+{% capture sn %}
+{% translate group_stage %}
+{% endcapture %}
+{% include group_tables.html group_tables=page.group_tables group_games=page.group_games stage_name=sn table_field='group_table' %}
 
 {% if page.rules != nil %}
 &nbsp;

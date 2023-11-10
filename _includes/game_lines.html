@@ -1,19 +1,22 @@
-<a href="{{include.season_base_url}}games/{{include.game_key}}">
-  <font color="#aaa">{{include.game.date}}</font>
-  <font color="#aaa">{% translate {{include.game.type | prepend: "games."}} %}</font>
-  {% if include.game.extra != nil %}
-  <font color="#aaa">{{include.game.extra}}</font>
+<a href="{{include.season_base_url}}games/{{include.game_key}}" class="game-line">
+<span>{{include.game.date}}</span>
+<span>{% translate {{include.game.type | prepend: "games."}} %}</span>
+{% if include.game.penalty != nil%}
+<span>（{%t penalty %} {{include.game.penalty[0]}}:{{include.game.penalty[1]}}）</span>
+{% endif %}
+{% if include.game.extra != nil %}
+<span>{{include.game.extra}}</span>
+{% endif %}
+  {% include i18n_display_name.html entity=include.game.home %}
+  <img class="team-logo" src='{{site.baseurl_root}}/assets/img/{{ include.game.home.logo }}'/>
+  {% if include.game.schedule %}
+  &nbsp;VS&nbsp;
+  {% else %}
+  {{include.game.home.score}}
+  :
+  {{ include.game.away.score }}
   {% endif %}
-    {{ include.game.home.display_name }}
-    <img class="team-logo" src='{{site.baseurl}}/assets/img/{{ include.game.home.logo }}'/>
-    {% if include.game.schedule %}
-    &nbsp;VS&nbsp;
-    {% else %}
-    {{include.game.home.score}}
-    :
-    {{ include.game.away.score }}
-    {% endif %}
-    <img class="team-logo" src='{{site.baseurl}}/assets/img/{{ include.game.away.logo }}'/>
-    {{include.game.away.display_name}}
-  </a>
-  <br/>
+  <img class="team-logo" src='{{site.baseurl_root}}/assets/img/{{ include.game.away.logo }}'/>
+  {% include i18n_display_name.html entity=include.game.away %}
+</a>
+<br/>

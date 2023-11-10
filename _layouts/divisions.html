@@ -1,19 +1,16 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="{{"/assets/css/knockout-bracket.css" | relative_url }}">
 
 {% include season_tabs.html name=page.display_name description=page.description link=page.link %}
 <div class="row">&nbsp;</div>
 
 {% include champion.html winner=page.winner %}
 
-{% include knockout_brackets.html knockouts=page.knockouts %}
-
 {% capture sn %}
-{% translate rank_stage %}
+{% translate league %}
 {% endcapture %}
-{% include group_tables.html group_tables=page.rank_tables group_games=page.rank_games stage_name=sn %}
+{% include group_tables.html group_tables=page.group_tables group_games=page.group_games stage_name=sn table_field='group_table' %}
 
 {% if page.rules != nil %}
 &nbsp;

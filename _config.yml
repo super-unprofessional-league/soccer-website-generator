@@ -22,7 +22,7 @@ baseurl: "/soccer-website-generator" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: zh
 languages: ["zh"]
-exclude_from_localizations: ["_posts", javascript", "images", "css"]
+exclude_from_localizations: ["_posts", "assets", "docs", "scripts", "_sass"]
 
 # Build settings
 markdown: kramdown
@@ -47,6 +47,10 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docs/
+  - bundle/
+  - cache/
+  - gems/
+  - ruby/
 
 tag_page_layout: tag_page
 tag_page_dir: tag

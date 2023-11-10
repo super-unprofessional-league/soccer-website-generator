@@ -8,12 +8,22 @@ layout: default
 
 {% include champion.html winner=page.winner %}
 
-{% include knockout_brackets.html knockouts=page.knockouts %}
-
 {% capture sn %}
 {% translate rank_stage %}
 {% endcapture %}
-{% include group_tables.html group_tables=page.rank_tables group_games=page.rank_games stage_name=sn %}
+{% include group_tables.html group_tables=page.rank_tables group_games=page.rank_games stage_name=sn index_offset=true %}
+
+<h3>联赛阶段</h3>
+
+{% include team_table.html table=page.table table_field="league_table" %}
+
+<h3>{% translate games_list %}</h3>
+
+{% for game in page.league_games %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
+{% endfor %}
 
 {% if page.rules != nil %}
 &nbsp;

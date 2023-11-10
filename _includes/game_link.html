@@ -1,9 +1,9 @@
 <a href="{{include.season_base_url}}games/{{include.game[0]}} ">
-  {{ include.game.home.display_name }}
-  <img width="30px" src='{{site.baseurl}}/assets/img/{{ include.game.home.logo }}'/>
+  {% include i18n_display_name.html entity=include.game.home %}
+  <img width="30px" src='{{site.baseurl_root}}/assets/img/{{ include.game.home.logo }}'/>
   {{ include.game.home.score }}
   :
   {{ include.game.away.score }}
-  <img width="30px" src='{{site.baseurl}}/assets/img/{{ include.game.away.logo }}'/>
-  {{include.game.away.display_name}}
+  <img width="30px" src='{{site.baseurl_root}}/assets/img/{{ include.game.away.logo }}'/>
+  {% include i18n_display_name.html entity=include.game.away %}
 </a>

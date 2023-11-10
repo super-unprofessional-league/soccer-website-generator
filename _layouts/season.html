@@ -2,51 +2,12 @@
 layout: default
 ---
 
-{% include season_tabs.html name=page.display_name description=page.description %}
+{% include season_tabs.html name=page.display_name description=page.description link=page.link %}
 <div class="row">&nbsp;</div>
 
-{% if page.winner != nil and page.winner != "" %}
-<h3>🏆 {% translate champion %}</h3>
-{% include team_link.html team=page.winner %}
-{% endif %}
+{% include champion.html winner=page.winner %}
 
-<div class="row">&nbsp;</div>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>{% translate table.team_name %}</th>
-      <th>{% translate table.played %}</th>
-      <th>{% translate table.win %}</th>
-      <th>{% translate table.tie %}</th>
-      <th>{% translate table.lose %}</th>
-      <th>{% translate table.goals_for %}</th>
-      <th>{% translate table.goals_against %}</th>
-      <th>{% translate table.goals_diff %}</th>
-      <th>{% translate table.points %}</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for team in page.table %}
-    <tr>
-      <td>{{ forloop.index }}</td>
-      <td>
-        {% include team_link.html team=team %}
-      </td>
-      <td>{{ team.table.games_played }}</td>
-      <td>{{ team.table.wins }}</td>
-      <td>{{ team.table.draws }}</td>
-      <td>{{ team.table.loses }}</td>
-      <td>{{ team.table.goals_for }}</td>
-      <td>{{ team.table.goals_against }}</td>
-      <td>{{ team.table.goals_diff }}</td>
-      <td>{{ team.table.points }}</td>
-    </tr>
-    {% endfor %}
-    
-  </tbody>
-</table>
+{% include team_table.html table=page.table %}
 
 <h3>{% translate games_list %}</h3>
 

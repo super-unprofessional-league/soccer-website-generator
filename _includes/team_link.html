@@ -1,6 +1,6 @@
 {% if include.team != nil %}
-<img class="team-logo" src='{{site.baseurl}}/assets/img/{{ include.team.logo }}'/>
-<a href='{{include.team.key}}'>{{ include.team.display_name }}</a>
+<img class="team-logo" src='{{site.baseurl_root}}/assets/img/{{ include.team.logo }}'/>
+<a href='{{include.team.key}}'>{% include i18n_display_name.html entity=include.team %}</a>
 {% else %}
 &nbsp;
 {% endif %}

@@ -9,6 +9,7 @@ $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
+$table-spacing-unit:     6px !default;
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
@@ -45,8 +46,8 @@ $on-laptop:        800px !default;
 
 // Import partials.
 @import
+  "tags",
   "minima/base",
   "minima/layout",
-  "minima/tags",
   "minima/syntax-highlighting"
 ;

@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+<div class="wrapper">
+  <a href="{{site.banners[0].link}}">
+    <img class="banner" src="{{site.banners[0].img}}">
+    </img>
+  </a>
+</div>
 
 <div class="home">
   {%- if page.title -%}
@@ -16,8 +22,11 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">
           {{ post.date | date: date_format }}
-          {%- include tags.html tags=post.tags -%}
         </span>
+        <span class="post-meta">
+          • {{ post.author }}
+        </span>
+        {%- include tags.html tags=post.tags -%}
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}

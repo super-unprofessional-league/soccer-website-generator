@@ -1,0 +1,154 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{"/assets/css/knockout-bracket.css" | relative_url }}">
+
+{% include season_tabs.html name=page.display_name description=page.description disable_tabs=true %}
+<div class="row">&nbsp;</div>
+
+{% include champion.html winner=page.winner %}
+
+{% if page.knockout_array != nil %}
+<h3>{% translate knockout_stage %}</h3>
+
+<div class="tournament">
+{% for round in page.knockout_array  %}
+  <ul class="round">
+    <li class="spacer">&nbsp;</li>
+		
+    {% for game_array in round %}
+    
+    {% assign p0 = game_array[0].info %}
+    {% assign p1 = game_array[1].info %}
+    
+    <li class="game game-top">
+      <div class="player static">
+        {% if p0 != nil %}
+        <img src="{{site.baseurl_root}}/assets/img/{{p0.img | default: 'placeholder-player.jpg'}}" />
+        <span class="align-center">{{p0.number}} {{p0.name}}</span>
+        {% else %}
+        <img src="{{site.baseurl_root}}/assets/img/question-mark.png" />
+        <span class="align-center">&nbsp;</span>
+        {% endif %}
+      </div>
+    </li>
+		<li class="game game-spacer"></li>
+		<li class="game game-spacer-text">
+			<div>
+			{% if game_array[2] != nil %}
+      {{game_array[2][0]}} : {{game_array[2][1]}}
+			{% elsif game_array[0] != nil %}
+      VS
+			{% else %}
+      &nbsp;
+			{% endif %}
+			</div>
+		</li>
+		<li class="game game-spacer"></li>
+    <li class="game game-bottom ">
+      <div class="player static">
+        {% if p1 != nil %}
+        <img src="{{site.baseurl_root}}/assets/img/{{p1.img | default: 'placeholder-player.jpg'}}" />
+        <span class="align-center">{{p1.number}} {{p1.name}}</span>
+        {% else %}
+        <img src="{{site.baseurl_root}}/assets/img/question-mark.png" />
+        <span class="align-center">&nbsp;</span>
+        {% endif %}
+      </div>
+    </li>
+
+
+
+    <li class="spacer">&nbsp;</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+
+
+<ul class="round" style="width: 50px">
+{% if page.winner != nil and page.winner != "" %}
+{% include team_link.html team=page.winner %}
+{% else %}
+&nbsp;
+{% endif %}
+</ul>
+</div>
+{% endif %}
+
+{% if page.group_tables != nil %}
+
+<h3>{% translate group_stage %}</h3>
+
+{% for group in page.group_tables %}
+{% assign group_key = group[0] %}
+{% assign sorted = group[1].sorted %}
+
+<table class="small">
+  <thead>
+    <tr>
+      <th></th>
+      <th>{{group_key}}</th>
+      <th>{% translate table.played %}</th>
+      <th>{% translate table.win %}</th>
+      <th>{% translate table.tie %}</th>
+      <th>{% translate table.lose %}</th>
+      <th>颠球数</th>
+      <th>{% translate table.points %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in sorted %}
+    {% assign name = player[0] %}
+    {% assign p = page.players[name].info %}
+    <tr>
+      <td>{{ forloop.index }}</td>
+      <td class="player-td">
+        <div class="player static">
+          <img src="{{site.baseurl_root}}/assets/img/{{p.img | default: 'placeholder-player.jpg'}}" />
+        </div>
+        <span>#{{p.number}} {{p.name}}</span>
+      </td>
+      <td>{{ player[1].games_played }}</td>
+      <td>{{ player[1].wins }}</td>
+      <td>{{ player[1].draws }}</td>
+      <td>{{ player[1].loses }}</td>
+      <td>{{ player[1].scores }}</td>
+      <td>{{ player[1].points }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% assign games = page.group_games[group_key] %}
+
+{% for game in games %}
+
+{% assign g = game[1] %}
+{% assign n0 = g.players[0] %}
+{% assign n1 = g.players[1] %}
+
+{% assign p0 = page.players[n0].info %}
+{% assign p1 = page.players[n1].info %}
+
+<div class="player-game-result">
+<span>{{p0.name}}</span>
+<span class="align-center">
+{% if g.score.size > 0 %}
+ {{ g.score[0] }} : {{ g.score[1] }} 
+{% else %}
+ VS 
+{% endif %}
+</span>
+<span>{{p1.name}}</span>
+</div>
+{% endfor %}
+<br/>
+<br/>
+{% endfor %}
+
+{% endif %}
+
+{% if page.rules != nil %}
+&nbsp;
+<p style="font-size:12px;">{{page.rules | newline_to_br}}</p>
+{% endif %}

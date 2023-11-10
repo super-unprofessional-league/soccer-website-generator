@@ -1,0 +1,27 @@
+{% assign event = include.event %}
+<p>
+{% if event.link != nil %}
+<a href="{{event.link}}" target="_blank" rel="noopener noreferrer">
+{% endif %}
+    <img width="30px" src="{{site.baseurl_root}}/assets/img/icon/{{event.type}}.png" />
+    {{event.time}}'
+    {% if event.player.team != nil %}
+    {{event.player.player}} <a href='../../{{event.player.team.key}}'><img class="team-logo" src='{{site.baseurl_root}}/assets/img/{{ event.player.team.logo }}'/></a>
+    {% else %}
+    {{event.player}}
+    {% endif %}
+    {% if event.assist %}
+        <img width="30px" src="{{site.baseurl_root}}/assets/img/icon/assist.png" />
+        {% if event.assist.team != nil %}
+        {{event.assist.player}} <a href='../../{{event.assist.team.key}}'><img class="team-logo" src='{{site.baseurl_root}}/assets/img/{{ event.assist.team.logo }}'/></a>
+        {% else %}
+        {{event.assist}}
+        {% endif %}
+    {% elsif event.sub %}
+        <img width="30px" src="{{site.baseurl_root}}/assets/img/icon/sub.png" />
+        {{event.sub}}
+    {% endif %}
+{% if event.link != nil %}
+</a>
+{% endif %}
+</p>

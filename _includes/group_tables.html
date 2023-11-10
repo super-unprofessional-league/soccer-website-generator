@@ -1,0 +1,34 @@
+{% if include.group_tables != nil %}
+
+{% assign table_field = include.table_field %}
+{% if table_field == nil %}
+{% assign table_field = "table" %}
+{% endif %}
+
+<h3>{{ include.stage_name }}</h3>
+
+{% assign id = include.index_offset %}
+
+{% for group in include.group_tables %}
+{% assign group_key = group[0] %}
+{% assign group_table = group[1] %}
+
+{% if include.index_offset %}
+{% include team_table.html table=group_table group_name=group_key index_offset=id table_field=table_field %}
+{% else %}
+{% include team_table.html table=group_table group_name=group_key table_field=table_field%}
+{% endif %}
+
+{% for game in include.group_games[group_key] %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
+{% endfor %}
+<br/>
+<br/>
+
+{% assign len = group_table | size %}
+{% assign id = id | plus: len %}
+{% endfor %}
+
+{% endif %}

@@ -1,0 +1,7 @@
+{% assign entry = "display_name_" | append: site.lang %}
+{% assign display_name = include.entity[{{entry}}] %}
+{% if display_name != nil %}
+{{ display_name }}
+{% else %}
+{{ include.entity.display_name }}
+{% endif %}

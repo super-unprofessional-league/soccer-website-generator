@@ -1,0 +1,57 @@
+{% if include.knockouts != nil %}
+
+{% for k in include.knockouts  %}
+{% assign knockout_key = k[0] %}
+<h3>{{ knockout_key }}</h3>
+<div class="tournament">
+  {% for round in k[1].knockout_array  %}
+  <ul class="round">
+    <li class="spacer">&nbsp;</li>
+		
+    {% for game_array in round %}
+		{% assign game_pair = game_array[2] %}
+    {% assign team0 = game_array[0] %}
+    {% assign team1 = game_array[1] %}
+    
+    <li class="game game-top">{% include team_link.html team=team0 %}</li>
+		<li class="game game-spacer"></li>
+		<li class="game game-spacer-text">
+			<div>
+			{% if game_pair[1] != nil %}
+			{% include knockout_game_link.html game=game_pair %}
+			{% else %}
+			&nbsp;
+			{% endif %}
+			</div>
+		</li>
+		<li class="game game-spacer"></li>
+    <li class="game game-bottom ">{% include team_link.html team=team1 %}</li>
+
+
+
+    <li class="spacer">&nbsp;</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+
+
+
+<ul class="round" style="width: 50px">
+{% if k[1].winner != nil and k[1].winner != "" %}
+{% assign w = k[1].winner %}
+{% include team_link.html team=w %}
+{% else %}
+&nbsp;
+{% endif %}
+</ul>
+</div>
+
+{% for game in k[1].other_games %}
+{% assign gk = game[0] %}
+{% assign g = game[1] %}
+{% include game_lines.html game_key=gk game=g season_base_url="" %}
+{% endfor %}
+<br/>
+
+{% endfor %}
+{% endif %}

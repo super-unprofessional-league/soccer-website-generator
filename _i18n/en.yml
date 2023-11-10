@@ -1,23 +1,41 @@
+global:
+  en: English
+  zh: 中文
+  ja: 日本語
 posts_title: Posts
 schedule: Schedule
 goal_scorers: Goal Scorers
+assist_list: Assists
 season: Season
 season_list: All Seasons
+league_website: League Website
 player:
-  photo: Pic
+  photo: Photo
   name: Name
   team: Team
   goals_penalty: |
     Goals
     (Penalty)
+  assists_penalty: |
+    Assists
+    (Penalty Makes)
   number: No.
   position: Position
   goals: Goals
+  assists: Assists
+门将: GK
+后卫: DF
+中场: MF
+前锋: FW
 champion: Champion
 knockout_stage: Knockout Stage
 group_stage: Group Stage
 rank_stage: Ranking Stage
+qualify_stage: Qualifying Stage
+open_group: Open Group Complete Ranking
+yzb_group: Courage Cup Ranking
 games_list: Games
+penalty: Penalty
 table:
   team_name: Team
   played: Played
@@ -45,6 +63,9 @@ games:
   rank-r1: Ranking Round 1
   rank-r2: Ranking Round 2
   rank-r3: Ranking Round 3
+  rank-r4: Ranking Round 4
+  rank-r5: Ranking Round 5
+  rank-r6: Ranking Round 6
   group: Group
   group-r1: Group Round 1
   group-r2: Group Round 2
@@ -52,6 +73,7 @@ games:
   group-r4: Group Round 4
   group-r5: Group Round 5
   group-r6: Group Round 6
+  qualify: Qualifier
   league: League
   '#1': Round 1
   '#2': Round 2
@@ -73,3 +95,5 @@ games:
   '#18': Round 18
   '#19': Round 19
   '#20': Round 20
+  '#21': Round 21
+  '#22': Round 22

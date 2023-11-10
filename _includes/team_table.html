@@ -1,0 +1,53 @@
+{% assign table_field = include.table_field %}
+{% if table_field == nil %}
+{% assign table_field = "table" %}
+{% endif %}
+
+{% assign index_offset = include.index_offset %}
+{% if index_offset == nil %}
+{% assign index_offset = 0 %}
+{% endif %}
+
+<div style="overflow:auto; width: auto;">
+  {% if include.table_class != nil %}
+  <table class="{{include.table_class}}">
+  {% else %}
+  <table>
+  {% endif %}
+    <thead>
+      <tr>
+        <th>{{include.group_name}}</th>
+        <th>{% translate table.team_name %}</th>
+        <th><b>{% translate table.points %}</b></th>
+        <th>{% translate table.played %}</th>
+        <th>{% translate table.win %}</th>
+        <th>{% translate table.tie %}</th>
+        <th>{% translate table.lose %}</th>
+        <th>{% translate table.goals_for %}</th>
+        <th>{% translate table.goals_against %}</th>
+        <th>{% translate table.goals_diff %}</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for team in include.table %}
+      <tr>
+        <td>{{ forloop.index | plus: index_offset }}</td>
+        <td>
+          {% include team_link.html team=team %}
+        </td>
+        {% assign table_data = team[table_field] %}
+        <td><b>{{ table_data.points }}</b></td>
+        <td>{{ table_data.games_played }}</td>
+        <td>{{ table_data.wins }}</td>
+        <td>{{ table_data.draws }}</td>
+        <td>{{ table_data.loses }}</td>
+        <td>{{ table_data.goals_for }}</td>
+        <td>{{ table_data.goals_against }}</td>
+        <td>{{ table_data.goals_diff }}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+</div>

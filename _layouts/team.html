@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: default
 ---
 
+<article class="post">
+<div class="post-content">
 <h1>
-    <img width="20%" class="team-page-logo" src='{{site.baseurl}}/assets/img/{{page.team.logo}}'/>
-    {{ page.team.display_name }}
+    <img width="20%" class="team-page-logo" src='{{site.baseurl_root}}/assets/img/{{page.team.logo}}'/>
+    {% include i18n_display_name.html entity=page.team %}
 </h1>
 
 <p>{{ page.team.description }}</p>
@@ -31,7 +33,7 @@ layout: page
     {% else %}
     <tbody>
     {% endif %}
-        <td>{%if stats.is_winner == true %}🏆{%endif%} <a href="../../{{ stats.season_key }}/{{page.team_key}}">{{ stats.season_name }}</a></td>
+        <td>{%if stats.is_winner == true %}🏆{%endif%} <a href="../../{{ stats.season_key }}/{{page.team_key}}">{% include i18n_display_name.html entity=stats %}</a></td>
         <td>{{ stats.games_played }}</td>
         <td>{{ stats.wins }}</td>
         <td>{{ stats.draws }}</td>
@@ -56,6 +58,7 @@ layout: page
             <th>{% translate player.name %}</th>
             <th>{% translate player.position %}</th>
             <th>{% translate player.goals %}</th>
+            <th>{% translate player.assists %}</th>
             </tr>
         </thead>
         <tbody>
@@ -73,9 +76,9 @@ layout: page
 
 
 <!-- Starting squad -->
-<div class="column team-page-squad" >
+<!-- <div class="column team-page-squad" >
     {% include squad.html squad=page.team.players.starting %}
-</div>
+</div> -->
 
 </div>
 
@@ -91,7 +94,10 @@ layout: page
 {% if page.team.image %}
 <br/>
 <div>
-    <img src="{{site.baseurl}}/assets/img/{{page.team.image}}" />
+    <img src="{{site.baseurl_root}}/assets/img/{{page.team.image}}" />
 </div>
 <br/>
 {% endif %}
+
+</div>
+</article>
